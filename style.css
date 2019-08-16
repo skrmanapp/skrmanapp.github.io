@@ -245,24 +245,25 @@ button:focus {
 /*=== Featured section ===*/
 
 .mu-header-featured-area {
-	display: inline;
-	float: left;
+	/*display: inline;*/
+	/*float: left;*/
 	padding: 50px 0;
 	width: 100%;
 }
 
 .mu-header-featured-img {
-	display: inline;
-	float: left;
-	width: 40%;
+	/*display: inline;*/
+	/*float: left;*/
+	width: 100%;
+	text-align: center;
 }
 
 .mu-header-featured-content {
-	display: inline;
-	float: right;
-	margin-top: 200px;
+	/*display: inline;*/
+	/*float: right;*/
+	margin-top: 0px;
 	text-align: center;
-	width: 60%;
+	width: 100%;
 }
 
 .mu-header-featured-content h1 {
