@@ -1,8 +1,81 @@
 .table-head{
-    background-color: lightgray;
-    color: gray;
-    height: 30px;
+    background-color: #F5F5F5;
+
+    height: 40px;
     width: 100%;
 
 
+}
+.table-head-title{
+    color: #b1b1b1;
+    line-height: 40px;
+    margin-left: 15px;
+
+}
+.user-avatar{
+    margin-top: 8px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.row-line{
+    background-color: #F5F5F5;
+
+    height: 1px;
+
+    width: 100%;
+}
+
+
+
+
+
+.table-row-m{
+    padding-right: 0px;
+    height: 80px;
+}
+.row-title-m{
+    color: gray;
+    margin-left: 0px;
+    line-height: 80px;
+    text-align: left;
+}
+
+
+
+
+.table-row-s{
+    height: 50px;
+    padding-right: 0px;
+}
+
+.row-title-s{
+    color: gray;
+    margin-left: 0px;
+    line-height: 50px;
+    text-align: left;
+
+}
+
+
+.row-input{
+    height: 50px;
+    line-height: 30px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+}
+
+
+.row-select{
+    height: 50px;
+    line-height: 30px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+    background-color: transparent;
 }
