@@ -45,79 +45,155 @@
 <main role="main">
 
     <div class="container-fluid" style="padding-left: 0px;padding-right: 0px">
-        <div class="table-head">
-            <p class="table-head-title">
-                基本资料
-            </p>
-        </div>
 
 
-        <!-- row -->
+        <div class="row table-view">
 
-        <div class="row  col-xs-12 table-row-m" >
 
-            <div class="col-xs-4">
-                <p class="row-title-m" >
-                    头像
+            <!-- head -->
+            <div class="col-xs-12 table-head " >
+                <p class="col-xs-4 table-head-title">
+                    基本资料
                 </p>
             </div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                <img class="user-avatar" src="https://lazy-1252169987.cos.ap-guangzhou.myqcloud.com/default-avatar.png" alt="User Avatar" id="user-avatar-image">
+            <!-- head -->
+
+
+            <!-- row -->
+            <div class="  col-xs-12 table-row-m">
+
+                <div class="col-xs-4">
+                    <p class="row-title-m" >
+                        头像
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <img class="user-avatar" src="https://lazy-1252169987.cos.ap-guangzhou.myqcloud.com/default-avatar.png" alt="User Avatar" id="user-avatar-image">
+                </div>
             </div>
-        </div>
+            <div class="row-line col-xs-12"></div>
+            <!-- row -->
+
+
+
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        昵称
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <input id="nickName" name="nickName"  type="text" class="row-input">
+                </div>
+            </div>
             <div class="row-line col-xs-12"></div>
 
-
-        <!-- row -->
-
+            <!-- row -->
 
 
-        <!-- row -->
 
-        <div class="row table-row-s col-xs-12">
 
-            <div class="col-xs-4">
-                <p class="row-title-s" >
-                   昵称
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        性别
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <select name="select" id="sex" class="row-select">
+                        <option value="equal">男</option>
+                        <option value="like">女</option>
+                    </select>
+                    <i class="fa fa-angle-right fa-2x row-icon"></i>
+                </div>
+            </div>
+            <div class="row-line col-xs-12" ></div>
+
+            <!-- row -->
+
+
+
+            <!-- head -->
+            <div class="col-xs-12 table-head " >
+                <p class="col-xs-4 table-head-title">
+                    会员信息
                 </p>
             </div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                <input id="nickName" name="nickName"  type="text" class="row-input">
+            <!-- head -->
+
+
+
+
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        会员等级
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <p id="vip-level" name="vip-level"  type="text" class="row-text"> </p>
+                </div>
             </div>
+            <div class="row-line col-xs-12"></div>
+
+            <!-- row -->
+
+
+
+
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        兑换码
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <p id="vip-vertify" name="vip-level"  type="text" class="row-text"> </p>
+                    <i class="fa fa-angle-right fa-2x row-icon"></i>
+                </div>
+            </div>
+            <div class="row-line col-xs-12" ></div>
+
+            <!-- row -->
+
+
+
+
         </div>
-        <div class="row-line col-xs-12"></div>
 
-        <!-- row -->
-
-
-        <!-- row -->
-
-        <div class="row table-row-s col-xs-12">
-
-            <div class="col-xs-4">
-                <p class="row-title-s" >
-                    性别
-                </p>
-            </div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                <select name="select" id="sex" class="row-select">
-                    <option value="equal">男</option>
-                    <option value="like">女</option>
-                </select>
-                <p class="fa-window-close"></p>
-            </div>
-        </div>
-        <div class="row-line col-xs-12"></div>
-
-        <!-- row -->
 
 
     </div>
 
 
+
+
+    </div>
+
+
+
+    <div class="row " style="margin-top: 50px">
+        <div class="col-xs-1"> </div>
+        <button id="add-button" type="button" class="col-xs-10 table-button">保存</button>
+        <div class="col-xs-1"> </div>
+    </div>
 
 
 </main>

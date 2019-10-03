@@ -1,15 +1,24 @@
+
+body,
+html {
+    overflow-x:hidden;
+    background-color: #F5F5F5;
+}
 .table-head{
     background-color: #F5F5F5;
 
     height: 40px;
-    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 
-
+}
+.table-view{
+    background-color: #ffffff;
 }
 .table-head-title{
     color: #b1b1b1;
     line-height: 40px;
-    margin-left: 15px;
+
 
 }
 .user-avatar{
@@ -31,6 +40,7 @@
 
 
 .table-row-m{
+    padding-left: 0px;
     padding-right: 0px;
     height: 80px;
 }
@@ -46,6 +56,7 @@
 
 .table-row-s{
     height: 50px;
+    padding-left: 0px;
     padding-right: 0px;
 }
 
@@ -67,7 +78,15 @@
     border:0;
     outline: none;
 }
-
+.row-text{
+    height: 50px;
+    line-height: 30px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+}
 
 .row-select{
     height: 50px;
@@ -78,4 +97,25 @@
     border:0;
     outline: none;
     background-color: transparent;
+}
+
+.row-icon{
+    margin-top: 9px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    color:lightgray;
+    border:none;
+    border:0;
+    outline: none;
+}
+
+.table-button{
+    height: 40px;
+    background: #ffffff;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkred;
+    color: darkred;
 }
