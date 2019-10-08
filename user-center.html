@@ -69,6 +69,7 @@
                 </div>
                 <div class="col-xs-4"></div>
                 <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <input id="fileSelector" type="file" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;">
                     <img class="user-avatar" src="https://lazy-1252169987.cos.ap-guangzhou.myqcloud.com/default-avatar.png" alt="User Avatar" id="user-avatar-image">
                 </div>
             </div>
@@ -222,37 +223,135 @@
     jQuery(document).ready(function($){
         var Bucket = 'skrman-1256882866';
         var Region = 'ap-guangzhou';
-        console.log("sdfasdf")
+         var cos;
+        var cosReady = false;
+        var credentials;
+        var _data;
             // 初始化实例
-        var cos = new COS({
-            getAuthorization: function (options, callback) {
-                // 异步获取临时密钥
-                $.get('https://service-146wwpk2-1252169987.gz.apigw.tencentcs.com/release/getCosAuth', {
-                    bucket: options.Bucket,
-                    region: options.Region,
-                }, function (data) {
-                    console.log(data)
-                    var credentials = data.credentials;
 
-                    callback({
-                        TmpSecretId: credentials.tmpSecretId,
-                        TmpSecretKey: credentials.tmpSecretKey,
-                        XCosSecurityToken: credentials.sessionToken,
-                        ExpiredTime: data.expiredTime
+        // $.ajax({
+        //     type : "get", //提交方式
+        //     url : 'https://service-146wwpk2-1252169987.gz.apigw.tencentcs.com/release/getCosAuth',//路径
+        //     crossDomain: true,//跨域
+        //     dataType:'json',
+        //     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+        //     contentType: "application/x-www-form-urlencoded; charset=utf-8",
+        //     data : {
+        //     },//数据，这里使用的是Json格式进行传输
+        //     success : function(data) {//返回数据根据结果进行相应的处理
+        //         _data = data
+        //          credentials = data.credentials;
+        //         cosReady = true;
+        //         initCos()
+        //     },
+        //     error: (err,type) => {
+        //     },
+
+
+        // });
+        initCos()
+        function initCos() {
+            cos = new COS({
+                // 必选参数
+
+                getAuthorization: function (options, callback) {
+                    // 服务端 JS 和 PHP 例子：https://github.com/tencentyun/cos-js-sdk-v5/blob/master/server/
+                    // 服务端其他语言参考 COS STS SDK ：https://github.com/tencentyun/qcloud-cos-sts-sdk
+                    // STS 详细文档指引看：https://cloud.tencent.com/document/product/436/14048
+                    $.ajax({
+                        type: "get", //提交方式
+                        url: 'https://service-146wwpk2-1252169987.gz.apigw.tencentcs.com/release/getCosAuth',//路径
+                        crossDomain: true,//跨域
+                        dataType: 'json',
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                        data: {},//数据，这里使用的是Json格式进行传输
+                        success: function (data) {//返回数据根据结果进行相应的处理
+                            credentials = data.credentials
+                            console.log(data)
+                            callback({
+                                TmpSecretId: credentials.tmpSecretId,
+                                TmpSecretKey: credentials.tmpSecretKey,
+                                XCosSecurityToken: credentials.sessionToken,
+                                ExpiredTime: data.expiredTime, // SDK 在 ExpiredTime 时间前，不会再次调用 getAuthorization
+                            });
+                            console.log(cos)
+                        },
+                        error: (err, type) => {
+                        },
+
+
+
+
                     });
-                });
-            }
+                }
+
+            })
+        }
+
+
+        $("#user-avatar-image").click(function(){
+            // 二次确认
+
+
+            $("#fileSelector").val('');
+            $("#fileSelector").trigger("click");
+
+
         });
 
-        // 接下来可以通过 cos 实例调用 COS 请求。
-        // TODO
+        // // 接下来可以通过 cos 实例调用 COS 请求。
+        // // TODO
+
+
+
+
+// 头像预览
+        $("#fileSelector").change(function (e) {
+
+
+            // 获取上传文件对象
+            console.log(e)
+            var file = e.target.files[0];
+            cos.putObject({
+                Bucket: 'skrman-1256882866', /* 必须 */
+                Region: 'ap-guangzhou',    /* 必须 */
+                Key: '/avatar/picture.jpg',              /* 必须 */
+                Body: 'hello!',
+            }, function(err, data) {
+                console.log(err || data);
+            });
+            // cos.putObject({
+            //     Bucket: 'skrman-1256882866', /* 必须 */
+            //     Region: 'ap-guangzhou',    /* 必须 */
+            //     Key: 'avatar/aaaaa.png',              /* 必须 */
+            //     StorageClass: 'STANDARD',
+            //     Body: file, // 上传文件对象
+            //     onProgress: function(progressData) {
+            //         console.log(JSON.stringify(progressData));
+            //     }
+            // }, function(err, data) {
+            //     console.log(err || data);
+            // });
+            // 读取文件URL
+            var reader = new FileReader();
+            // reader.readAsDataURL(file);
+            // // 阅读文件完成后触发的事件
+            // reader.onload = function () {
+            //     // 读取的URL结果：this.result
+            //     $("#avatar_img").attr("src", this.result);//avatar_img  img标签的ID
+            // }
+
+        })
+
+
+    })
 
 
 
 
 
 
-    });
 
 
 
