@@ -1,4 +1,4 @@
-let request_url= "https://service-f5y4uhf0-1256882866.gz.apigw.tencentcs.com/release/skrmanweb";
+let request_url= "https://api.hb174.top/skrman/servlet";
 
 
 

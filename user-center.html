@@ -145,7 +145,7 @@
                 </div>
                 <div class="col-xs-4"></div>
                 <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                    <p id="vip-level" name="vip-level"  type="text" class="row-text"> </p>
+                    <p id="vip-level" name="vip-level"  type="text" class="row-text" > </p>
                 </div>
             </div>
             <div class="row-line col-xs-12"></div>
@@ -157,20 +157,20 @@
 
             <!-- row -->
 
-            <div class=" table-row-s col-xs-12">
+            <!--<div class=" table-row-s col-xs-12">-->
 
-                <div class="col-xs-4">
-                    <p class="row-title-s" >
-                        兑换码
-                    </p>
-                </div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                    <p id="vip-vertify" name="vip-level"  type="text" class="row-text"> </p>
-                    <i class="fa fa-angle-right fa-2x row-icon"></i>
-                </div>
-            </div>
-            <div class="row-line col-xs-12" ></div>
+                <!--<div class="col-xs-4">-->
+                    <!--<p class="row-title-s" >-->
+                        <!--兑换码-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--<div class="col-xs-4"></div>-->
+                <!--<div class="col-xs-4" style="  display: flex;justify-content: flex-end;">-->
+                    <!--<p id="vip-vertify" name="vip-level"  type="text" class="row-text"> </p>-->
+                    <!--<i class="fa fa-angle-right fa-2x row-icon"></i>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row-line col-xs-12" ></div>-->
 
             <!-- row -->
 
@@ -205,7 +205,7 @@
 
 
 <!-- jQuery library -->
-<script src="assets/js/jquery.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 <!-- tool library -->
 <script src="assets/js/tool.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -216,78 +216,77 @@
 <!-- Ajax contact form  -->
 <script type="text/javascript" src="assets/js/app.js"></script>
 
-<script src="assets/js/cos-js-sdk-v5.js"></script>
 
 <script type="text/javascript">
 
     jQuery(document).ready(function($){
-        var Bucket = 'skrman-1256882866';
-        var Region = 'ap-guangzhou';
-         var cos;
+
         var cosReady = false;
         var credentials;
         var _data;
             // 初始化实例
 
-        // $.ajax({
-        //     type : "get", //提交方式
-        //     url : 'https://service-146wwpk2-1252169987.gz.apigw.tencentcs.com/release/getCosAuth',//路径
-        //     crossDomain: true,//跨域
-        //     dataType:'json',
-        //     headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
-        //     contentType: "application/x-www-form-urlencoded; charset=utf-8",
-        //     data : {
-        //     },//数据，这里使用的是Json格式进行传输
-        //     success : function(data) {//返回数据根据结果进行相应的处理
-        //         _data = data
-        //          credentials = data.credentials;
-        //         cosReady = true;
-        //         initCos()
-        //     },
-        //     error: (err,type) => {
-        //     },
+        var auth = "null";
+        auth = UrlParm.parm("auth");
+
+
+        console.log(auth)
+        if(!auth || auth == 'null'){
+            alert('进入参数错误！')
+            return
+        }
+
+
+        function reloadForm(data) {
+            //读取数据
+            console.log('sss');
+            $("#progressText").show();
+            $("#progressText2").show();
+
+
+            <!--==========================网络请求============================-->
+            var requestData = {
+                "auth":auth
+            }
+            var dataStr =  JSON.stringify(requestData)
+            console.log(dataStr)
+            $.ajax({
+                type: "post", //提交方式
+                url: request_url + '/UserInfoGet',//路径
+                crossDomain: true,//跨域
+                dataType: 'json',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                data: dataStr,//数据，这里使用的是Json格式进行传输
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    console.log('result');
+                    console.log(result);
+                    if (result.errcode == 0) {
+                        $("#user-avatar-image").attr('src',result.result.Avatar);
+                        $("#nickName").val(result.result.NickName)
+                        $("#vip-level").html(result.result.VipInfo)
+                    } else {
+
+                    }
+
+                },
+                error: (err, type) => {
+
+
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+        reloadForm();
+
 
 
         // });
-        initCos()
-        function initCos() {
-            cos = new COS({
-                // 必选参数
-
-                getAuthorization: function (options, callback) {
-                    // 服务端 JS 和 PHP 例子：https://github.com/tencentyun/cos-js-sdk-v5/blob/master/server/
-                    // 服务端其他语言参考 COS STS SDK ：https://github.com/tencentyun/qcloud-cos-sts-sdk
-                    // STS 详细文档指引看：https://cloud.tencent.com/document/product/436/14048
-                    $.ajax({
-                        type: "get", //提交方式
-                        url: 'https://service-146wwpk2-1252169987.gz.apigw.tencentcs.com/release/getCosAuth',//路径
-                        crossDomain: true,//跨域
-                        dataType: 'json',
-                        headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
-                        contentType: "application/x-www-form-urlencoded; charset=utf-8",
-                        data: {},//数据，这里使用的是Json格式进行传输
-                        success: function (data) {//返回数据根据结果进行相应的处理
-                            credentials = data.credentials
-                            console.log(data)
-                            callback({
-                                TmpSecretId: credentials.tmpSecretId,
-                                TmpSecretKey: credentials.tmpSecretKey,
-                                XCosSecurityToken: credentials.sessionToken,
-                                ExpiredTime: data.expiredTime, // SDK 在 ExpiredTime 时间前，不会再次调用 getAuthorization
-                            });
-                            console.log(cos)
-                        },
-                        error: (err, type) => {
-                        },
 
 
-
-
-                    });
-                }
-
-            })
-        }
 
 
         $("#user-avatar-image").click(function(){
@@ -312,15 +311,15 @@
 
             // 获取上传文件对象
             console.log(e)
-            var file = e.target.files[0];
-            cos.putObject({
-                Bucket: 'skrman-1256882866', /* 必须 */
-                Region: 'ap-guangzhou',    /* 必须 */
-                Key: '/avatar/picture.jpg',              /* 必须 */
-                Body: 'hello!',
-            }, function(err, data) {
-                console.log(err || data);
-            });
+            // var file = e.target.files[0];
+            // cos.putObject({
+            //     Bucket: 'skrman-1256882866', /* 必须 */
+            //     Region: 'ap-guangzhou',    /* 必须 */
+            //     Key: '/avatar/picture.jpg',              /* 必须 */
+            //     Body: 'hello!',
+            // }, function(err, data) {
+            //     console.log(err || data);
+            // });
             // cos.putObject({
             //     Bucket: 'skrman-1256882866', /* 必须 */
             //     Region: 'ap-guangzhou',    /* 必须 */
@@ -334,7 +333,7 @@
             //     console.log(err || data);
             // });
             // 读取文件URL
-            var reader = new FileReader();
+
             // reader.readAsDataURL(file);
             // // 阅读文件完成后触发的事件
             // reader.onload = function () {
