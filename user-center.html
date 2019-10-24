@@ -256,7 +256,7 @@
 
         var auth = "null";
         auth = UrlParm.parm("auth");
-
+        var vip = "null"
 
         console.log(auth)
         if(!auth || auth == 'null'){
@@ -268,7 +268,7 @@
         function reloadForm() {
             //读取数据
             console.log('sss');
-            $("#bind-wechat").hide();
+
 
 
 
@@ -295,12 +295,8 @@
                         $("#mobilePhone").html(result.result.MobilePhone)
                         $("#email").html(result.result.Email)
                         $("#vip-level").html(result.result.VipInfo)
+                        vip = result.result.Vip
 
-                        if(result.result.Vip == "super"){
-                            $("#bind-wechat").hide();
-                        }else{
-                            $("#bind-wechat").show();
-                        }
                     } else {
                         alert(result.errmsg)
                     }
@@ -337,7 +333,9 @@
 
         $("#bind-wechat").click(function(){
             // 二次确认
-
+            if(vip == "super"){
+                alert("您已经是最高会员")
+            }
 
             window.location.href = "bind-wechat.html?auth="+auth;
 
