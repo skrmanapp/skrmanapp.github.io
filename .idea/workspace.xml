@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bind-wechat-confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bind-wechat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aliyun-oss-sdk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aliyun-oss-sdk.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/cos-js-sdk-v5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/cos-js-sdk-v5.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/help-cjwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-cjwt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-center.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-center.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,16 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user-center.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1048">
-              <caret line="264" column="9" lean-forward="true" selection-start-line="264" selection-start-column="9" selection-end-line="264" selection-end-column="9" />
+            <state relative-caret-position="607">
+              <caret line="180" column="100" selection-start-line="180" selection-start-column="100" selection-end-line="180" selection-end-column="100" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#7;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#9;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#14;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bind-wechat-confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+            <state relative-caret-position="365">
+              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -132,6 +125,7 @@
       <find>user-nickname</find>
       <find>bind-button</find>
       <find>#modal-confirm</find>
+      <find>progressText</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -159,15 +153,15 @@
         <option value="$PROJECT_DIR$/help-yhxy.html" />
         <option value="$PROJECT_DIR$/help-bbxx.html" />
         <option value="$PROJECT_DIR$/help-cjwt.html" />
-        <option value="$PROJECT_DIR$/user-center.html" />
         <option value="$PROJECT_DIR$/bind-wechat.html" />
         <option value="$PROJECT_DIR$/bind-wechat-confirm.html" />
+        <option value="$PROJECT_DIR$/user-center.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1684" />
-    <option name="y" value="42" />
+    <option name="x" value="-1784" />
+    <option name="y" value="112" />
     <option name="width" value="1766" />
     <option name="height" value="986" />
   </component>
@@ -263,15 +257,15 @@
       <workItem from="1571725941014" duration="1954000" />
       <workItem from="1571727982630" duration="915000" />
       <workItem from="1571890690210" duration="12193000" />
-      <workItem from="1571909308953" duration="6678000" />
+      <workItem from="1571909308953" duration="6996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58095000" />
+    <option name="totallyTimeSpent" value="58413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1498" y="41" width="1766" height="986" extended-state="0" />
+    <frame x="-1784" y="112" width="1766" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2773639" />
@@ -481,23 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-center.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1048">
-          <caret line="264" column="9" lean-forward="true" selection-start-line="264" selection-start-column="9" selection-end-line="264" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#7;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#9;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bind-wechat-confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+        <state relative-caret-position="365">
+          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -508,6 +489,20 @@
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="180" column="100" selection-start-line="180" selection-start-column="100" selection-end-line="180" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#7;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#9;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#14;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

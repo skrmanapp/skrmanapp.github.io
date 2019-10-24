@@ -178,8 +178,8 @@
                     </p>
                 </div>
                 <div class="col-xs-2"></div>
-                <div class="col-xs-6" style="  display: flex;justify-content: flex-end;">
-                    <p id="vip-level" name="vip-level"  type="text" class="row-text" > </p>
+                <div class="col-xs-6" style="  display: flex;justify-content: flex-end;font-size: 12px">
+                    <p id="vip-level" name="vip-level"  type="text" class="row-text" > asdfasdfasdf</p>
                 </div>
             </div>
             <div class="row-line col-xs-12"></div>
@@ -265,11 +265,11 @@
         }
 
 
-        function reloadForm(data) {
+        function reloadForm() {
             //读取数据
             console.log('sss');
-            $("#progressText").show();
-            $("#progressText2").show();
+            $("#bind-wechat").hide();
+
 
 
             <!--==========================网络请求============================-->
@@ -295,8 +295,14 @@
                         $("#mobilePhone").html(result.result.MobilePhone)
                         $("#email").html(result.result.Email)
                         $("#vip-level").html(result.result.VipInfo)
-                    } else {
 
+                        if(result.reslut.Vip == "super"){
+                            $("#bind-wechat").hide();
+                        }else{
+                            $("#bind-wechat").show();
+                        }
+                    } else {
+                        alert(result.errmsg)
                     }
 
                 },
