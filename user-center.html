@@ -335,9 +335,11 @@
             // 二次确认
             if(vip == "super"){
                 alert("您已经是最高会员")
+            }else{
+                window.location.href = "bind-wechat.html?auth="+auth;
             }
 
-            window.location.href = "bind-wechat.html?auth="+auth;
+
 
 
         });
