@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/bind-wechat-confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/bind-wechat-confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bind-wechat.html" beforeDir="false" afterPath="$PROJECT_DIR$/bind-wechat.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bind-wechat-confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+            <state relative-caret-position="277">
+              <caret line="79" column="72" lean-forward="true" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -162,7 +161,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1784" />
+    <option name="x" value="-1783" />
     <option name="y" value="112" />
     <option name="width" value="1766" />
     <option name="height" value="986" />
@@ -259,15 +258,15 @@
       <workItem from="1571725941014" duration="1954000" />
       <workItem from="1571727982630" duration="915000" />
       <workItem from="1571890690210" duration="12193000" />
-      <workItem from="1571909308953" duration="7044000" />
+      <workItem from="1571909308953" duration="7127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58461000" />
+    <option name="totallyTimeSpent" value="58544000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1784" y="112" width="1766" height="986" extended-state="0" />
+    <frame x="-1783" y="112" width="1766" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2773639" />
@@ -494,8 +493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bind-wechat-confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+        <state relative-caret-position="277">
+          <caret line="79" column="72" lean-forward="true" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
