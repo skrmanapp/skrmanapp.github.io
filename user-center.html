@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-xs-4"></div>
                 <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                    <input id="nickName" name="nickName"  type="text" class="row-input">
+                    <input id="nickName" name="nickName"  type="text" class="row-input" >
                 </div>
             </div>
             <div class="row-line col-xs-12"></div>
@@ -121,7 +121,41 @@
 
             <!-- row -->
 
+            <!-- row -->
 
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        手机号
+                    </p>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6" style="  display: flex;justify-content: flex-end;">
+                    <p id="mobilePhone"   type="text" class="row-text" > </p>
+                </div>
+            </div>
+            <div class="row-line col-xs-12"></div>
+
+            <!-- row -->
+
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        邮箱
+                    </p>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6" style="  display: flex;justify-content: flex-end;">
+                    <p id="email"   type="text" class="row-text" > </p>
+                </div>
+            </div>
+            <div class="row-line col-xs-12"></div>
+
+            <!-- row -->
 
             <!-- head -->
             <div class="col-xs-12 table-head " >
@@ -140,11 +174,11 @@
 
                 <div class="col-xs-4">
                     <p class="row-title-s" >
-                        会员等级
+                        会员信息
                     </p>
                 </div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-6" style="  display: flex;justify-content: flex-end;">
                     <p id="vip-level" name="vip-level"  type="text" class="row-text" > </p>
                 </div>
             </div>
@@ -157,20 +191,20 @@
 
             <!-- row -->
 
-            <!--<div class=" table-row-s col-xs-12">-->
+            <div class=" table-row-s col-xs-12" id="bind-wechat">
 
-                <!--<div class="col-xs-4">-->
-                    <!--<p class="row-title-s" >-->
-                        <!--兑换码-->
-                    <!--</p>-->
-                <!--</div>-->
-                <!--<div class="col-xs-4"></div>-->
-                <!--<div class="col-xs-4" style="  display: flex;justify-content: flex-end;">-->
-                    <!--<p id="vip-vertify" name="vip-level"  type="text" class="row-text"> </p>-->
-                    <!--<i class="fa fa-angle-right fa-2x row-icon"></i>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row-line col-xs-12" ></div>-->
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        绑定微信
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <p   type="text" class="row-text"> </p>
+                    <i class="fa fa-angle-right fa-2x row-icon"></i>
+                </div>
+            </div>
+            <div class="row-line col-xs-12" ></div>
 
             <!-- row -->
 
@@ -190,11 +224,11 @@
 
 
 
-    <div class="row " style="margin-top: 50px">
-        <div class="col-xs-1"> </div>
-        <button id="add-button" type="button" class="col-xs-10 table-button">保存</button>
-        <div class="col-xs-1"> </div>
-    </div>
+    <!--<div class="row " style="margin-top: 50px">-->
+    <!--<div class="col-xs-1"> </div>-->
+    <!--<button id="add-button" type="button" class="col-xs-10 table-button">保存</button>-->
+    <!--<div class="col-xs-1"> </div>-->
+    <!--</div>-->
 
 
 </main>
@@ -211,20 +245,14 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
-<!-- Slick slider -->
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<!-- Ajax contact form  -->
-<script type="text/javascript" src="assets/js/app.js"></script>
+
+
 
 
 <script type="text/javascript">
 
     jQuery(document).ready(function($){
 
-        var cosReady = false;
-        var credentials;
-        var _data;
-            // 初始化实例
 
         var auth = "null";
         auth = UrlParm.parm("auth");
@@ -264,6 +292,8 @@
                     if (result.errcode == 0) {
                         $("#user-avatar-image").attr('src',result.result.Avatar);
                         $("#nickName").val(result.result.NickName)
+                        $("#mobilePhone").html(result.result.MobilePhone)
+                        $("#email").html(result.result.Email)
                         $("#vip-level").html(result.result.VipInfo)
                     } else {
 
@@ -290,17 +320,23 @@
 
 
         $("#user-avatar-image").click(function(){
-            // 二次确认
 
 
-            $("#fileSelector").val('');
-            $("#fileSelector").trigger("click");
+            //
+            // $("#fileSelector").val('');
+            // $("#fileSelector").trigger("click");
 
 
         });
 
-        // // 接下来可以通过 cos 实例调用 COS 请求。
-        // // TODO
+        $("#bind-wechat").click(function(){
+            // 二次确认
+
+
+            window.location.href = "bind-wechat.html?auth="+auth;
+
+
+        });
 
 
 

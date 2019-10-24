@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Apex App : Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body and title font -->
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top: 100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="modal-confirm">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="hiddenButton" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"></button>
+
+
+<!-- Start Contact -->
+<section id="mu-contact">
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+
+                    <div class="mu-title-area">
+                        <h2 class="mu-heading-title">确认绑定 </h2>
+                        <span class="mu-title-dot"></span>
+
+                    </div>
+
+
+
+                    <div class="mu-footer-area" style="margin-top: 0px">
+                        <img class="mu-profile-img" id="user-avatar-image"  alt="无法获取头像"></a>
+                        <p class="mu-copy-right" style="margin-top: 20px;font-size: 20px" id="user-nickname"></p>
+                        <p class="mu-copy-right" style="margin-top: 0px;font-size: 15px;color: goldenrod" id="user-vipinfo"></p>
+                        <p class="mu-copy-right" style="margin-top: 0px;font-size: 8px;color: gray" id="user-vipinfo-help"></p>
+
+
+                    </div>
+
+
+                    <div class="mu-footer-area" style="margin-top: 0px">
+                        <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;"  id="bind-button"><span>绑定</span></button>
+                        <p class="mu-copy-right" style="font-size: 12px;margin-top: 20px">注意：微信会员仅限绑定一次！绑定后您的微信或您的手机号或邮箱将作为唯一确定您身份的信息</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</section>
+<!-- End Contact -->
+
+
+
+
+<!-- End main content -->
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/tool.js"></script>
+
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+
+        var readyTask = false;
+        var auth = "null";
+        auth = UrlParm.parm("auth");
+        var vipcode = "null";
+        vipcode = UrlParm.parm("vipcode");
+
+        console.log(auth)
+        if(!auth || auth == 'null'){
+            alert('进入参数错误！')
+            return
+        }
+        if(!vipcode || vipcode == 'null'){
+            alert('进入参数错误！')
+            return
+        }
+
+
+        $("#bind-button").hide();
+        $("#modal-confirm").hide();
+        function initWeapp() {
+            //读取数据
+
+
+
+            <!--==========================网络请求============================-->
+            var requestData = {
+                vipcode: vipcode
+
+            }
+            var dataStr =  JSON.stringify(requestData)
+            console.log(dataStr)
+            $.ajax({
+                type: "post", //提交方式
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/checkWeapp',//路径
+                crossDomain: true,//跨域
+                dataType: 'json',
+                headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                contentType: "application/json; charset=utf-8",
+                data: dataStr,//数据，这里使用的是Json格式进行传输
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    console.log('result');
+                    console.log(result);
+                    if (result.errcode == 0) {
+
+                        $("#bind-button").show();
+                        $("#user-avatar-image").attr('src',result.avatar);
+                        $("#user-nickname").html(result.nickName)
+                        if(result.vipType=="base"){
+                            $("#user-vipinfo").html("基础会员")
+                            $("#user-vipinfo-help").html("Tips:若您是高级会员，请到小程序中把高级会员码绑定上哟～绑定好了这里会自动识别")
+                        }else{
+                            $("#user-vipinfo").html("高级会员")
+                            var expiredTime =  result.expiredTime
+                            var  expiredDate  = new Date(expiredTime)
+                            $("#user-vipinfo-help").html("有效期:"+expiredDate.toLocaleDateString())
+                        }
+                        if(result.nickName == "神秘的达人朋友"){
+                            showAlert("建议到SKR达人小程序中点击【用户授权】更新您的信息")
+
+                        }
+
+                    } else {
+                        showAlert(result.errmsg)
+
+                    }
+
+                },
+                error: (err, type) => {
+
+
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+        initWeapp();
+
+
+
+
+
+
+        // });
+
+
+
+
+        $("#bind-button").click(function(){
+            readyTask = true
+            $("#modal-body").html("确认绑定吗")
+            $("#modal-confirm").click(function() {
+                 if(readyTask == true){
+
+                     readyTask = false
+                     bindTask()
+                 }
+
+
+            })
+            $("#modal-confirm").show();
+            $("#hiddenButton").trigger("click");
+
+
+        });
+
+
+        function showAlert(content) {
+
+            $("#modal-body").html(content)
+            $("#modal-confirm").hide();
+            $("#hiddenButton").trigger("click");
+        }
+
+        function bindTask() {
+            //读取数据
+
+
+            <!--==========================网络请求============================-->
+            var requestData = {
+                "auth":auth,
+                "vipcode":vipcode,
+            }
+            var dataStr =  JSON.stringify(requestData)
+            console.log(dataStr)
+            $.ajax({
+                type: "post", //提交方式
+                url: request_url + '/UserBindWeapp',//路径
+                crossDomain: true,//跨域
+                dataType: 'json',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                data: dataStr,//数据，这里使用的是Json格式进行传输
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    console.log('result');
+                    console.log(result);
+                    if (result.errcode == 0) {
+                       alert("操作成功")
+                        window.location.href = "user-center.html?auth="+auth;
+                    } else {
+                        showAlert("操作失败！"+result.errmsg)
+
+                    }
+
+                },
+                error: (err, type) => {
+
+
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Apex App : Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body and title font -->
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin-top: 100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">登陆码不对</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="hiddenButton" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"></button>
+
+
+<!-- Start Contact -->
+<section id="mu-contact">
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area">
+
+                    <div class="mu-title-area">
+                        <h2 class="mu-heading-title">绑定微信 </h2>
+                        <span class="mu-title-dot"></span>
+
+                    </div>
+
+
+
+
+
+                    <div class="mu-title-area">
+                        <div class="col-md-12">
+                            <div class="mu-contact-left">
+                                <div id="form-messages"></div>
+                                <form class="mu-contact-form">
+
+                                    <div class="form-group">
+                                        <input type="text"  placeholder="输入登陆码" id="vipcode" class="form-control" style="text-align: center">
+                                    </div>
+
+
+                                </form>
+                                <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="vipcode-check"><span>查询</span></button>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12">
+                            <div class="mu-contact-content">
+                                <div class="mu-contact-right-single" style="text-align: left">
+                                    <p><strong>如何绑定？</strong></p>
+                                    <p >已是微信SKR达人会员的朋友，前往微信SKR达人，点击<strong>立即获取APP</strong>即可看到登陆码</p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</section>
+<!-- End Contact -->
+
+
+
+
+<!-- End main content -->
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- Bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/tool.js"></script>
+
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+
+
+        var auth = "null";
+        auth = UrlParm.parm("auth");
+
+
+        console.log(auth)
+        if(!auth || auth == 'null'){
+            alert('进入参数错误！')
+            return
+        }
+
+
+        function checkVip(code) {
+            //读取数据
+
+
+
+            <!--==========================网络请求============================-->
+            var requestData = {
+                vipcode: code
+
+            }
+            var dataStr =  JSON.stringify(requestData)
+            console.log(dataStr)
+            $.ajax({
+                type: "post", //提交方式
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/checkWeapp',//路径
+                crossDomain: true,//跨域
+                dataType: 'json',
+                headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                contentType: "application/json; charset=utf-8",
+                data: dataStr,//数据，这里使用的是Json格式进行传输
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    console.log('result');
+                    console.log(result);
+                    if (result.errcode == 0) {
+                        window.location.href = "bind-wechat-confirm.html?auth="+auth+"&vipcode="+code;
+                    } else {
+                        $("#hiddenButton").trigger("click");
+                    }
+
+                },
+                error: (err, type) => {
+
+
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+
+
+
+
+        // });
+
+
+
+
+        $("#vipcode-check").click(function(){
+            let _code =  $("#vipcode").val()
+            checkVip(_code)
+
+        });
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
