@@ -187,6 +187,7 @@
                     if (result.errcode == 0) {
                         window.location.href = "bind-wechat-confirm.html?auth="+auth+"&vipcode="+code;
                     } else {
+                        alert(result.errmsg)
                         $("#hiddenButton").trigger("click");
                     }
 
