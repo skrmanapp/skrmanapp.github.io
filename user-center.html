@@ -179,7 +179,7 @@
                 </div>
                 <div class="col-xs-2"></div>
                 <div class="col-xs-6" style="  display: flex;justify-content: flex-end;font-size: 12px">
-                    <p id="vip-level" name="vip-level"  type="text" class="row-text" > asdfasdfasdf</p>
+                    <p id="vip-level" name="vip-level"  type="text" class="row-text" ></p>
                 </div>
             </div>
             <div class="row-line col-xs-12"></div>
@@ -257,7 +257,7 @@
         var auth = "null";
         auth = UrlParm.parm("auth");
         var vip = "null"
-
+        $("#bind-wechat").hide()
         console.log(auth)
         if(!auth || auth == 'null'){
             alert('进入参数错误！')
