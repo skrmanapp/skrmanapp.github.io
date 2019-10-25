@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bind-wechat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+            <state relative-caret-position="710">
+              <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -162,6 +162,7 @@
       <find>alert</find>
       <find>showalert</find>
       <find>bootstrap.min</find>
+      <find>vipcode</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -299,12 +300,12 @@
       <workItem from="1571931786431" duration="78000" />
       <workItem from="1571961914490" duration="2237000" />
       <workItem from="1571971370060" duration="310000" />
-      <workItem from="1571976046442" duration="1342000" />
+      <workItem from="1571976046442" duration="1707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64644000" />
+    <option name="totallyTimeSpent" value="65009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="45" width="1766" height="986" extended-state="0" />
@@ -554,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bind-wechat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="139" column="32" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+        <state relative-caret-position="710">
+          <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
