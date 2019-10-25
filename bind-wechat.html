@@ -137,7 +137,7 @@
 
 
 <!-- jQuery library -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Bootstrap -->
 
@@ -181,7 +181,7 @@
 
             }
             var dataStr =  JSON.stringify(requestData)
-            console.log(dataStr)
+
             $.ajax({
                 type: "post", //提交方式
                 url: 'https://cloud.bmob.cn/aed0843961fb06dc/checkWeapp',//路径
@@ -202,7 +202,7 @@
 
                 },
                 error: (jqXHR, textStatus, errorThrown) => {
-                    weui.alert(jqXHR.status+jqXHR.responseText+jqXHR.statusText+textStatus+textStatus.toLocaleString())
+                    weui.alert(jqXHR.status+jqXHR.responseText+jqXHR.statusText+textStatus+textStatus.toLocaleString()+errorThrown.message)
 
                 },
 
