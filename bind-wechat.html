@@ -108,7 +108,7 @@
                             <div class="mu-contact-content">
                                 <div class="mu-contact-right-single" style="text-align: left">
                                     <p><strong>如何绑定？</strong></p>
-                                    <p >已是微信SKR达人会员的朋友，前往微信SKR达人，点击<strong>立即获取APP</strong>即可看到登陆码.</p>
+                                    <p >已是微信SKR达人会员的朋友，前往微信SKR达人，点击<strong>立即获取APP</strong>即可看到登陆码..</p>
                                 </div>
 
 
@@ -200,8 +200,8 @@
                     }
 
                 },
-                error: (err, type) => {
-                    weui.alert(err.statusText)
+                error: (jqXHR, textStatus, errorThrown) => {
+                    weui.alert(jqXHR.status+jqXHR.responseText+jqXHR.statusText+textStatus)
 
                 },
 
