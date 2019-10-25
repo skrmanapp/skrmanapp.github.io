@@ -182,7 +182,7 @@
             }
 
             var dataStr =  JSON.stringify(requestData)
-            weui.alert(dataStr)
+
             $.ajax({
                 type: "post", //提交方式
                 url: 'https://cloud.bmob.cn/aed0843961fb06dc/checkWeapp',//路径
@@ -197,7 +197,7 @@
                     if (result.errcode == 0) {
                         window.location.href = "bind-wechat-confirm.html?auth="+auth+"&vipcode="+code;
                     } else {
-                        weui.alert(result.errmsg)
+                        weui.toast(result.errmsg, 3000);
 
                     }
 
