@@ -205,7 +205,7 @@
 
                 },
                 error: (err, type) => {
-                    weui.alert(err.toLocaleString())
+                    weui.alert(err.statusText)
 
                 },
 
@@ -279,7 +279,7 @@
                 },
                 error: (err, type) => {
 
-
+                    weui.alert(err.statusText)
                 },
 
 
