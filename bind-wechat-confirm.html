@@ -223,7 +223,15 @@
 
         // });
 
+        function bindSuccess() {
 
+            weui.alert('操作成功！为保证您能顺利收到推送，请将APP重启一次', function(){
+
+                window.location.href = "user-center.html?auth="+auth;
+            }, {
+                title: '提示'
+            });
+        }
 
 
         $("#bind-button").click(function(){
@@ -269,8 +277,7 @@
                     console.log('result');
                     console.log(result);
                     if (result.errcode == 0) {
-                       alert("操作成功")
-                        window.location.href = "user-center.html?auth="+auth;
+                        bindSuccess()
                     } else {
                         weui.alert("操作失败！"+result.errmsg)
 
