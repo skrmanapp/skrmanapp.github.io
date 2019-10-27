@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/download-iosnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-iosnew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/download-iosnew.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
@@ -36,6 +37,15 @@
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="68" column="77" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -109,7 +119,6 @@
       <list>
         <option value="$PROJECT_DIR$/backup.html" />
         <option value="$PROJECT_DIR$/download-ios.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/download-android.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
@@ -125,12 +134,13 @@
         <option value="$PROJECT_DIR$/user-center.html" />
         <option value="$PROJECT_DIR$/bind-wechat-confirm.html" />
         <option value="$PROJECT_DIR$/download-iosnew.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="y" value="44" />
+    <option name="x" value="305" />
+    <option name="y" value="49" />
     <option name="width" value="1766" />
     <option name="height" value="986" />
   </component>
@@ -240,12 +250,12 @@
       <workItem from="1571976046442" duration="2162000" />
       <workItem from="1571990266565" duration="3242000" />
       <workItem from="1572099997633" duration="1070000" />
-      <workItem from="1572134176149" duration="4375000" />
+      <workItem from="1572134176149" duration="4525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74151000" />
+    <option name="totallyTimeSpent" value="74301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="44" width="1766" height="986" extended-state="0" />
@@ -339,13 +349,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4470">
-          <caret line="67" column="56" lean-forward="true" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -602,6 +605,13 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="68" column="77" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="77" />
         </state>
       </provider>
     </entry>
