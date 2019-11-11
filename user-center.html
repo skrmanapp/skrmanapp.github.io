@@ -214,7 +214,24 @@
 
             <!-- row -->
 
+            <!-- row -->
 
+            <div class=" table-row-s col-xs-12" id="test-push" style="display: none;">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        测试推送
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <p   type="text" class="row-text"> </p>
+                    <i class="fa fa-angle-right fa-2x row-icon"></i>
+                </div>
+            </div>
+            <div class="row-line col-xs-12" ></div>
+
+            <!-- row -->
 
 
         </div>
@@ -267,6 +284,11 @@
         var tapCount = 5
 
         console.log(auth)
+
+
+
+
+
         if(!auth || auth == 'null'){
 
             weui.alert('进入参数错误！');
@@ -305,7 +327,9 @@
                         $("#email").html(result.result.Email)
                         $("#vip-level").html(result.result.VipInfo)
                         vip = result.result.Vip
-
+                        if(vip!='null'){
+                            $("#test-push").css("display","unset");
+                        }
                     } else {
                         weui.alert(result.errmsg)
                     }
@@ -337,6 +361,46 @@
 
 
         });
+
+
+        $("#test-push").click(function(){
+
+            <!--==========================网络请求============================-->
+            var requestData = {
+                "auth":auth
+            }
+            var dataStr =  JSON.stringify(requestData)
+            console.log(dataStr)
+            $.ajax({
+                type: "post", //提交方式
+                url: request_url + '/MessageTest',//路径
+                crossDomain: true,//跨域
+                dataType: 'json',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                data: dataStr,//数据，这里使用的是Json格式进行传输
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    console.log('result');
+                    console.log(result);
+                    if (result.errcode == 0) {
+                        weui.alert("已提交测试，如无推送，请尝试重启手机再测试")
+                    } else {
+                        weui.alert(result.errmsg)
+                    }
+
+                },
+                error: (err, type) => {
+
+                    weui.alert(err.statusText)
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+
+        });
+
 
 
         $("#user-avatar-image").click(function(){
