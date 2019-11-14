@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,11 +16,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="554" column="66" selection-start-line="554" selection-start-column="66" selection-end-line="554" selection-end-column="66" />
+            <state relative-caret-position="759">
+              <caret line="570" selection-start-line="570" selection-end-line="570" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/download-ios.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="83" column="197" selection-start-line="83" selection-start-column="197" selection-end-line="83" selection-end-column="197" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -27,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/monitorStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -104,17 +118,17 @@
         <option value="$PROJECT_DIR$/help-cjwt.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/help-recovery.html" />
-        <option value="$PROJECT_DIR$/download-ios.html" />
         <option value="$PROJECT_DIR$/user-center.html" />
         <option value="$PROJECT_DIR$/monitorStyle.css" />
         <option value="$PROJECT_DIR$/monitor.html" />
+        <option value="$PROJECT_DIR$/download-ios.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-42" />
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
+    <option name="x" value="231" />
+    <option name="y" value="29" />
+    <option name="width" value="1311" />
     <option name="height" value="1007" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -125,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,18 +260,19 @@
       <workItem from="1573641812683" duration="96000" />
       <workItem from="1573711043098" duration="7688000" />
       <workItem from="1573719312746" duration="902000" />
-      <workItem from="1573740594507" duration="1995000" />
+      <workItem from="1573740594507" duration="2600000" />
+      <workItem from="1573775699528" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98293000" />
+    <option name="totallyTimeSpent" value="98916000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-42" y="22" width="1920" height="1007" extended-state="0" />
+    <frame x="0" y="22" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -490,16 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download-ios.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user-center.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -507,17 +512,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitorStyle.css">
+    <entry file="file://$PROJECT_DIR$/monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        <state relative-caret-position="759">
+          <caret line="570" selection-start-line="570" selection-end-line="570" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monitor.html">
+    <entry file="file://$PROJECT_DIR$/monitorStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="554" column="66" selection-start-line="554" selection-start-column="66" selection-end-line="554" selection-end-column="66" />
+        <state relative-caret-position="1095">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download-ios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="83" column="197" selection-start-line="83" selection-start-column="197" selection-end-line="83" selection-end-column="197" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
