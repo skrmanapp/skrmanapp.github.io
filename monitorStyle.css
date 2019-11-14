@@ -1,0 +1,233 @@
+
+body,
+html {
+    overflow-x:hidden;
+    background-color: #F5F5F5;
+}
+.AutoBar{
+    position: relative;
+    margin-top: 0px;
+    width: 100%;
+    top: 0px;
+    height:40px;
+    background: white;
+    border-bottom-style: solid;
+    border-color: #dfdfdfdf;
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.AutoBarButton{
+    position: relative;
+    width: 24%;
+    height:24px;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:black;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333333;
+}
+
+.rowView{
+    position:relative;
+    background-color: #f5f5f5;
+    margin: 16px 6% 16px 6%;
+    width: 88%;
+    height: 218px;
+    box-shadow: 0 5px 8px rgba(20, 20, 20, .1);
+    border-radius:6px;
+    overflow:hidden;
+
+}
+
+.pic{
+
+    position:absolute;
+    width: 35%;
+    right: 4%;
+    height:120px;
+    top: 5px;
+    overflow: hidden;
+    overflow:hidden;
+    padding-top:50%;
+}
+.pic img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+.rowViewTitleLine{
+    position:absolute;
+    background-color: #000000;
+    left: 14px;
+    top: 15px;
+    width: 5px;
+    height: 15px;
+    border-radius:2px;
+
+}
+
+.rowViewTitle{
+    position:absolute;
+    color: #555555;
+    left: 8%;
+    top: 15px;
+    width: 60%;
+    height: 30px;
+    border-radius:2px;
+    line-height: 15px;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: bold;
+
+}
+
+
+
+
+.rowViewOriginal{
+    position:absolute;
+    color: #555555;
+    left: 5%;
+    top: 50px;
+    width: 50%;
+    height: 100px;
+    border-radius:2px;
+    line-height: 15px;
+    font-size:12px;
+    word-break: break-all;
+}
+.rowViewInfo{
+    position:absolute;
+    color: #555555;
+    left: 5%;
+    top: 190px;
+    width: 90%;
+    height: 30px;
+    border-radius:2px;
+    line-height: 15px;
+    font-size:12px;
+    overflow: hidden;
+
+}
+
+
+
+
+.table-view{
+    background-color: #ffffff;
+}
+.table-head-title{
+    color: #b1b1b1;
+    line-height: 40px;
+
+
+}
+.user-avatar{
+    margin-top: 8px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+.row-line{
+    background-color: #F5F5F5;
+
+    height: 1px;
+
+    width: 100%;
+}
+
+
+
+
+
+.table-row-m{
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 80px;
+}
+.row-title-m{
+    color: gray;
+    margin-left: 0px;
+    line-height: 80px;
+    text-align: left;
+}
+
+
+
+
+.table-row-s{
+    height: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row-title-s{
+    color: gray;
+    margin-left: 0px;
+    line-height: 50px;
+    text-align: left;
+
+}
+
+
+.row-input{
+    height: 50px;
+    line-height: 30px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+}
+.row-text{
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+}
+
+.row-select{
+    height: 50px;
+    line-height: 30px;
+    text-align: right;
+    color:darkgray;
+    border:none;
+    border:0;
+    outline: none;
+    background-color: transparent;
+}
+
+.row-icon{
+    margin-top: 9px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    color:lightgray;
+    border:none;
+    border:0;
+    outline: none;
+}
+
+.table-button{
+    height: 40px;
+    background: #ffffff;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkred;
+    color: darkred;
+}
