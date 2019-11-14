@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitorStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/monitorStyle.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/monitor.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="519">
-              <caret line="554" column="63" selection-start-line="554" selection-start-column="63" selection-end-line="554" selection-end-column="63" />
+              <caret line="554" column="66" selection-start-line="554" selection-start-column="66" selection-end-line="554" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -114,8 +112,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="146" />
-    <option name="y" value="25" />
+    <option name="x" value="-42" />
+    <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -248,15 +246,15 @@
       <workItem from="1573641812683" duration="96000" />
       <workItem from="1573711043098" duration="7688000" />
       <workItem from="1573719312746" duration="902000" />
-      <workItem from="1573740594507" duration="1508000" />
+      <workItem from="1573740594507" duration="1995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97806000" />
+    <option name="totallyTimeSpent" value="98293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="146" y="25" width="1920" height="1007" extended-state="0" />
+    <frame x="-42" y="22" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -519,7 +517,7 @@
     <entry file="file://$PROJECT_DIR$/monitor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
-          <caret line="554" column="63" selection-start-line="554" selection-start-column="63" selection-end-line="554" selection-end-column="63" />
+          <caret line="554" column="66" selection-start-line="554" selection-start-column="66" selection-end-line="554" selection-end-column="66" />
         </state>
       </provider>
     </entry>
