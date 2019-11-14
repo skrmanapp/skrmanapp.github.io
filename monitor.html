@@ -126,6 +126,7 @@
         var AutoRefresh = false;
         var onNotification = false;
         var orderByUpdate = false;
+        var country = "cn"
         var ref = setInterval(function(){
             timeTask();
         },1000);
@@ -134,16 +135,19 @@
             if (current_country != null){
                 if (current_country == 'CN') {
                     baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
-
+                    country = "cn"
                     $("#AutoBar_3").html("地区:国区")
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
+                    country = "us"
                     baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
+                    country = "gb"
                     baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
+                    country = "jp"
                     baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
                 }
 
@@ -232,6 +236,7 @@
                     onClick: function () {
                         baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
                         $("#AutoBar_3").html("地区:国区")
+                        country = "cn"
                         localStorage.setItem('current_country', 'CN');
                         reloadSnkrs()
                     }
@@ -240,6 +245,7 @@
                     onClick: function () {
                         baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
                         $("#AutoBar_3").html("地区:美区")
+                        country = "us"
                         localStorage.setItem('current_country', 'US');
                         reloadSnkrs()
                     }
@@ -248,6 +254,7 @@
                     onClick: function () {
                         baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
                         $("#AutoBar_3").html("地区:英区")
+                        country = "gb"
                         localStorage.setItem('current_country', 'CN');
                         reloadSnkrs()
                     }
@@ -256,6 +263,7 @@
                     onClick: function () {
                         baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
                         $("#AutoBar_3").html("地区:日区")
+                        country = "jp"
                         localStorage.setItem('current_country', 'JP');
                         reloadSnkrs()
                     }
@@ -403,7 +411,6 @@
                 },
                 error: (err, type) => {
 
-                    weui.alert(err.statusText)
                 },
 
 
@@ -444,6 +451,7 @@
                 var info = ""
                 var buyStep = 0
                 var original = "未获取到"
+                var seoSlug = ""
                 try {
 
 
@@ -512,6 +520,8 @@
                     info = '【发售日期】' + startSellTime
 
 
+                    seoSlug = threads[i].seoSlug
+
                     var tempSku = ""
                     var skuCount = 0
                     for (var j = 0; j < threads[i].product.skus.length; j++) {
@@ -542,16 +552,26 @@
 
 
 
-
+                let   jumpUrl = "https://www.nike.com/"+country+"launch/t/"+seoSlug;
 
                 $("#shoeList").html( $("#shoeList").html() +"     " +
                     " <div class=' rowView '  >\n" +
+                    " <div class=' rowHead '  >\n" +
                     "                <div class='pic' ><img src="+image+" ></div>\n" +
                     "                <div class='rowViewTitle'>"+title+"</div>\n" +
                     "                <div class='rowViewTitleLine'></div>\n" +
                     "                <div class='rowViewOriginal'>"+original+"</div>\n" +
                     "                <div class='rowViewInfo'>"+info+"</div>\n" +
-                    "            </div>" )
+                    "            </div>"+
+
+                    " <div class=' rowBottom '  >\n" +
+                    "  <a class=' rowButton ' href='"+jumpUrl+"' >查看商品</a>          " +
+                    "" +
+                    "</div>"+
+
+                    "            </div>"
+
+                )
 
 
 
