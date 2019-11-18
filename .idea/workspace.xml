@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/android-cjwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-cjwt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-iosnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-iosnew.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,13 +28,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/download-ios.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="108" column="80" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="80" />
+            <state relative-caret-position="668">
+              <caret line="147" column="29" lean-forward="true" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#strong#0;n#p#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/download-iosnew.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="134" column="78" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -55,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android-cjwt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+            <state relative-caret-position="35">
+              <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#strong#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -183,7 +193,6 @@
         <option value="$PROJECT_DIR$/user-center-android.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/select-device.html" />
-        <option value="$PROJECT_DIR$/download-iosnew.html" />
         <option value="$PROJECT_DIR$/bind-wechat.html" />
         <option value="$PROJECT_DIR$/user-centerv12.html" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -191,12 +200,13 @@
         <option value="$PROJECT_DIR$/user-center.html" />
         <option value="$PROJECT_DIR$/monitorStyle.css" />
         <option value="$PROJECT_DIR$/monitor.html" />
-        <option value="$PROJECT_DIR$/download-ios.html" />
         <option value="$PROJECT_DIR$/download-android.html" />
         <option value="$PROJECT_DIR$/android-help.html" />
         <option value="$PROJECT_DIR$/android-pzff.html" />
         <option value="$PROJECT_DIR$/help-cjwt.html" />
         <option value="$PROJECT_DIR$/android-cjwt.html" />
+        <option value="$PROJECT_DIR$/download-ios.html" />
+        <option value="$PROJECT_DIR$/download-iosnew.html" />
       </list>
     </option>
   </component>
@@ -339,15 +349,15 @@
       <workItem from="1573775699528" duration="18000" />
       <workItem from="1573792334787" duration="1195000" />
       <workItem from="1573998910497" duration="4568000" />
-      <workItem from="1574036013478" duration="2280000" />
+      <workItem from="1574036013478" duration="2864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106959000" />
+    <option name="totallyTimeSpent" value="107543000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-286" y="339" width="1920" height="1007" extended-state="0" />
+    <frame x="28" y="67" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -461,13 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
           <caret line="187" column="101" selection-start-line="187" selection-start-column="101" selection-end-line="187" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download-iosnew.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -604,18 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download-ios.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="108" column="80" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="80" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#p#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download-android.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="730">
@@ -633,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android-cjwt.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="80" column="34" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+        <state relative-caret-position="35">
+          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#strong#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -643,6 +634,25 @@
             <element signature="n#style#0;n#img#1;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#2;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download-ios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="147" column="29" lean-forward="true" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#p#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download-iosnew.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="134" column="78" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
         </state>
       </provider>
     </entry>
