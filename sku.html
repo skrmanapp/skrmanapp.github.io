@@ -381,11 +381,31 @@
 
                             }catch (e) { }
                             try {
-                                console.log("cards.images[image_index].imageUrl")
-                                console.log(card_item.images)
-                                for (var image_index = 0; image_index < card_item.images.length; image_index++) {
 
-                                    imageString =imageString+
+                                for (var image_index = 0; image_index < card_item.images.length; image_index++) {
+                                    try {
+                                        var imageDescriptionString = "";
+                                        imageDescriptionString =
+                                            '<div class=" table-row col-xs-12" >\n' +
+                                            '                <p class="row-key" >\n' +
+                                            '                    图片类型\n' +
+                                            '                </p>\n' +
+                                            '                <p class="row-value" >\n' +
+                                            card_item.images[image_index].type +
+                                            '                </p>\n' +
+                                            '            </div>'+
+
+                                            '<div class=" table-row col-xs-12" >\n' +
+                                            '                <p class="row-key" >\n' +
+                                            '                    alt\n' +
+                                            '                </p>\n' +
+                                            '                <p class="row-value" >\n' +
+                                            card_item.images[image_index].alt +
+                                            '                </p>\n' +
+                                            '            </div>'
+
+                                    }catch (e) {console.log(e) }
+                                    imageString =imageString+imageDescriptionString+
                                         '<div class="pic" ><img src="'+card_item.images[image_index].imageUrl+'" ></div>'
                                 }
 
@@ -395,9 +415,7 @@
 
                             var htmlString = '<div class="  col-xs-12" style="width: 100%;padding: 10%">\n' +
                                 insideHtmlString+imageString+
-                                '                <p >\n' +
-                                card_item.description+
-                                '                </p>\n' +
+
                                 '            </div>'
                             console.log(htmlString)
                             $("#cardTable").html($("#cardTable").html()+htmlString)
