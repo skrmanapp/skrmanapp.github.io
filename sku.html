@@ -73,6 +73,9 @@
             <div class='smallTitle' id="skuTitle" style="visibility: hidden">库存情况（US美码自行转换，数量为预估值）</div>
             <div id="skuTable"></div>
 
+
+            <div id="cardTable"></div>
+
         </div>
 
 
@@ -280,12 +283,16 @@
                     }catch (e) { }
 
                     try {
+                        var selectionEngine = "FLOW"
+                        if (shoe_item.product.selectionEngine) {
+                            selectionEngine = shoe_item.product.selectionEngine
+                        }
                         var htmlString = '<div class=" table-row col-xs-12" >\n' +
                             '                <p class="row-key" >\n' +
                             '                    发售方式\n' +
                             '                </p>\n' +
                             '                <p class="row-value" >\n' +
-                            shoe_item.product.selectionEngine +
+                            selectionEngine +
                             '                </p>\n' +
                             '            </div>'
                         $("#attributeTable").html($("#attributeTable").html()+htmlString)
@@ -344,6 +351,60 @@
                     startQuerySku()
 
 
+
+
+                    try {
+                        var cards = shoe_item.cards
+                        for (var j = 0; j < cards.length; j++) {
+                            let card_item = cards[j]
+                            var insideHtmlString = "";
+                            var imageString = "";
+                            try {
+                                insideHtmlString =
+                                    '<div class=" table-row col-xs-12" >\n' +
+                                    '                <p class="row-key" >\n' +
+                                    '                    内容类型\n' +
+                                    '                </p>\n' +
+                                    '                <p class="row-value" >\n' +
+                                    card_item.type +
+                                    '                </p>\n' +
+                                    '            </div>'+
+
+                                    '<div class=" table-row col-xs-12" >\n' +
+                                    '                <p class="row-key" >\n' +
+                                    '                    iOSOnly\n' +
+                                    '                </p>\n' +
+                                    '                <p class="row-value" >\n' +
+                                    card_item.iOSOnly +
+                                    '                </p>\n' +
+                                    '            </div>'
+
+                            }catch (e) { }
+                            try {
+                                console.log("cards.images[image_index].imageUrl")
+                                console.log(card_item.images)
+                                for (var image_index = 0; image_index < card_item.images.length; image_index++) {
+
+                                    imageString =imageString+
+                                        '<div class="pic" ><img src="'+card_item.images[image_index].imageUrl+'" ></div>'
+                                }
+
+
+                            }catch (e) { }
+                            console.log(card_item.description)
+
+                            var htmlString = '<div class="  col-xs-12" style="width: 100%;padding: 10%">\n' +
+                                insideHtmlString+imageString+
+                                '                <p >\n' +
+                                card_item.description+
+                                '                </p>\n' +
+                                '            </div>'
+                            console.log(htmlString)
+                            $("#cardTable").html($("#cardTable").html()+htmlString)
+                        }
+
+
+                    }catch (e) { }
 
 
                 },
