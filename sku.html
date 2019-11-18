@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>自助监控</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+    <!-- Main Style -->
+    <link href="skuStyle.css" rel="stylesheet">
+
+
+
+
+    <!-- Bootstrap 本地版 -->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+
+
+    <!--  Bootstrap CDN版-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body and title font -->
+
+
+
+</head>
+<body>
+
+
+
+
+
+<!-- Start main content -->
+
+<main role="main">
+
+    <div class="container-fluid" style="padding-left: 0px;padding-right: 0px">
+
+
+        <div class="row table-view">
+
+
+
+
+
+
+                <div class='pic' ><img id="shoeImage" ></div>
+                <div class='subTitle' id="subTitle"></div>
+                <div class='mainTitle' id="mainTitle"></div>
+                <div class='smallTitle' id="smallTitle1"></div>
+                <div class='smallTitle' id="smallTitle2"></div>
+            <div class='smallTitle' id="smallTitle3"></div>
+
+
+            <div id="attributeTable" style="margin-bottom: 150px"></div>
+
+            <div class='smallTitle' id="skuTitle" style="visibility: hidden">库存情况（US美码自行转换，数量为预估值）</div>
+            <div id="skuTable"></div>
+
+        </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+</main>
+
+<!-- End main content -->
+
+
+
+
+<!-- jQuery library -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<!-- tool library -->
+<script src="assets/js/tool.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- we ui -->
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+<!--https://github.com/Tencent/weui.js/blob/master/docs/component/loading.md-->
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+        var loading;
+        var timeTaskId;
+        var total_time = 30; //以秒来存放
+        var current_time = 0;
+        var AutoRefresh = false;
+        var onNotification = false;
+        var orderByUpdate = false;
+        var country = "cn"
+        var skuArray = [];
+
+
+        var currentId = "null";
+        currentId = UrlParm.parm("id");
+
+        if(!currentId || currentId == 'null'){
+
+            weui.alert('进入参数错误！');
+            return
+        }
+        try {
+            var current_country = localStorage.getItem('current_country');
+            if (current_country != null){
+                if (current_country == 'CN') {
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+                    country = "cn"
+
+                } else if (current_country == 'US') {
+
+                    country = "us"
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
+                } else if (current_country == 'UK') {
+
+                    country = "gb"
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
+                } else if (current_country == 'JP') {
+
+                    country = "jp"
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
+                }
+
+
+            }
+            var orderByUpdate_temp = localStorage.getItem('orderByUpdate');
+            if (orderByUpdate_temp != null){
+                if (orderByUpdate_temp == 'true') {
+                    orderByUpdate = true;
+
+                }
+
+
+            }
+        } catch (e) {
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--==========================网络请求============================-->
+
+        function reloadSnkrs() {
+            var currentApi = baseApi;
+            if (orderByUpdate) {
+                currentApi += "&orderBy=lastUpdated"
+            }
+            loading =  weui.loading('加载中');
+            $.ajax({
+                type : "get", //提交方式
+                url : currentApi,//路径
+                crossDomain: true,//跨域
+                timeout:5000,
+                dataType:'json',
+                headers: {
+                    'accept': '*/*',
+                    'accept-language': 'zh-CN',
+                    'Content-Type': 'application/json',
+                },
+                contentType: "application/json",
+                data : {
+
+                },//数据，这里使用的是Json格式进行传输
+                success : function(data) {//返回数据根据结果进行相应的处理
+                    loading.hide()
+                    var threads = data.threads;
+                    for (var i = 0; i < threads.length; i++) {
+                        //=============寻找id================
+                        var  shoeId = threads[i].id
+                        if (shoeId==currentId){
+                            index = i;
+                            break;
+                            //找到id退出循环
+                        }else{
+                            if (i == threads.length-1){
+                                weui.alert('请重新进入');
+                            }
+                        }
+                        //=============寻找id================
+                    }
+
+                    var shoe_item = threads[index]
+                    console.log(shoe_item)
+                   try {
+                       $("#shoeImage").attr("src",shoe_item.imageUrl)
+                   }catch (e) {}
+                    try {
+                        $("#subTitle").html(shoe_item.product.subtitle)
+                    }catch (e) { }
+                    try {
+                        $("#mainTitle").html(shoe_item.product.title)
+                    }catch (e) { }
+                    try {
+                        $("#smallTitle1").html("价格:"+shoe_item.product.price.fullRetailPrice)
+                    }catch (e) { }
+
+                    try {
+                        var startSelldata = new Date();
+                        var startSellTime = shoe_item.product.startSellDate
+                        if (isNaN(startSellTime) && !isNaN(Date.parse(startSellTime))) {
+                            startSelldata = new Date(startSellTime);
+                            startSellTime = shoe_item.product.startSellDate.substring(0, 19) + '(+8为北京时间)'
+
+
+                            var BJ_Hour = parseInt(startSellTime.substring(11, 13)) + 8
+                            var BJ_Day = parseInt(startSellTime.substring(8, 10))
+                            if (BJ_Hour > 24) {
+                                BJ_Day = BJ_Day + 1
+                                BJ_Hour = BJ_Hour - 24
+                            }
+                            var BJ_Hour_Str = '' + BJ_Hour;
+                            if (BJ_Hour < 10) {
+                                BJ_Hour_Str = '0' + BJ_Hour_Str
+                            }
+                            startSellTime = "预计:"+startSellTime.substring(0, 8) + BJ_Day + " " + BJ_Hour_Str + startSellTime.substring(13, 19)
+
+                        } else {
+                            startSellTime = '未知时间'
+                        }
+                        $("#smallTitle2").html(startSellTime+"开售")
+                    }catch (e) {
+
+                    }
+
+
+                    try {
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            '                    快速搜索\n' +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            shoe_item.product.style +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                    }catch (e) { }
+
+                    try {
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            '                    发售方式\n' +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            shoe_item.product.selectionEngine +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                    }catch (e) { }
+
+                    try {
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            '                    发售状态\n' +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            shoe_item.product.merchStatus +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                    }catch (e) { }
+
+
+                    try {
+                        var restricted = shoe_item.restricted
+                        var restrictedStr = '未知'
+                        if (typeof (restricted) == "undefined") {
+
+                        } else {
+                            if (restricted) {
+                                restrictedStr = '专属购买/突击发布'
+                            } else {
+                                restrictedStr = '否'
+                            }
+                        }
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            '                    专属购买\n' +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            restrictedStr +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                    }catch (e) { }
+
+
+                    try {
+                        skuArray = [];
+                        for (var j = 0; j < shoe_item.product.skus.length; j++) {
+                            var tempSku =  shoe_item.product.skus[j].nikeSize;
+                            var tempSkuId = shoe_item.product.skus[j].id;
+                            var jsonSku = {
+                                "nikeSize": tempSku || '',
+                                "id": tempSkuId || '',
+                            }
+                            skuArray.push(jsonSku)
+                        }
+
+                    }catch (e) { }
+                    startQuerySku()
+
+
+
+
+                },
+                error: (err, type) => {
+
+                },
+
+
+            });
+        }
+        <!--==========================网络请求============================-->
+
+
+
+
+
+
+
+
+
+
+        <!--==========================网络请求============================-->
+        function startQuerySku() {
+            console.log(skuArray)
+            $("#skuTitle").css("visibility","unset")
+            for (var i = 0; i < skuArray.length;i++){
+                try {
+                    let skuid = skuArray[i].id;
+                    reloadSku(skuid);
+                }catch (e) {
+
+                }
+
+
+            }
+        }
+        function reloadSku(skuid) {
+
+            $.ajax({
+                type : "get", //提交方式
+                url : "https://api.nike.com/deliver/available_skus/v1/" + skuid,//路径
+                crossDomain: true,//跨域
+                timeout:5000,
+                dataType:'json',
+                headers: {
+                    'accept': '*/*',
+                    'accept-language': 'zh-CN',
+                    'Content-Type': 'application/json',
+                },
+                contentType: "application/json",
+                data : {
+
+                },//数据，这里使用的是Json格式进行传输
+                success : function(data) {//返回数据根据结果进行相应的处理
+                    if (data.available){
+                        var levelStr = data.level;
+                        var level = data.level
+                        var skuid =data.id
+                        if (level == "HIGH"){
+                            levelStr = "多 （大于500）"
+                        } else if (level == "MEDIUM") {
+                            levelStr = "中 （约100～500）"
+                        } else if (level == "LOW") {
+                            levelStr = "少 （小于99）"
+                        } else if (level == "NA") {
+                            levelStr = "NA（即将发售无法查询）"
+                        }
+                        var currentSize = "null"
+                        for (var j = 0; j < skuArray.length; j++){
+                            if (skuArray[j].id == skuid)
+                            {
+                                currentSize = "US "+skuArray[j].nikeSize;
+
+                            }
+                        }
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            currentSize +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            levelStr +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#skuTable").html($("#skuTable").html()+htmlString)
+
+                    }
+
+                },
+                error: (err, type) => {
+
+                },
+
+
+            });
+        }
+        <!--==========================网络请求============================-->
+        reloadSnkrs();
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -553,7 +553,7 @@
 
 
                 let   jumpUrl = "https://www.nike.com/"+country+"/launch/t/"+seoSlug;
-
+                console.log("shoeId"+shoeId)
                 $("#shoeList").html( $("#shoeList").html() +"     " +
                     " <div class=' rowView '  >\n" +
                     " <div class=' rowHead '  >\n" +
@@ -565,7 +565,8 @@
                     "            </div>"+
 
                     " <div class=' rowBottom '  >\n" +
-                    "  <a class=' rowButton ' href='"+jumpUrl+"' >查看商品</a>          " +
+                    "  <a class=' rowButton ' href='"+jumpUrl+"' >快速跳转</a>          " +
+                    "  <a class=' rowButton ' href='sku.html?id="+shoeId+"' >查看货量</a>          " +
                     "" +
                     "</div>"+
 
