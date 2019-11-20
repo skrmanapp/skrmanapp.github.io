@@ -51,7 +51,14 @@
                         <h2 class="mu-heading-title">滔博限量发售 </h2>
                         <span class="mu-title-dot"></span>
                     </div>
-                    请打开滔博公众号
+                    <div class="mu-feature-content">
+
+                        <p id="content"></p>
+                        <p >请打开TOPSPORTS微信公众号，点击限量发售查看</p>
+                        <img class="mu-profile-img" src=" http://www.topsports.com.cn/CN/webrs/image/wechatQrcode.png"  style="border-color: lightgray;border-style: solid"  alt="iphone Image">
+
+
+                    </div>
 
                 </div>
             </div>
@@ -81,9 +88,38 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
-
+<script src="assets/js/tool.js"></script>
 <!-- Ajax contact form  -->
 <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+        var city= "";
+        city = UrlParm.parm("city");
+        console.log(city)
+        var time= "";
+        time = UrlParm.parm("time");
+        var title= "";
+        title = UrlParm.parm("title");
+        $("#content").html("【"+city+"】滔博限量发售<br>【时间】"+time+"<br>【内容】"+title+" ")
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
 
 
