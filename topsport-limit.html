@@ -51,12 +51,13 @@
                         <h2 class="mu-heading-title">滔博限量发售 </h2>
                         <span class="mu-title-dot"></span>
                     </div>
-                    <div class="mu-feature-content">
+                    <div class="mu-feature-content" >
 
                         <p id="content"></p>
-                        <p >请打开TOPSPORTS微信公众号，点击限量发售查看</p>
-                        <img class="mu-profile-img" src=" http://www.topsports.com.cn/CN/webrs/image/wechatQrcode.png"  style="border-color: lightgray;border-style: solid"  alt="iphone Image">
-
+                        <p >【查看方法】请打开【TOPSPORTS微信公众号】-点击【限量发售】查看</p>
+                        <div  style="text-align: center">
+                        <img class="mu-profile-img" src=" http://www.topsports.com.cn/CN/webrs/image/wechatQrcode.png"  style="border-color: lightgray;border-style: solid;"  alt="iphone Image">
+                        </div>
 
                     </div>
 
@@ -104,7 +105,9 @@
         time = UrlParm.parm("time");
         var title= "";
         title = UrlParm.parm("title");
-        $("#content").html("【"+city+"】滔博限量发售<br>【时间】"+time+"<br>【内容】"+title+" ")
+        var htmlString = "【"+city+"】滔博限量发售<br>【时间】"+time+"<br>【内容】"+title+" ";
+        htmlString = htmlString.replace(/\+/g," ")
+        $("#content").html(htmlString)
 
     })
 
