@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/topsport-limit.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/help-jszc.html" afterPath="$PROJECT_DIR$/help-jszc.html" />
+      <change beforePath="$PROJECT_DIR$/android-cjwt.html" afterPath="$PROJECT_DIR$/android-cjwt.html" />
+      <change beforePath="$PROJECT_DIR$/help-cjwt.html" afterPath="$PROJECT_DIR$/help-cjwt.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,12 +42,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topsport-limit.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="topsport-limit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/topsport-limit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help-cjwt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/help-cjwt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="72" selection-end-column="210" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="android-cjwt.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android-cjwt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="65" column="210" lean-forward="false" selection-start-line="65" selection-start-column="210" selection-end-line="65" selection-end-column="210" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,17 +186,17 @@
         <option value="$PROJECT_DIR$/android-pzff.html" />
         <option value="$PROJECT_DIR$/download-ios.html" />
         <option value="$PROJECT_DIR$/download-iosnew.html" />
-        <option value="$PROJECT_DIR$/android-cjwt.html" />
         <option value="$PROJECT_DIR$/weapp-help.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/download-android.html" />
-        <option value="$PROJECT_DIR$/help-cjwt.html" />
         <option value="$PROJECT_DIR$/skuStyle.css" />
         <option value="$PROJECT_DIR$/monitorStyle.css" />
         <option value="$PROJECT_DIR$/monitor.html" />
         <option value="$PROJECT_DIR$/sku.html" />
         <option value="$PROJECT_DIR$/help-jszc.html" />
         <option value="$PROJECT_DIR$/topsport-limit.html" />
+        <option value="$PROJECT_DIR$/help-cjwt.html" />
+        <option value="$PROJECT_DIR$/android-cjwt.html" />
       </list>
     </option>
   </component>
@@ -319,12 +344,12 @@
       <workItem from="1574054606461" duration="1324000" />
       <workItem from="1574062161457" duration="8486000" />
       <workItem from="1574077208341" duration="20000" />
-      <workItem from="1574216787894" duration="129000" />
+      <workItem from="1574216787894" duration="855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118998000" />
+    <option name="totallyTimeSpent" value="119724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1007" extended-state="0" />
@@ -573,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android-cjwt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help-recovery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -598,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2775">
           <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help-cjwt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -659,6 +670,28 @@
         <state relative-caret-position="198">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help-cjwt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="71" column="21" lean-forward="false" selection-start-line="71" selection-start-column="21" selection-end-line="72" selection-end-column="210" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android-cjwt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="65" column="210" lean-forward="false" selection-start-line="65" selection-start-column="210" selection-end-line="65" selection-end-column="210" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
