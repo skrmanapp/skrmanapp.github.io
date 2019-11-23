@@ -75,7 +75,7 @@
 
 
             <div id="cardTable"></div>
-
+            <div class='smallTitle' id="updateTitle"></div>
         </div>
 
 
@@ -238,9 +238,11 @@
                         $("#mainTitle").html(shoe_item.product.title)
                     }catch (e) { }
                     try {
-                        $("#smallTitle1").html("价格:"+shoe_item.product.price.fullRetailPrice)
+                        $("#smallTitle1").html(shoe_item.seoSlug)
                     }catch (e) { }
-
+                    try {
+                        $("#updateTitle").html("信息更新于:"+shoe_item.lastUpdatedDate)
+                    }catch (e) { }
                     try {
                         var startSelldata = new Date();
                         var startSellTime = shoe_item.product.startSellDate
