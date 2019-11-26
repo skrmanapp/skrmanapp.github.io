@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skr-news.html" beforeDir="false" afterPath="$PROJECT_DIR$/skr-news.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -64,8 +65,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skr-news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="514">
+              <caret line="107" column="32" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,7 +199,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="46" />
+    <option name="y" value="243" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -321,15 +326,15 @@
       <workItem from="1574216787894" duration="4001000" />
       <workItem from="1574234392067" duration="16000" />
       <workItem from="1574470852082" duration="247000" />
-      <workItem from="1574762516513" duration="469000" />
+      <workItem from="1574762516513" duration="1111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123602000" />
+    <option name="totallyTimeSpent" value="124244000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1007" extended-state="0" />
+    <frame x="46" y="243" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -625,8 +630,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skr-news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="514">
+          <caret line="107" column="32" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
