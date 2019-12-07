@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/select-device.html" beforeDir="false" afterPath="$PROJECT_DIR$/select-device.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,19 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skr-news.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/select-device.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+            <state relative-caret-position="316">
+              <caret line="96" column="100" lean-forward="true" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -52,11 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/download-ios.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+            <state relative-caret-position="290">
+              <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/download-iosnew.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="75" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -199,14 +198,14 @@
         <option value="$PROJECT_DIR$/backup.html" />
         <option value="$PROJECT_DIR$/bind-wechat-confirm.html" />
         <option value="$PROJECT_DIR$/user-center-beta2.html" />
-        <option value="$PROJECT_DIR$/download-ios.html" />
         <option value="$PROJECT_DIR$/select-device.html" />
+        <option value="$PROJECT_DIR$/download-ios.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="18" />
-    <option name="y" value="464" />
+    <option name="x" value="-22" />
+    <option name="y" value="230" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -336,15 +335,15 @@
       <workItem from="1575038740777" duration="248000" />
       <workItem from="1575039066938" duration="186000" />
       <workItem from="1575473226221" duration="351000" />
-      <workItem from="1575686722767" duration="339000" />
+      <workItem from="1575686722767" duration="537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125368000" />
+    <option name="totallyTimeSpent" value="125566000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="22" y="527" width="1920" height="1007" extended-state="0" />
+    <frame x="-22" y="230" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24907847" />
@@ -472,13 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1584">
           <caret line="72" column="75" selection-start-line="72" selection-start-column="75" selection-end-line="72" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download-iosnew.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" column="78" selection-start-line="134" selection-start-column="78" selection-end-line="134" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -637,17 +629,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download-ios.html">
+    <entry file="file://$PROJECT_DIR$/select-device.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+        <state relative-caret-position="316">
+          <caret line="96" column="100" lean-forward="true" selection-start-line="96" selection-start-column="100" selection-end-line="96" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select-device.html">
+    <entry file="file://$PROJECT_DIR$/download-iosnew.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+        <state relative-caret-position="336">
+          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="75" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download-ios.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
         </state>
       </provider>
     </entry>
