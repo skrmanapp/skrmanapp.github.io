@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/help-yszc2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,15 +17,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-end-line="554" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sell.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1245">
@@ -37,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help-cjwt2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="795">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -47,16 +38,25 @@
         <entry file="file://$PROJECT_DIR$/help-yszc.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" column="24" lean-forward="true" selection-end-line="153" selection-end-column="7" />
+              <caret line="29" column="24" selection-end-line="153" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/help-yszc2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="824">
+              <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/help-yszc2.html">
+        <entry file="file://$PROJECT_DIR$/download-android.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+            <state relative-caret-position="445">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="72" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/help-cjwt.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1080">
-              <caret line="72" column="27" lean-forward="true" selection-end-line="170" selection-end-column="7" />
+              <caret line="72" column="27" selection-end-line="170" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/user-center.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4410">
-              <caret line="294" column="18" lean-forward="true" selection-start-line="293" selection-start-column="11" selection-end-line="294" selection-end-column="18" />
+              <caret line="294" column="18" selection-start-line="293" selection-start-column="11" selection-end-line="294" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -178,7 +178,6 @@
         <option value="$PROJECT_DIR$/download-iosnew.html" />
         <option value="$PROJECT_DIR$/weapp-help.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/download-android.html" />
         <option value="$PROJECT_DIR$/skuStyle.css" />
         <option value="$PROJECT_DIR$/monitorStyle.css" />
         <option value="$PROJECT_DIR$/monitor.html" />
@@ -196,12 +195,12 @@
         <option value="$PROJECT_DIR$/sell.html" />
         <option value="$PROJECT_DIR$/help-cjwt2.html" />
         <option value="$PROJECT_DIR$/help-yszc2.html" />
+        <option value="$PROJECT_DIR$/download-android.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="68" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -213,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +228,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,12 +334,13 @@
       <workItem from="1575771743737" duration="320000" />
       <workItem from="1575787767963" duration="458000" />
       <workItem from="1576417960679" duration="1393000" />
-      <workItem from="1576424124190" duration="657000" />
+      <workItem from="1576424124190" duration="1255000" />
+      <workItem from="1576502287125" duration="173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128733000" />
+    <option name="totallyTimeSpent" value="129504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="68" width="1920" height="1007" extended-state="0" />
@@ -468,13 +468,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weapp-help.html" />
-    <entry file="file://$PROJECT_DIR$/download-android.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="102" selection-start-line="68" selection-start-column="102" selection-end-line="68" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help-recovery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -626,17 +619,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/help-cjwt2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help-yszc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="24" selection-end-line="153" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/help-cjwt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
-          <caret line="72" column="27" lean-forward="true" selection-end-line="170" selection-end-column="7" />
+          <caret line="72" column="27" selection-end-line="170" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-center.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4410">
-          <caret line="294" column="18" lean-forward="true" selection-start-line="293" selection-start-column="11" selection-end-line="294" selection-end-column="18" />
+          <caret line="294" column="18" selection-start-line="293" selection-start-column="11" selection-end-line="294" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -657,24 +664,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/help-cjwt2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help-yszc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" lean-forward="true" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help-yszc2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="824">
           <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download-android.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="72" selection-end-column="30" />
         </state>
       </provider>
     </entry>
