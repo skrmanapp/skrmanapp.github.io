@@ -46,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help-yszc2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
+            <state relative-caret-position="2295">
               <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/download-android.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="72" selection-end-column="30" />
+            <state relative-caret-position="655">
+              <caret line="73" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -199,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
@@ -335,15 +335,16 @@
       <workItem from="1575787767963" duration="458000" />
       <workItem from="1576417960679" duration="1393000" />
       <workItem from="1576424124190" duration="1255000" />
-      <workItem from="1576502287125" duration="173000" />
+      <workItem from="1576502287125" duration="284000" />
+      <workItem from="1576646954837" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129504000" />
+    <option name="totallyTimeSpent" value="129641000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="68" width="1920" height="1007" extended-state="0" />
+    <frame x="0" y="22" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24907847" />
@@ -633,6 +634,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/help-yszc2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/help-cjwt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -664,17 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/help-yszc2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/download-android.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="72" selection-end-column="30" />
+        <state relative-caret-position="655">
+          <caret line="73" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="73" />
         </state>
       </provider>
     </entry>
