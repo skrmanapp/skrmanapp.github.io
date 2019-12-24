@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-iosnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-iosnew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/select-device.html" beforeDir="false" afterPath="$PROJECT_DIR$/select-device.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,6 +20,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="516">
               <caret line="441" selection-start-line="441" selection-end-line="441" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="838">
+              <caret line="530" lean-forward="true" selection-start-line="530" selection-end-line="530" />
             </state>
           </provider>
         </entry>
@@ -55,20 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/download-iosnew.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
               <caret line="13" column="63" lean-forward="true" selection-end-line="293" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-centerv12.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5085">
-              <caret line="339" selection-start-line="339" selection-end-line="339" />
             </state>
           </provider>
         </entry>
@@ -191,12 +188,13 @@
         <option value="$PROJECT_DIR$/select-device.html" />
         <option value="$PROJECT_DIR$/download-ios.html" />
         <option value="$PROJECT_DIR$/download-iosnew.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-236" />
-    <option name="y" value="463" />
+    <option name="x" value="56" />
+    <option name="y" value="172" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -349,15 +347,15 @@
       <workItem from="1576646954837" duration="26000" />
       <workItem from="1577156256738" duration="656000" />
       <workItem from="1577164315485" duration="4585000" />
-      <workItem from="1577210036805" duration="1210000" />
+      <workItem from="1577210036805" duration="1691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5795000" />
+    <option name="totallyTimeSpent" value="6276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-236" y="463" width="1920" height="1007" extended-state="0" />
+    <frame x="56" y="172" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -398,13 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="26" lean-forward="true" selection-end-line="244" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-center.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="441" selection-start-line="441" selection-end-line="441" />
         </state>
       </provider>
     </entry>
@@ -484,6 +475,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="13" column="63" lean-forward="true" selection-end-line="293" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="441" selection-start-line="441" selection-end-line="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="530" lean-forward="true" selection-start-line="530" selection-end-line="530" />
         </state>
       </provider>
     </entry>
