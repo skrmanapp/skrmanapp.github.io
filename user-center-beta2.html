@@ -129,7 +129,7 @@
 
             <!-- row -->
 
-            <div class=" table-row-s col-xs-12">
+            <div class=" table-row-s col-xs-12" id="bind-mobile">
 
                 <div class="col-xs-4">
                     <p class="row-title-s" >
@@ -147,7 +147,7 @@
 
             <!-- row -->
 
-            <div class=" table-row-s col-xs-12">
+            <div class=" table-row-s col-xs-12" id="bind-email">
 
                 <div class="col-xs-4">
                     <p class="row-title-s" >
@@ -281,6 +281,8 @@
         var auth = "null";
         auth = UrlParm.parm("auth");
         var vip = "null"
+        var isEmailBind = true
+        var isPhoneBind = true
         var tapCount = 5
 
         console.log(auth)
@@ -323,8 +325,19 @@
                     if (result.errcode == 0) {
                         $("#user-avatar-image").attr('src',result.result.Avatar);
                         $("#nickName").val(result.result.NickName)
-                        $("#mobilePhone").html(result.result.MobilePhone)
-                        $("#email").html(result.result.Email)
+
+                        let _MobilePhone =  result.result.MobilePhone
+                        $("#mobilePhone").html(_MobilePhone)
+                        if(_MobilePhone.indexOf("绑定")>-1){
+                            isPhoneBind = false;
+                        }
+
+                        let _Email =  result.result.Email
+                        $("#email").html(_Email)
+                        if(_Email.indexOf("绑定")>-1){
+                            isEmailBind = false;
+                        }
+
                         $("#vip-level").html(result.result.VipInfo)
                         vip = result.result.Vip
                         if(vip!='null'){
@@ -427,45 +440,16 @@
         });
 
 
+        $("#bind-email").click(function(){
+            // 二次确认
+            console.log(isEmailBind)
+            if(!isEmailBind){
+                window.location.href = "bind-email.html?auth="+auth;
+            }
+        });
 
 
-// 头像预览
-        $("#fileSelector").change(function (e) {
 
-
-            // 获取上传文件对象
-            console.log(e)
-            // var file = e.target.files[0];
-            // cos.putObject({
-            //     Bucket: 'skrman-1256882866', /* 必须 */
-            //     Region: 'ap-guangzhou',    /* 必须 */
-            //     Key: '/avatar/picture.jpg',              /* 必须 */
-            //     Body: 'hello!',
-            // }, function(err, data) {
-            //     console.log(err || data);
-            // });
-            // cos.putObject({
-            //     Bucket: 'skrman-1256882866', /* 必须 */
-            //     Region: 'ap-guangzhou',    /* 必须 */
-            //     Key: 'avatar/aaaaa.png',              /* 必须 */
-            //     StorageClass: 'STANDARD',
-            //     Body: file, // 上传文件对象
-            //     onProgress: function(progressData) {
-            //         console.log(JSON.stringify(progressData));
-            //     }
-            // }, function(err, data) {
-            //     console.log(err || data);
-            // });
-            // 读取文件URL
-
-            // reader.readAsDataURL(file);
-            // // 阅读文件完成后触发的事件
-            // reader.onload = function () {
-            //     // 读取的URL结果：this.result
-            //     $("#avatar_img").attr("src", this.result);//avatar_img  img标签的ID
-            // }
-
-        })
 
 
     })
