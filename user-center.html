@@ -195,16 +195,42 @@
 
 
 
-            <!-- row -->
 
-            <div class=" table-row-s col-xs-12" id="bind-wechat">
+
+            <!-- row -->
+            <div class="  col-xs-12 table-row-s" style="display: none;" id="verify-card">
 
                 <div class="col-xs-4">
                     <p class="row-title-s" >
-                        绑定微信
+                        欢迎使用SKR
                     </p>
                 </div>
-                <div class="col-xs-4"></div>
+
+                <div class="col-xs-8" style="  display: flex;justify-content: flex-end;">
+                  <div class="vip-button" id="vip-button-text">续费会员</div>
+                </div>
+            </div>
+            <div class="row-line col-xs-12"></div>
+            <!-- row -->
+
+
+            <!-- head -->
+            <div class="col-xs-12 table-head " >
+                <p class="col-xs-4 table-head-title">
+                    其他
+                </p>
+            </div>
+            <!-- head -->
+            <!-- row -->
+
+            <div class=" table-row-s col-xs-12"  id="bind-wechat">
+
+                <div class="col-xs-8">
+                    <p class="row-title-s" >
+                        绑定微信（旧版本老用户）
+                    </p>
+                </div>
+
                 <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
                     <p   type="text" class="row-text"> </p>
                     <i class="fa fa-angle-right fa-2x row-icon"></i>
@@ -213,7 +239,6 @@
             <div class="row-line col-xs-12" ></div>
 
             <!-- row -->
-
             <!-- row -->
 
             <div class=" table-row-s col-xs-12" id="test-push" style="display: none;">
@@ -232,7 +257,6 @@
             <div class="row-line col-xs-12" ></div>
 
             <!-- row -->
-
 
         </div>
 
@@ -304,7 +328,6 @@
 
 
 
-
             <!--==========================网络请求============================-->
             var requestData = {
                 "auth":auth
@@ -342,6 +365,17 @@
                         vip = result.result.Vip
                         if(vip!='null'){
                             $("#test-push").css("display","unset");
+                            $("#bind-wechat").css("display","none");
+                        }
+                        $("#verify-card").css("display","unset");
+                        if(vip=='null'){
+                            $("#vip-button-text").html("卡券兑换")
+                        }
+                        if(vip=='base'){
+                            $("#vip-button-text").html("升级会员")
+                        }
+                        if(vip=='super'){
+                            $("#vip-button-text").html("续费会员")
                         }
                     } else {
                         weui.alert(result.errmsg)
@@ -374,7 +408,18 @@
 
 
         });
+        $("#verify-card").click(function(){
+            if(vip=='null'){
+                window.location.href = "verify-card-new.html?auth="+auth;
 
+            }else{
+                window.location.href = "verify-card-continue.html?auth="+auth;
+
+            }
+
+
+
+        });
 
         $("#test-push").click(function(){
 

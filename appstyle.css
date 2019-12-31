@@ -1,8 +1,10 @@
 
 body,
 html {
+
     overflow-x:hidden;
     background-color: #F5F5F5;
+
 }
 .table-head{
     background-color: #F5F5F5;
@@ -37,8 +39,6 @@ html {
 
 
 
-
-
 .table-row-m{
     padding-left: 0px;
     padding-right: 0px;
@@ -68,6 +68,17 @@ html {
 
 }
 
+.vip-button{
+    color: #8a6d3b;
+    background-image: linear-gradient(to right,#ffe6b9,#e2c695);
+    width: 140px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    margin-top: 7px;
+    border-radius: 18px;
+    font-weight: bold;
+}
 
 .row-input{
     height: 50px;
