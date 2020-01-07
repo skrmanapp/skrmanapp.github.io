@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -126,8 +123,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="y" value="56" />
+    <option name="x" value="229" />
+    <option name="y" value="136" />
     <option name="width" value="1920" />
     <option name="height" value="1007" />
   </component>
@@ -287,15 +284,15 @@
       <workItem from="1577719375090" duration="479000" />
       <workItem from="1577759624314" duration="13443000" />
       <workItem from="1577833818431" duration="874000" />
-      <workItem from="1577836518899" duration="2166000" />
+      <workItem from="1577836518899" duration="2521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2166000" />
+    <option name="totallyTimeSpent" value="2521000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="56" width="1920" height="1007" extended-state="0" />
+    <frame x="134" y="72" width="1920" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
