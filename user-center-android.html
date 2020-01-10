@@ -239,7 +239,24 @@
             <div class="row-line col-xs-12" ></div>
 
             <!-- row -->
+            <!-- row -->
 
+            <div class=" table-row-s col-xs-12" id="test-push" style="display: none;">
+
+                <div class="col-xs-4">
+                    <p class="row-title-s" >
+                        测试推送
+                    </p>
+                </div>
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
+                    <p   type="text" class="row-text"> </p>
+                    <i class="fa fa-angle-right fa-2x row-icon"></i>
+                </div>
+            </div>
+            <div class="row-line col-xs-12" ></div>
+
+            <!-- row -->
 
         </div>
 
@@ -440,7 +457,10 @@
         });
 
 
+        $("#test-push").click(function(){
 
+            window.location.href = "push-test.html?auth="+auth+"&platform=android";
+        });
 
 
     })
