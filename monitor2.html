@@ -57,15 +57,15 @@
 
             <!-- head -->
             <div class="col-xs-12 AutoBar " >
-                <view class='AutoBarButton' id="AutoBar_1">自动刷新</view>
-                <view class='AutoBarButton' id="AutoBar_2">立即刷新</view>
+
+                <view class='AutoBarButton' id="AutoBar_2">返回上层</view>
                 <view class='AutoBarButton' id="AutoBar_3">地区:中国</view>
-                <view class='AutoBarButton' id="AutoBar_4">排序:同步</view>
+
             </div>
             <!-- head -->
 
             <div id="shoeList">
-            <!--<div class=' rowView ' >-->
+                <!--<div class=' rowView ' >-->
 
                 <!--<div class='pic' ><img src="https://c.static-nike.com/a/images/w_750,c_limit/y2fxddhm0u6ukm6cqodb/rio-de-janeiro.jpg" ></div>-->
                 <!--<div class='rowViewTitle'>AIR JORDAN X</div>-->
@@ -75,7 +75,7 @@
 
 
 
-            <!--</div>-->
+                <!--</div>-->
             </div>
 
 
@@ -118,113 +118,49 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
-       var loading;
+        var baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(CN)&filter=language(zh-Hans)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
+
+        var loading;
         var timeTaskId;
         var total_time = 30; //以秒来存放
         var current_time = 0;
         var AutoRefresh = false;
-        var onNotification = false;
-        var orderByUpdate = false;
+
         var country = "cn"
-        var ref = setInterval(function(){
-            timeTask();
-        },1000);
+
         try {
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+                    baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(CN)&filter=language(zh-Hans)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                     country = "cn"
                     $("#AutoBar_3").html("地区:国区")
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
                     country = "us"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
+                    baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(US)&filter=language(en)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
                     country = "gb"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
+                    baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(GB)&filter=language(en-GB)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
                     country = "jp"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
+                    baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(JP)&filter=language(JA)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                 }
 
 
             }
-            var orderByUpdate_temp = localStorage.getItem('orderByUpdate');
-            if (orderByUpdate_temp != null){
-                if (orderByUpdate_temp == 'true') {
-                    orderByUpdate = true;
-                    $("#AutoBar_4").html("排序:库存")
-                }
 
-
-            }
         } catch (e) {
         }
-
-
-        $("#AutoBar_1").click(function(){
-            if(AutoRefresh){
-                AutoRefresh = false;
-                $("#AutoBar_1").html("自动刷新")
-            }else{
-                $("#AutoBar_1").html("停止刷新")
-                weui.actionSheet([
-                    {
-                        label: '频率：每30秒',
-                        onClick: function () {
-                            total_time = 30
-                            current_time = 30
-                            AutoRefresh = true;
-                        }
-                    }, {
-                        label: '频率：每20秒',
-                        onClick: function () {
-                            total_time = 20
-                            current_time = 20
-                            AutoRefresh = true;
-                        }
-                    }, {
-                        label: '频率：每10秒',
-                        onClick: function () {
-                            total_time = 10;
-                            current_time = 10;
-                            AutoRefresh = true;
-                        }
-                    }
-                ], [
-                    {
-                        label: '取消',
-                        onClick: function () {
-                            AutoRefresh = false;
-                            $("#AutoBar_2").html("立即刷新")
-                        }
-                    }
-                ], {
-                    className: 'custom-classname',
-                    onClose: function(){
-                        if(AutoRefresh) {
-                            $("#AutoBar_1").html("停止刷新")
-                        }else{
-                            $("#AutoBar_1").html("自动刷新")
-                        }
-                    }
-                });
-
-            }
-
-
-        });
 
 
 
 
 
         $("#AutoBar_2").click(function(){
-            reloadSnkrs()
+            window.history.back(-1);
         });
 
 
@@ -234,7 +170,7 @@
                 {
                     label: '切换国区',
                     onClick: function () {
-                        baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+                        baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(CN)&filter=language(zh-Hans)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                         $("#AutoBar_3").html("地区:国区")
                         country = "cn"
                         localStorage.setItem('current_country', 'CN');
@@ -243,7 +179,7 @@
                 }, {
                     label: '切换美区',
                     onClick: function () {
-                        baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
+                        baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(US)&filter=language(en)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                         $("#AutoBar_3").html("地区:美区")
                         country = "us"
                         localStorage.setItem('current_country', 'US');
@@ -252,7 +188,7 @@
                 }, {
                     label: '切换英区',
                     onClick: function () {
-                        baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
+                        baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(GB)&filter=language(en-GB)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                         $("#AutoBar_3").html("地区:英区")
                         country = "gb"
                         localStorage.setItem('current_country', 'CN');
@@ -261,7 +197,7 @@
                 },{
                     label: '切换日区',
                     onClick: function () {
-                        baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
+                        baseApi = 'https://api.nike.com/product_feed/threads/v2/?anchor=0&count=20&filter=marketplace(JP)&filter=language(JA)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)&filter=exclusiveAccess(true,false)&fields=active&fields=id&fields=lastFetchTime&fields=publishedContent&fields=productInfo.merchProduct&fields=productInfo.launchView';
                         $("#AutoBar_3").html("地区:日区")
                         country = "jp"
                         localStorage.setItem('current_country', 'JP');
@@ -273,7 +209,7 @@
                     label: '取消',
                     onClick: function () {
                         AutoRefresh = false;
-                        $("#AutoBar_2").html("立即刷新")
+
                     }
                 }
             ], {
@@ -286,102 +222,12 @@
 
 
 
-        $("#AutoBar_4").click(function(){
-
-            weui.actionSheet([
-                {
-                    label: '默认排序(同步软件)',
-                    onClick: function () {
-                        orderByUpdate = false;
-                        reloadSnkrs()
-                        weui.alert('同步软件！');
-                        $("#AutoBar_4").html("排序:同步")
-                        localStorage.setItem('orderByUpdate', 'false');
-                    }
-                }, {
-                    label: '实时库存更新',
-                    onClick: function () {
-                        orderByUpdate = true;
-                        reloadSnkrs()
-                        weui.alert('高级排序实时监控所有库存变动，捡漏必备！');
-                        $("#AutoBar_4").html("排序:库存")
-                        localStorage.setItem('orderByUpdate', 'true');
-
-                    }
-                },{
-                    label: '更多日期数据',
-                    onClick: function () {
-                        window.location.href = "monitor2.html";
-                    }
-                },
-            ], [
-                {
-                    label: '取消',
-                    onClick: function () {
-
-                    }
-                }
-            ], {
-                className: 'custom-classname',
-                onClose: function(){
-                    if(orderByUpdate){
-                        $("#AutoBar_4").html("排序:高级")
-                    }else{
-                        $("#AutoBar_4").html("排序:同步")
-                    }
-                }
-            });
-        });
 
 
 
 
 
 
-
-
-        function timeTask() {
-
-            if (current_time > 0) {
-                current_time -= 1;
-                var minStr = "00";
-                var secStr = "00";
-                if (current_time / 60 > 9) {
-                    minStr = parseInt(current_time / 60);
-                } else {
-                    minStr = "0" + parseInt(current_time / 60);
-                }
-
-                if (current_time % 60 > 9) {
-                    secStr = current_time % 60;
-                } else {
-                    secStr = "0" + current_time % 60;
-                }
-
-                var timeStr = "下次刷新" + minStr + ":" + secStr;
-
-
-                if (AutoRefresh) {
-                    $("#AutoBar_2").html(timeStr)
-                } else {
-
-                }
-
-
-
-            } else {
-                current_time = total_time;
-
-                if (AutoRefresh) {
-                    $("#AutoBar_2").html("正在刷新")
-                    reloadSnkrs();
-                } else {
-
-                }
-
-            }
-
-        }
 
 
 
@@ -392,9 +238,7 @@
 
         function reloadSnkrs() {
             var currentApi = baseApi;
-            if (orderByUpdate) {
-                currentApi += "&orderBy=lastUpdated"
-            }
+
             loading =  weui.loading('加载中');
             $.ajax({
                 type : "get", //提交方式
@@ -439,7 +283,7 @@
 
 
 
-            threads= data.threads;
+            threads= data.objects;
             console.log(threads.length)
 
             //=============JSON转换成功"=================
@@ -454,27 +298,60 @@
                 var shoeId = ""
                 var title = ""
                 var image = "http://lazy-1252169987.cosgz.myqcloud.com/nullshoe.png"
-                var info = ""
+
                 var buyStep = 0
-                var original = "未获取到"
+                var original = ""
                 var seoSlug = ""
                 try {
 
 
-                    image = threads[i].imageUrl
+                    image = threads[i].publishedContent.properties.coverCard.properties.portraitURL
 
-                    title = threads[i].name
+                    title = threads[i].publishedContent.properties.title
                     shoeId = threads[i].id
 
-                    var startSelldata = new Date();
-                    var startSellTime = threads[i].product.startSellDate
+
+                    try {
+                        var startSelldata = new Date();
+                        var startSellTime = threads[i].productInfo[0].launchView.startEntryDate
+                        console.log("============")
+                        if (isNaN(startSellTime) && !isNaN(Date.parse(startSellTime))) {
+                            startSelldata = new Date(startSellTime);
+                            startSellTime = threads[i].productInfo[0].launchView.startEntryDate.substring(0, 19) + '(+8为北京时间)'
+
+
+                            var BJ_Hour = parseInt(startSellTime.substring(11, 13)) + 8
+                            var BJ_Day = parseInt(startSellTime.substring(8, 10))
+                            if (BJ_Hour > 24) {
+                                BJ_Day = BJ_Day + 1
+                                BJ_Hour = BJ_Hour - 24
+                            }
+                            var BJ_Hour_Str = '' + BJ_Hour;
+                            if (BJ_Hour < 10) {
+                                BJ_Hour_Str = '0' + BJ_Hour_Str
+                            }
+                            startSellTime = startSellTime.substring(0, 8) + BJ_Day + " " + BJ_Hour_Str + startSellTime.substring(13, 19)
+
+                        } else {
+                            startSellTime = '未知'
+                        }
+                        original = '【抽签开始日期】</br>' + startSellTime
+                    } catch (e) {
+                }
+
+
+
+
+                    var Commercedata = new Date();
+                    var CommerceTime = threads[i].productInfo[0].merchProduct.commerceStartDate
+                    console.log("============")
                     if (isNaN(startSellTime) && !isNaN(Date.parse(startSellTime))) {
-                        startSelldata = new Date(startSellTime);
-                        startSellTime = threads[i].product.startSellDate.substring(0, 19) + '(+8为北京时间)'
+                        Commercedata = new Date(CommerceTime);
+                        CommerceTime = threads[i].productInfo[0].merchProduct.commerceStartDate.substring(0, 19) + '(+8为北京时间)'
 
 
-                        var BJ_Hour = parseInt(startSellTime.substring(11, 13)) + 8
-                        var BJ_Day = parseInt(startSellTime.substring(8, 10))
+                        var BJ_Hour = parseInt(CommerceTime.substring(11, 13)) + 8
+                        var BJ_Day = parseInt(CommerceTime.substring(8, 10))
                         if (BJ_Hour > 24) {
                             BJ_Day = BJ_Day + 1
                             BJ_Hour = BJ_Hour - 24
@@ -483,13 +360,17 @@
                         if (BJ_Hour < 10) {
                             BJ_Hour_Str = '0' + BJ_Hour_Str
                         }
-                        startSellTime = startSellTime.substring(0, 8) + BJ_Day + " " + BJ_Hour_Str + startSellTime.substring(13, 19)
+                        CommerceTime = CommerceTime.substring(0, 8) + BJ_Day + " " + BJ_Hour_Str + CommerceTime.substring(13, 19)
 
                     } else {
-                        startSellTime = '未知'
+                        CommerceTime = '未知'
                     }
+                    CommerceTime =CommerceTime.replace("2022-","2020-")
+                    original = original+'</br>【准许销售日期】</br>' + CommerceTime
 
-                    var merchStatus = threads[i].product.merchStatus
+
+
+                    var merchStatus = threads[i].productInfo[0].merchProduct.status
 
                     var merchStatusStr = '未知'
                     if (typeof (merchStatus) == "undefined") {
@@ -505,57 +386,43 @@
                             merchStatusStr = merchStatus
                         }
                     }
+                    original = original + "</br>【在售状态】"+merchStatusStr
 
-
-                    var restricted = threads[i].restricted
+                    var restricted = threads[i].productInfo[0].merchProduct.exclusiveAccess
                     var restrictedStr = '未知'
                     if (typeof (restricted) == "undefined") {
 
                     } else {
                         if (restricted) {
-                            restrictedStr = '专属购买/突击发布'
+                            restrictedStr = '专属购买'
                         } else {
                             restrictedStr = '否'
                         }
                     }
+                    original = original + "</br>【专属状态】"+restrictedStr
 
+                    try {
+                        var publishType = threads[i].productInfo[0].launchView.method
+                        var publishTypeStr = '未知'
+                        if (typeof (publishType) == "undefined") {
 
-
-
-
-                    info = '【发售日期】' + startSellTime
-
-
-                    seoSlug = threads[i].seoSlug
-
-                    var tempSku = ""
-                    var skuCount = 0
-                    for (var j = 0; j < threads[i].product.skus.length; j++) {
-                        if (threads[i].product.skus[j].available == true) {
-                            tempSku = tempSku + threads[i].product.skus[j].nikeSize + " "
-                            skuCount += 1
+                        } else {
+                            publishTypeStr = publishType
                         }
-                    }
-                    if (skuCount > 0) {
-                        buyStep += 1
+                        original = original + "</br>【发售引擎】"+publishTypeStr
+                    }catch (e) {
+                        original = original + "</br>【发售引擎】先到先得"
                     }
 
 
-                    var selectionEngine = "FLOW"
-                    if (threads[i].product.selectionEngine) {
-                        selectionEngine = threads[i].product.selectionEngine
-                    } else {
-                        buyStep += 1
-                    }
-                    original = "【快速搜索】" + threads[i].product.style + '<br>【当前库存(US码)】' + tempSku + '<br>【发售方式】' + selectionEngine + '<br>【在售状态】' + merchStatusStr + '<br>【是否专属】' + restrictedStr
-                    if (buyStep > 2) {
-                        original = original + "<br>⭐️⭐️⭐️有货可买⭐️⭐️⭐️"
-                    }
+
+                } catch (e) {
                 }
-                catch (err) {
-                    console.log('error' + err.message)
-                }
+                try {
+                    seoSlug = threads[i].publishedContent.properties.seo.slug
+                }catch (e) {
 
+                }
 
 
                 let   jumpUrl = "https://www.nike.com/"+country+"/launch/t/"+seoSlug;
@@ -567,13 +434,10 @@
                     "                <div class='rowViewTitle'>"+title+"</div>\n" +
                     "                <div class='rowViewTitleLine'></div>\n" +
                     "                <div class='rowViewOriginal'>"+original+"</div>\n" +
-                    "                <div class='rowViewInfo'>"+info+"</div>\n" +
                     "            </div>"+
 
                     " <div class=' rowBottom '  >\n" +
                     "  <a class=' rowButton ' href='"+jumpUrl+"' >快速跳转商品</a>          " +
-                    "  <a class=' rowButton ' href='sku.html?id="+shoeId+"' >查看后台数据</a>          " +
-                    "" +
                     "</div>"+
 
                     "            </div>"
