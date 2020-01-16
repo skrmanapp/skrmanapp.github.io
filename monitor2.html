@@ -345,7 +345,7 @@
                     var Commercedata = new Date();
                     var CommerceTime = threads[i].productInfo[0].merchProduct.commerceStartDate
                     console.log("============")
-                    if (isNaN(startSellTime) && !isNaN(Date.parse(startSellTime))) {
+                    if (isNaN(CommerceTime) && !isNaN(Date.parse(CommerceTime))) {
                         Commercedata = new Date(CommerceTime);
                         CommerceTime = threads[i].productInfo[0].merchProduct.commerceStartDate.substring(0, 19) + '(+8为北京时间)'
 
