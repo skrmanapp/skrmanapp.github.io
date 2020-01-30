@@ -36,7 +36,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gdzl-admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../skrmancoding" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -159,7 +159,8 @@
       <workItem from="1579182301006" duration="3461000" />
       <workItem from="1579227788887" duration="136000" />
       <workItem from="1579420022207" duration="68000" />
-      <workItem from="1580351683953" duration="104000" />
+      <workItem from="1580351683953" duration="450000" />
+      <workItem from="1580356426286" duration="296000" />
     </task>
     <servers />
   </component>
@@ -171,9 +172,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1577156550944" />
-    <state x="956" y="337" key="FileChooserDialogImpl" timestamp="1579420086551">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="765" y="267" key="FileChooserDialogImpl" timestamp="1580356706832">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="765" y="267" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580356706832" />
     <state x="956" y="337" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579420086551" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1577156555715">
       <screen x="0" y="0" width="1536" height="824" />
