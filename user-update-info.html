@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title></title>
     <!-- Favicon -->
@@ -34,8 +34,13 @@
 
 
 
+
 </head>
 <body>
+
+
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="hiddenButton" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"></button>
 
 
 <!-- Start Contact -->
@@ -53,7 +58,7 @@
                 <div class="mu-contact-area" style="padding-top: 20px">
 
                     <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">测试推送 </h2>
+                        <h2 class="mu-heading-title">设置昵称 </h2>
                         <span class="mu-title-dot"></span>
 
                     </div>
@@ -68,30 +73,19 @@
                                 <div id="form-messages"></div>
                                 <div class="mu-contact-form">
 
-
+                                    <div class="form-group">
+                                        <input type="text"  placeholder="新的昵称" id="value" class="form-control" style="text-align: center">
+                                    </div>
 
 
                                 </div>
-                                <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;"
-                                         id="TencentCaptcha"
-                                         type="button"><span>点击测试</span></button>
+                                <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="update-button"><span>更新</span></button>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="mu-contact-content">
-                                <div class="mu-contact-right-single" style="text-align: left">
-                                    <p><strong>收不到测试推送？</strong></p>
-                                    试试重启手机然后再来这里测试一遍，安卓用户按照配置方法配置好
-                                    <p><strong>能收到测试推送但是收不到突袭信息？</strong></p>
-                                    能收到测试推送证明您的推送通道正常，请检查您关注的频道是否齐全。
-                                </div>
 
 
-                            </div>
-                        </div>
 
                     </div>
-
 
 
                 </div>
@@ -130,19 +124,15 @@
 <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
 <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 
-<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
 
 <script type="text/javascript">
 
     jQuery(document).ready(function($){
 
-        //
-        //
+
+
         var auth = "null";
         auth = UrlParm.parm("auth");
-        var platform = "null"
-        platform = UrlParm.parm("platform");
-
 
 
         console.log(auth)
@@ -150,57 +140,24 @@
             weui.alert('进入参数错误！')
             return
         }
-        if(!platform || platform == 'null'){
-            weui.alert('进入参数错误！')
-            return
-        }
-
-        $("#history-get").click(function(){
-            window.location.href = "verify-history.html?auth="+auth;
 
 
-        });
-
-
-
-
-
-        $("#TencentCaptcha").click(function(){
-
-            //方法1: 直接生成一个验证码对象。
-            var captcha1 = new TencentCaptcha('2078230893', function(res) {
-
-
-                // res（用户主动关闭验证码）= {ret: 2, ticket: null}
-                // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
-                if(res.ret === 0){
-                    console.log(res)
-                    checkCard(res.ticket,res.randstr)
-
-                }else{
-                    weui.alert('人机验证失败')
-                }
-            });
-            captcha1.show(); // 显示验证码
-        });
-
-        function checkCard(ticket,randstr) {
+        function updateInfo(_value) {
             //读取数据
 
 
 
             <!--==========================网络请求============================-->
             var requestData = {
-                "auth":auth,
-                "platform":platform,
-                "ticket":ticket,
-                "randstr":randstr
+                "value":_value,
+                "type":"NickName",
+                "auth":auth
             }
             var dataStr =  JSON.stringify(requestData)
             console.log(dataStr)
             $.ajax({
                 type: "post", //提交方式
-                url: request_url + '/MessageTestV2',//路径
+                url: request_url + '/UserInfoUpdate',//路径
                 crossDomain: true,//跨域
                 dataType: 'json',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
@@ -209,17 +166,16 @@
                 success: function (result) {//返回数据根据结果进行相应的处理
                     console.log('result');
                     console.log(result);
-
                     if (result.errcode == 0) {
 
-                        weui.alert("已请求测试信息")
+                        weui.alert("操作成功")
                     } else {
                         weui.alert(result.errmsg)
                     }
 
                 },
                 error: (err, type) => {
-                    console.log(err);
+
                     weui.alert(err.statusText+"网络错误请联系客服")
                 },
 
@@ -228,6 +184,21 @@
             <!--==========================网络请求============================-->
 
         }
+
+
+
+
+        // });
+
+
+
+
+        $("#update-button").click(function(){
+            let _value =  $("#value").val()
+            updateInfo(_value)
+
+        });
+
 
 
     })

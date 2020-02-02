@@ -36,19 +36,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../skrmancoding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\53921\Documents\GitHub\skrmanapp.github.io\assets\js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="D:\Github\skrmanapp.github.io" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -163,7 +164,8 @@
       <workItem from="1580356426286" duration="881000" />
       <workItem from="1580359579557" duration="197000" />
       <workItem from="1580450197158" duration="47000" />
-      <workItem from="1580450728615" duration="106000" />
+      <workItem from="1580450728615" duration="215000" />
+      <workItem from="1580616439104" duration="5642000" />
     </task>
     <servers />
   </component>
