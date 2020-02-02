@@ -451,7 +451,7 @@
             console.log(fileUploadControl.files)
             const pic = fileUploadControl.files[0]
             var  file;
-            if(pic.size>50000){
+            if(pic.size>500000){
                 weui.alert('文件太大啦~请压缩后上传');
                 return;
             }
