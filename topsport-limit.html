@@ -54,11 +54,13 @@
                     <div class="mu-feature-content" >
 
                         <p id="content"></p>
-                        <p >【查看方法】请打开【TOPSPORTS微信公众号】-点击【限量发售】查看</p>
+                        <p >【查看方法】请打开【滔博运动App】查看</p>
                         <div  style="text-align: center">
-                        <img class="mu-profile-img" src=" http://www.topsports.com.cn/CN/webrs/image/wechatQrcode.png"  style="border-color: lightgray;border-style: solid;"  alt="iphone Image">
+                            <a id="link"><img class="mu-profile-img" src="https://wxcdnlan.qxclub.cn/static/img/logo.a85f06d.png"  style="border-color: lightgray;border-style: solid;"  alt="iphone Image">  </a>
+                            <p style="text-align:center;margin-top:20px">请确保安装滔博运动App，点击图标再次跳转</p>
+                            <p style="text-align:center;margin-top:10px;font-size:12px"><a href="https://wx.qxclub.cn/f/wap/#/appDownload">点击下载滔博运动App</a>   </p>
                         </div>
-
+                        <p style="text-align:center;margin-top:20px" id="test">-</p>
                     </div>
 
                 </div>
@@ -85,7 +87,7 @@
 
 
 <!-- jQuery library -->
-<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- Bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
@@ -109,6 +111,16 @@
         htmlString = htmlString.replace(/\+/g," ")
         $("#content").html(htmlString)
 
+
+
+        window.location.href = "topsportsapp://";
+
+        $('#link').attr('href',"topsportsapp://");
+        setTimeout(function () {
+            // 这里就是处理的事件
+            $('#link').get(0).click();
+            $('#test').html("--");
+        }, 1000);
     })
 
 
