@@ -115,7 +115,20 @@
 
         window.location.href = "topsportsapp://";
 
+        let u = navigator.userAgent;
+        let android = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        if(android){
+            window.location.href = "scheme://topsports.honghu.com";
+
+        }
+
+
         $('#link').attr('href',"topsportsapp://");
+        if(android){
+            $('#link').attr('href',"scheme://topsports.honghu.com");
+
+        }
+
         setTimeout(function () {
             // 这里就是处理的事件
             $('#link').get(0).click();
