@@ -77,7 +77,12 @@
 
             <!--</div>-->
             </div>
+            <div class="col-xs-12 PageBar " >
+                <view class='PageBarButton' id="PageBar_1">上一页</view>
+                <view class='PageBarNum' id="PageNum"></view>
+                <view class='PageBarButton' id="PageBar_2">下一页</view>
 
+            </div>
 
 
 
@@ -103,7 +108,7 @@
 
 
 <!-- jQuery library -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 <!-- tool library -->
 <script src="assets/js/tool.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -118,15 +123,16 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
        var loading;
-        var timeTaskId;
         var total_time = 30; //以秒来存放
         var current_time = 0;
         var AutoRefresh = false;
-        var onNotification = false;
         var orderByUpdate = false;
         var country = "cn"
+        var page = 0
+        $("#PageNum").html(page+1)
+
         var ref = setInterval(function(){
             timeTask();
         },1000);
@@ -226,6 +232,22 @@
         $("#AutoBar_2").click(function(){
             reloadSnkrs()
         });
+        $("#PageBar_1").click(function(){
+            if(page>0){
+
+                page-=1
+                $("#PageNum").html(page+1)
+                reloadSnkrs()
+            }
+
+
+        });
+        $("#PageBar_2").click(function(){
+            page+=1
+            $("#PageNum").html(page+1)
+            reloadSnkrs()
+        });
+
 
 
 
@@ -391,7 +413,12 @@
         <!--==========================网络请求============================-->
 
         function reloadSnkrs() {
+
+            $("#shoeList").html('')
             var currentApi = baseApi;
+            currentApi = currentApi+'&offset='+(page*50)
+
+
             if (orderByUpdate) {
                 currentApi += "&orderBy=lastUpdated"
             }
@@ -572,7 +599,7 @@
 
                     " <div class=' rowBottom '  >\n" +
                     "  <a class=' rowButton ' href='"+jumpUrl+"' >快速跳转商品</a>          " +
-                    "  <a class=' rowButton ' href='sku.html?id="+shoeId+"' >查看后台数据</a>          " +
+                    "  <a class=' rowButton ' href='sku.html?id="+shoeId+"&page="+page+"' >查看后台数据</a>          " +
                     "" +
                     "</div>"+
 

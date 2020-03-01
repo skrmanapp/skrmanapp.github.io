@@ -18,6 +18,52 @@ html {
     justify-content: center;
     margin-bottom: 16px;
 }
+.PageBarButton{
+    position: relative;
+    width: 16%;
+    height:28px;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:black;
+    text-align: center;
+    font-size: 11px;
+    line-height: 26px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333333;
+}
+.PageBarNum{
+    position: relative;
+    width: 28px;
+    height:28px;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:white;
+    text-align: center;
+    font-size: 11px;
+    line-height: 26px;
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333333;
+}
+.PageBar{
+    position: relative;
+    margin-top: 8px;
+    width: 100%;
+    top: 0px;
+    height:40px;
+    background: white;
+    border-top-style: solid;
+    border-color: #dfdfdfdf;
+    border-width: 2px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
 .AutoBarButton{
     position: relative;
     width: 24%;
@@ -195,7 +241,6 @@ html {
     line-height: 80px;
     text-align: left;
 }
-
 
 
 

@@ -50,11 +50,10 @@
 
 <main role="main">
 
-    <div class="container-fluid" style="padding-left: 0px;padding-right: 0px">
+    <div  style="padding-left: 0px;padding-right: 0px;">
 
 
         <div class="row table-view">
-
 
 
 
@@ -85,13 +84,8 @@
         </div>
 
 
+    <div class="myBackButton" id="myBackButton" >返回上层</div>
 
-    </div>
-
-
-
-
-    </div>
 
 
 
@@ -103,7 +97,7 @@
 
 
 <!-- jQuery library -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 <!-- tool library -->
 <script src="assets/js/tool.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -118,20 +112,21 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
         var loading;
-        var timeTaskId;
-        var total_time = 30; //以秒来存放
-        var current_time = 0;
-        var AutoRefresh = false;
-        var onNotification = false;
+
         var orderByUpdate = false;
         var country = "cn"
+
         var skuArray = [];
 
 
         var currentId = "null";
         currentId = UrlParm.parm("id");
+
+        var page = 0
+        var pageSrt = UrlParm.parm("page");
+        page = parseInt(pageSrt)
 
         if(!currentId || currentId == 'null'){
 
@@ -142,21 +137,21 @@
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
                     country = "cn"
 
                 } else if (current_country == 'US') {
 
                     country = "us"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
 
                     country = "gb"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
 
                     country = "jp"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -189,6 +184,7 @@
 
         function reloadSnkrs() {
             var currentApi = baseApi;
+            currentApi = currentApi+'&offset='+(page*50)
             if (orderByUpdate) {
                 currentApi += "&orderBy=lastUpdated"
             }
@@ -327,7 +323,7 @@
                         }
                         var htmlString = '<div class=" table-row col-xs-12" >\n' +
                             '                <p class="row-key" >\n' +
-                            '                    专属购买\n' +
+                            '                    专属状态\n' +
                             '                </p>\n' +
                             '                <p class="row-value" >\n' +
                             restrictedStr +
@@ -524,7 +520,9 @@
         reloadSnkrs();
 
 
-
+        $("#myBackButton").click(function(){
+            history.back(-1)
+        });
 
     })
 
