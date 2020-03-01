@@ -48,9 +48,6 @@
 
 <!-- Start main content -->
 
-<main role="main">
-
-    <div  style="padding-left: 0px;padding-right: 0px;">
 
 
         <div class="row table-view">
@@ -74,14 +71,14 @@
 
 
             <div id="cardTable"></div>
-            <div class='smallTitle' id="updateTitle"></div>
+
+            <div class='emptyDiv' ></div>
         </div>
 
 
 
 
 
-        </div>
 
 
     <div class="myBackButton" id="myBackButton" >返回上层</div>
@@ -89,7 +86,6 @@
 
 
 
-</main>
 
 <!-- End main content -->
 
@@ -236,9 +232,7 @@
                     try {
                         $("#smallTitle1").html(shoe_item.seoSlug)
                     }catch (e) { }
-                    try {
-                        $("#updateTitle").html("信息更新于:"+shoe_item.lastUpdatedDate)
-                    }catch (e) { }
+
                     try {
                         var startSelldata = new Date();
                         var startSellTime = shoe_item.product.startSellDate
@@ -418,7 +412,7 @@
                             console.log(htmlString)
                             $("#cardTable").html($("#cardTable").html()+htmlString)
                         }
-
+                        $("#cardTable").html($("#cardTable").html()+'<div class="  col-xs-12"  style="width: 100%;padding: 10%;text-align: center;">信息更新于:'+shoe_item.lastUpdatedDate+'</div>')
 
                     }catch (e) { }
 

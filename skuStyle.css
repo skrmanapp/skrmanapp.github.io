@@ -124,9 +124,6 @@ html {
     word-break: break-all;
 }
 .smallTitle{
-    padding-left: 10%;
-    padding-right: 10%;
-    position:relative;
     width: 100%;
     left: 0%;
     height:20px;
@@ -136,6 +133,11 @@ html {
     font-size: 10px;
     line-height: 20px;
     word-break: break-all;
+}
+.emptyDiv{
+    margin-top: 50px;
+    height: 100px;
+    width: 100%;
 }
 .rowViewTitleLine{
     position:absolute;
@@ -197,6 +199,8 @@ html {
 
 .table-view{
     background-color: #ffffff;
+    overflow: hidden;
+    height: 100%;
 
 }
 .table-head-title{

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/monitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku.html" beforeDir="false" afterPath="$PROJECT_DIR$/sku.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/skuStyle.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,27 +17,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sku.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
+            <state relative-caret-position="462">
+              <caret line="414" column="181" selection-start-line="414" selection-start-column="181" selection-end-line="414" selection-end-column="181" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/monitor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="879">
-              <caret line="156" column="96" selection-start-line="156" selection-start-column="96" selection-end-line="156" selection-end-column="96" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,8 +35,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skuStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="302" column="22" lean-forward="true" selection-start-line="302" selection-start-column="22" selection-end-line="302" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="109" selection-start-line="109" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monitor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,6 +69,8 @@
       <find>reloadSnkrs</find>
       <find>专属</find>
       <find>body</find>
+      <find>rowHead</find>
+      <find>updateTitle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,16 +81,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/monitor2.html" />
+        <option value="$PROJECT_DIR$/monitor.html" />
         <option value="$PROJECT_DIR$/monitorStyle.css" />
         <option value="$PROJECT_DIR$/skuStyle.css" />
         <option value="$PROJECT_DIR$/sku.html" />
-        <option value="$PROJECT_DIR$/monitor.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-23" />
-    <option name="y" value="72" />
+    <option name="x" value="27" />
+    <option name="y" value="81" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
   </component>
@@ -280,15 +285,15 @@
       <workItem from="1582687496923" duration="502000" />
       <workItem from="1582783703766" duration="195000" />
       <workItem from="1582942840310" duration="185000" />
-      <workItem from="1583028869723" duration="4121000" />
+      <workItem from="1583028869723" duration="5364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4121000" />
+    <option name="totallyTimeSpent" value="5364000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-23" y="72" width="1920" height="1005" extended-state="0" />
+    <frame x="27" y="81" width="1920" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -357,36 +362,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/monitorStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
+        <state relative-caret-position="822">
           <caret line="244" selection-start-line="244" selection-end-line="244" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skuStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="302" column="22" lean-forward="true" selection-start-line="302" selection-start-column="22" selection-end-line="302" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sku.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="507" lean-forward="true" selection-start-line="507" selection-end-line="507" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="156" column="96" selection-start-line="156" selection-start-column="96" selection-end-line="156" selection-end-column="96" />
+        <state relative-caret-position="330">
+          <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skuStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="109" selection-start-line="109" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sku.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="414" column="181" selection-start-line="414" selection-start-column="181" selection-end-line="414" selection-end-column="181" />
+          <folding>
+            <element signature="n#style#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
