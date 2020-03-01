@@ -140,21 +140,21 @@
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
                     country = "cn"
                     $("#AutoBar_3").html("地区:国区")
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
                     country = "us"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
                     country = "gb"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
                     country = "jp"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja&offset=0';
+                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja';
                 }
 
 
