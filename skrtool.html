@@ -56,7 +56,7 @@
                 <div class="mu-contact-area" style="padding-top: 20px">
 
                     <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">天猫BP工具 </h2>
+                        <h2 class="mu-heading-title">SKR达人天猫BP</h2>
                         <span class="mu-title-dot"></span>
 
                     </div>
@@ -214,6 +214,7 @@
                     let current_props_value = current_props.values[j]
                     let current_props_vid = current_props_value.vid
                     let current_props_image = "https://"+current_props_value.image
+                    let isSelect = false;
                     if(skuId==0 && j==0  ){
                         if(i==0){
                             current_image = current_props_image
@@ -229,6 +230,7 @@
                         for(var k =0;k<props.length;k++){
                             if(props[k].pid==current_props_pid && props[k].vid==current_props_vid){
                                 current_style =current_style+ current_props_name+":"+current_props_value.name
+                                isSelect = true
                                 if(i==0){
                                     current_image = current_props_image
                                 }
@@ -236,8 +238,12 @@
                         }
                     }
 
+                    if(isSelect){
+                        current_props_html = current_props_html+" <option value="+current_props_vid+" selected = 'selected'>"+current_props_value.name+"</option>"
+                    }else{
+                        current_props_html = current_props_html+" <option value="+current_props_vid+">"+current_props_value.name+"</option>"
+                    }
 
-                    current_props_html = current_props_html+" <option value="+current_props_vid+">"+current_props_value.name+"</option>"
                 }
 
                 itemStylePad_html =itemStylePad_html+ current_props_html  + "</select></div>"
