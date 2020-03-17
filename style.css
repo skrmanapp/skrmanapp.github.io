@@ -1312,6 +1312,11 @@ button:focus {
 	height: 60px;
 
 }
+.itemLong{
+	width: 100%;
+	height: 60px;
+
+}
 .itemTitle{
 	font-size: 12px;
 	height: 20px;
@@ -1321,6 +1326,15 @@ button:focus {
 	height: 30px;
 	background-color: white;
 	width: 90%;
+	line-height: 30px;
+}
+.itemDiv{
+	font-size: 14px;
+	height: 30px;
+	background-color: white;
+	width: 90%;
+	line-height: 30px;
+	color: darkred;
 }
 .myBackButton{
 	position: fixed;

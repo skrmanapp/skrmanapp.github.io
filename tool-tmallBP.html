@@ -56,7 +56,7 @@
                 <div class="mu-contact-area" style="padding-top: 20px">
 
                     <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">SKR达人天猫BP</h2>
+                        <h2 class="mu-heading-title">SKR达人淘宝BP</h2>
                         <span class="mu-title-dot"></span>
 
                     </div>
@@ -84,16 +84,48 @@
                         <div class="col-md-12" style="padding-left: 20px;padding-right: 20px;display: flex;justify-content: center;align-items: start;text-align: left;height: 120px">
                             <div class='pic' style="width: 35%"><img id="itemPic" ></div>
                             <div style="padding-left: 20px;width: 65%;padding-top: 5px">
-                                <div style="font-size: 13px;font-weight: bold" id="itemTitle"></div>
+                                <div style="font-size: 12px;font-weight: bold" id="itemTitle"></div>
                                 <div style="font-size: 10px;margin-top: 4px;color: darkred;" id="itemStyle"></div>
                             </div>
                         </div>
 
-                        <div id="itemStylePad" class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
 
+                        <div id="configPad" >
+                            <div id="itemStylePad" class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px"></div>
+
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >自动跳转时间</div>
+                                    <input class="itemSelect" type="datetime-local" id="timeInput">
+                                </div>
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >时间偏移</div>
+                                    <select class='itemSelect' id="time-offset">
+                                        <option value=0 >不偏移</option>
+                                        <option value=50 >提前50ms</option>
+                                        <option value=100 >提前100ms</option>
+                                        <option value=150 >提前150ms</option>
+                                        <option value=200 >提前150ms</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
+                        </div>
+                        <div id="readyPad" >
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' id="time-confirm"></div>
+                                    <div class='itemDiv' id="time-count"></div>
+                                </div>
+
+                            </div>
+                            <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="buy-button"><span>测试跳转</span></button>
 
                         </div>
-                        <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="buy-button"><span>购买</span></button>
+
+
 
                     </div>
 
@@ -151,15 +183,53 @@
         var skuId = 0;
         var props = [] ;
         var buyCount = 1 ;
+        var ready_url = "null" ;
+        var ready_time ;
+        var ready_time_offset ;
+        var ready_task = false ;
         // console.log(auth)
-
         $("#card-step-1").show()
         $("#card-step-2").hide()
+
+
+
+
+        $('#timeInput').val(getNowFormatDateTime())
+        var ref = setInterval(function(){
+            timeTask();
+        },50);
+
+
+        function timeTask() {
+
+           if(ready_task){
+               let now = new Date()
+               let timeDiff = ready_time.getTime() - now.getTime()
+
+
+               if(timeDiff<=ready_time_offset){
+                   ready_task = false;
+                   console.log("====ok====")
+                   startJump()
+               }else{
+                   $("#time-count").html("倒计时:"+timeDiff+"ms")
+
+
+               }
+
+
+
+           }
+
+        }
+
+
         function queryItem(_link) {
             //读取数据
             skuId = 0;
             props = [];
             buyCount = 1 ;
+            ready_task = false;
             <!--==========================网络请求============================-->
             var requestData = {
                 "mlink":_link
@@ -177,6 +247,10 @@
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
+                        $("#card-step-1").hide()
+                        $("#card-step-2").show()
+                        $("#configPad").show()
+                        $("#readyPad").hide();
                         reflashControlPad()
                     }else{
                         weui.alert(result.errmsg)
@@ -252,19 +326,37 @@
             }
             itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
                 "<div class='itemTitle' >购买数量(谨慎选择)</div>\n" +
-                "<select name='select' class='itemSelect' onchange=onChange_Count(this.options[this.options.selectedIndex].value)>\n"+
-                " <option value=1>1</option>"+
-                " <option value=2>2</option>"+
-                " <option value=3>3</option>"+
-                " <option value=5>5</option>"+
-                " <option value=10>10</option>"+
-                "</select></div>"
+                "<select name='select' class='itemSelect' onchange=onChange_Count(this.options[this.options.selectedIndex].value)>"
+
+                if(buyCount==1){
+                    itemStylePad_html = itemStylePad_html +   " <option value=1 selected = 'selected'>1</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=1 >1</option>"
+                }
+
+                if(buyCount==2){
+                    itemStylePad_html = itemStylePad_html +   " <option value=2 selected = 'selected'>2</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=2 >2</option>"
+                }
+                if(buyCount==5){
+                    itemStylePad_html = itemStylePad_html +   " <option value=5 selected = 'selected'>5</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=5 >5</option>"
+                }
+                if(buyCount==10){
+                    itemStylePad_html = itemStylePad_html +   " <option value=10 selected = 'selected'>10</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=10 >10</option>"
+                }
+
+                 itemStylePad_html = itemStylePad_html +"</select></div>"
 
 
 
             $("#itemStylePad").html(itemStylePad_html)
 
-            current_style = current_style+' 购买数量:'+buyCount
+            current_style = "[下单确认]"+current_style+' 购买数量:'+buyCount
             $("#itemStyle").html(current_style)
 
 
@@ -315,20 +407,84 @@
             mlink = mlink.split("?")[0]
             mlink = 'http'+mlink
             queryItem(mlink)
-            $("#card-step-1").hide()
-            $("#card-step-2").show()
+
 
         });
         $("#reset-button").click(function(){
-
+            ready_task = false;
             $("#card-step-1").show()
             $("#card-step-2").hide()
 
         });
+
+
+        $("#config-button").click(function(){
+
+
+
+
+            let ready_time_str = $("#timeInput").val()
+            ready_time = new Date(ready_time_str);
+            ready_time_offset = $("#time-offset").val()
+            ready_url = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
+
+            let now = new Date()
+            let timeDiff = ready_time.getTime() - now.getTime()
+            if(timeDiff<=ready_time_offset){
+                weui.alert("哎呀，开始时间不能比现在早")
+                return
+            }
+            $("#configPad").hide();
+            $("#readyPad").show();
+            $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
+            ready_task = true;
+        });
+
+
         $("#buy-button").click(function(){
-            window.location.href = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
+            startJump()
 
         });
+
+
+
+        function startJump() {
+            window.location.href = ready_url
+        }
+
+
+
+
+
+
+
+
+
+        function getNowFormatDateTime() {
+            let date = new Date();
+            let seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+
+            date.setMinutes(date.getMinutes()+1)
+            let hour = date.getHours();
+            let strMinutes = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            if (strMinutes >= 0 && strMinutes <= 9) {
+                strMinutes = "0" + strMinutes;
+            }
+
+            var currentdateTime = year + seperator1 + month + seperator1 + strDate+'T'+hour+':'+strMinutes;
+            return currentdateTime;
+        }
+
     })
 
 
