@@ -175,7 +175,7 @@
     jQuery(document).ready(function($){
 
 
-
+        var isApple = false;
         var auth = "null";
         auth = UrlParm.parm("auth");
         var itemData;
@@ -191,6 +191,10 @@
         $("#card-step-1").show()
         $("#card-step-2").hide()
 
+        let userAgent = navigator.userAgent;
+        if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
+            isApple = true
+        }
 
 
 
@@ -426,6 +430,9 @@
 
             let ready_time_str = $("#timeInput").val()
             ready_time = new Date(ready_time_str);
+            if(isApple){
+                ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
+            }
             ready_time_offset = $("#time-offset").val()
             ready_url = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
 
