@@ -124,19 +124,19 @@
             </div>
 
 
-            <!--<div class="row" style="font-size: 8px;color: #666666;padding: 16px;">-->
+            <div class="row" style="margin-top:100px;font-size: 8px;color: #666666;padding: 16px;">
 
-            <!--<p >-->
-            <!--备注： <br>-->
-            <!--(1)两个版本可以任意切换，选择你喜欢的即可 <br>-->
-            <!--(2)TestFlight版本相比AppStore版本，增加了论坛功能，并且改善了深色模式以及浏览器的BUG，对这两个问题比较介意的朋友建议TestFlight版本版本。 <br>-->
-            <!--(3)新功能会先出现在TestFlight版本，AppStore版本更新相对较慢。 <br>-->
-            <!--<strong style="color: darkred">(4)此次更新幅度较大，老版本用户需要重新下载安装和激活。登陆码/激活码需要重新绑定一次您的手机或邮箱，以后就无需再次绑定，激活码可以在以前的版本中找到哦   </strong> <br>-->
-            <!--</p>-->
+            <p >
 
+            * SKR工具箱内仅供娱乐，不对其实际效果作出任何保证<br>
 
+            </p>
 
-            <!--</div>-->
+                <p id="device-info">
+
+                </p>
+
+            </div>
 
 
 
@@ -175,10 +175,20 @@
 
 
 
-<!-- Custom js -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+        let userAgent = navigator.userAgent;
+        $('#device-info').html(userAgent);
+
+    })
 
 
+
+
+</script>
 
 
 </body>
