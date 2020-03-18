@@ -257,10 +257,7 @@
             $.ajax({
                 type: "post", //提交方式
                 url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP',//路径
-                crossDomain: true,//跨域
-                dataType: 'json',
                 headers: {'Content-Type': 'application/json'},
-                contentType: "application/json",
                 data: dataStr,//数据，这里使用的是Json格式进行传输
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
