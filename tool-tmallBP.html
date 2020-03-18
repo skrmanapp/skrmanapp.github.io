@@ -278,7 +278,7 @@
                 },
                 error: (err, type) => {
 
-                    weui.alert(err.statusText+"网络错误")
+                    weui.alert(err.statusText+"网络错误，换个网络试试")
                 },
 
 
@@ -443,8 +443,10 @@
 
             let ready_time_str = $("#timeInput").val()
             ready_time = new Date(ready_time_str);
+            ready_time.setSeconds(0)
             if(isApple){
                 ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
+
             }
             ready_time_offset = $("#time-offset").val()
             ready_url = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
