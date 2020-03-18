@@ -167,8 +167,7 @@
 
 
 <!-- jQuery library -->
-<!--<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>-->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 
 <!--  Bootstrap CDN版-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -256,10 +255,8 @@
             var dataStr =  JSON.stringify(requestData)
 
             $.ajax({
-                type: "post", //提交方式
-                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP',//路径
-                headers: {'Content-Type': 'application/json'},
-                data: dataStr,//数据，这里使用的是Json格式进行传输
+                type: "GET", //提交方式
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP2?mlink='+_link,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
