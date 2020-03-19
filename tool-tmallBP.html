@@ -381,15 +381,20 @@
         }
 
         function findSkuId() {
-            let propPath=''
+
             skuId = 0
-            for(var i =0;i<props.length;i++){
-                propPath =propPath+ props[i].pid+':'+props[i].vid+';'
-            }
+
+
             for(var i =0;i<itemData.skuBase.skus.length;i++){
                 let _propPath  = itemData.skuBase.skus[i].propPath+';'
+                var matchProps = true
+                for(var j =0;j<props.length;j++){
+                    if(_propPath.indexOf(props[j].pid+':')==-1 || _propPath.indexOf(props[j].vid+';')==-1){
+                        matchProps = false
+                    }
+                }
 
-                if(_propPath==propPath){
+                if(matchProps){
                     skuId = itemData.skuBase.skus[i].skuId
                 }
             }
