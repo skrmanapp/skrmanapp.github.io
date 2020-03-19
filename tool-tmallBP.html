@@ -205,6 +205,11 @@
         $("#card-step-2").hide()
 
         let userAgent = navigator.userAgent;
+        if(userAgent.indexOf('Weibo')>-1){
+            weui.alert("欢迎下载SKR达人APP启用功能")
+            window.location.href = "https://skrman.app"
+            return;
+        }
         if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
             isApple = true
             if(userAgent.indexOf('iPhone OS 4_3_3')>-1){
