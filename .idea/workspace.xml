@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-bbxx.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-bbxx.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+            <state relative-caret-position="818">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/help-bbxx.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -80,11 +89,11 @@
       <list>
         <option value="$PROJECT_DIR$/skrtool.html" />
         <option value="$PROJECT_DIR$/tool-tmallBP.html" />
+        <option value="$PROJECT_DIR$/help-bbxx.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
@@ -294,12 +303,14 @@
       <workItem from="1584492991847" duration="483000" />
       <workItem from="1584495194813" duration="1558000" />
       <workItem from="1584504671124" duration="92000" />
-      <workItem from="1584518861658" duration="145000" />
+      <workItem from="1584518861658" duration="551000" />
+      <workItem from="1584526269579" duration="685000" />
+      <workItem from="1584584345761" duration="52000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2278000" />
+    <option name="totallyTimeSpent" value="3421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1005" extended-state="6" />
@@ -375,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
+        <state relative-caret-position="818">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -392,6 +403,13 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help-bbxx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
         </state>
       </provider>
     </entry>
