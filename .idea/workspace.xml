@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help-bbxx.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-bbxx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,9 +19,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="818">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="475">
+              <caret line="66" column="47" lean-forward="true" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -29,6 +30,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="730">
+              <caret line="1346" column="18" selection-start-line="1346" selection-start-column="12" selection-end-line="1346" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help-bbxx.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="670">
@@ -40,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skrtool.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
+            <state relative-caret-position="832">
               <caret line="78" column="109" selection-start-line="78" selection-start-column="109" selection-end-line="78" selection-end-column="109" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -88,8 +98,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/skrtool.html" />
-        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
         <option value="$PROJECT_DIR$/help-bbxx.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -107,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,6 +129,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -306,14 +317,15 @@
       <workItem from="1584518861658" duration="551000" />
       <workItem from="1584526269579" duration="685000" />
       <workItem from="1584584345761" duration="52000" />
+      <workItem from="1584623727660" duration="975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3421000" />
+    <option name="totallyTimeSpent" value="4396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1005" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -384,19 +396,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+    <entry file="file://$PROJECT_DIR$/help-bbxx.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="818">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="670">
+          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skrtool.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
+        <state relative-caret-position="832">
           <caret line="78" column="109" selection-start-line="78" selection-start-column="109" selection-end-line="78" selection-end-column="109" />
           <folding>
             <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -406,10 +415,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/help-bbxx.html">
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+        <state relative-caret-position="475">
+          <caret line="66" column="47" lean-forward="true" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="1346" column="18" selection-start-line="1346" selection-start-column="12" selection-end-line="1346" selection-end-column="18" />
         </state>
       </provider>
     </entry>
