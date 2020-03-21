@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skrtool.html" beforeDir="false" afterPath="$PROJECT_DIR$/skrtool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,11 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skrtool.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="183" column="31" lean-forward="true" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+            <state relative-caret-position="441">
+              <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="214" column="126" selection-start-line="214" selection-start-column="126" selection-end-line="214" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -49,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user-center-qjz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="4981">
               <caret line="293" selection-start-line="293" selection-end-line="293" selection-end-column="41" />
             </state>
           </provider>
@@ -95,11 +104,13 @@
         <option value="$PROJECT_DIR$/help-cjwt2.html" />
         <option value="$PROJECT_DIR$/download-android.html" />
         <option value="$PROJECT_DIR$/skrtool.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="365" />
+    <option name="y" value="58" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
   </component>
@@ -317,15 +328,16 @@
       <workItem from="1584665750861" duration="55000" />
       <workItem from="1584758716454" duration="107000" />
       <workItem from="1584774847282" duration="170000" />
-      <workItem from="1584775143362" duration="31000" />
+      <workItem from="1584775143362" duration="111000" />
+      <workItem from="1584782354769" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496000" />
+    <option name="totallyTimeSpent" value="615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1005" extended-state="0" />
+    <frame x="365" y="58" width="1920" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -385,15 +397,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user-center-qjz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="4981">
           <caret line="293" selection-start-line="293" selection-end-line="293" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skrtool.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="183" column="31" lean-forward="true" selection-start-line="183" selection-start-column="31" selection-end-line="183" selection-end-column="31" />
+        <state relative-caret-position="441">
+          <caret line="185" column="39" selection-start-line="185" selection-start-column="39" selection-end-line="185" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="214" column="126" selection-start-line="214" selection-start-column="126" selection-end-line="214" selection-end-column="126" />
         </state>
       </provider>
     </entry>
