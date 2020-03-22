@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skrtool.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="180" column="103" lean-forward="true" selection-start-line="180" selection-start-column="103" selection-end-line="180" selection-end-column="103" />
+            <state relative-caret-position="186">
+              <caret line="172" column="21" lean-forward="true" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -330,15 +330,15 @@
       <workItem from="1584774847282" duration="170000" />
       <workItem from="1584775143362" duration="111000" />
       <workItem from="1584782354769" duration="154000" />
-      <workItem from="1584880441521" duration="453000" />
+      <workItem from="1584880441521" duration="515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1183000" />
+    <option name="totallyTimeSpent" value="1245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1005" extended-state="6" />
+    <frame x="4" y="22" width="1920" height="1005" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -412,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skrtool.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="180" column="103" lean-forward="true" selection-start-line="180" selection-start-column="103" selection-end-line="180" selection-end-column="103" />
+        <state relative-caret-position="186">
+          <caret line="172" column="21" lean-forward="true" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
         </state>
       </provider>
     </entry>
