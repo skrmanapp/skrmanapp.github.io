@@ -191,6 +191,9 @@
         var isApple = false;
         var auth = "null";
         auth = UrlParm.parm("auth");
+        if(!auth || auth == 'null'){
+            weui.alert('为了工具箱的正常使用，请尽快前往官网https://SKRMAN.APP更新软件版本');
+        }
         var itemData;
         var itemId;
         var skuId = 0;
@@ -200,7 +203,7 @@
         var ready_time ;
         var ready_time_offset ;
         var ready_task = false ;
-        // console.log(auth)
+
         $("#card-step-1").show()
         $("#card-step-2").hide()
 
