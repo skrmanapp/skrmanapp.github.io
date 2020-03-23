@@ -68,7 +68,7 @@
                             <div class="mu-contact-left">
                                 <div class="mu-contact-form">
                                     <div class="form-group">
-                                        <textarea type="text"  placeholder="通过淘口令查询(确保口令内含有https://m.tb.cn)" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
+                                        <textarea type="text"  placeholder="通过淘口令或链接查询(若口令请确保含有https://m.tb.cn)" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
                                         <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="query-button"><span>查询</span></button>
                                     </div>
 
@@ -428,14 +428,20 @@
         }
         $("#query-button").click(function(){
             let _link =  $("#link").val()
-            if(_link.indexOf('m.tb.cn')==-1){
+
+            if(_link.indexOf('m.tb.cn')>-1){
+                var mlink = _link.split("http")[1]
+                mlink = mlink.split("?")[0]
+                mlink = 'http'+mlink
+                queryItem(mlink)
+            }else if(_link.indexOf('id=')>-1){
+                var mlink = _link.split("id=")[1]
+                mlink = 'id='+mlink
+                queryItem(mlink)
+            }else{
                 weui.alert('确保口令内含有https://m.tb.cn')
             }
-            var mlink = _link.split("http")[1]
 
-            mlink = mlink.split("?")[0]
-            mlink = 'http'+mlink
-            queryItem(mlink)
 
 
         });
@@ -472,6 +478,8 @@
             $("#readyPad").show();
             $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
             ready_task = true;
+
+            window.copy("this is a test string");
         });
 
 
