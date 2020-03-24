@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="481" column="49" selection-start-line="481" selection-start-column="49" selection-end-line="481" selection-end-column="49" />
+            <state relative-caret-position="416">
+              <caret line="467" column="55" lean-forward="true" selection-start-line="467" selection-start-column="55" selection-end-line="467" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="155" />
     <option name="y" value="22" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
@@ -297,12 +296,12 @@
       <workItem from="1584782354769" duration="154000" />
       <workItem from="1584880441521" duration="534000" />
       <workItem from="1584885757573" duration="470000" />
-      <workItem from="1584974664429" duration="1715000" />
+      <workItem from="1584974664429" duration="2326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3449000" />
+    <option name="totallyTimeSpent" value="4060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="155" y="22" width="1920" height="1005" extended-state="0" />
@@ -389,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="481" column="49" selection-start-line="481" selection-start-column="49" selection-end-line="481" selection-end-column="49" />
+        <state relative-caret-position="416">
+          <caret line="467" column="55" lean-forward="true" selection-start-line="467" selection-start-column="55" selection-end-line="467" selection-end-column="55" />
         </state>
       </provider>
     </entry>
