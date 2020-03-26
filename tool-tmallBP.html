@@ -192,7 +192,7 @@
         var auth = "null";
         auth = UrlParm.parm("auth");
         if(!auth || auth == 'null'){
-            weui.alert('为了工具箱的正常使用，请尽快前往官网https://SKRMAN.APP更新软件版本');
+            weui.alert('请前往官网https://SKRMAN.APP更新最新版本');
         }
         var itemData;
         var itemId;
@@ -267,7 +267,7 @@
 
             $.ajax({
                 type: "GET", //提交方式
-                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP2?mlink='+_link,//路径
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
@@ -479,7 +479,7 @@
             $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
             ready_task = true;
 
-     
+
         });
 
 
