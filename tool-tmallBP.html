@@ -107,6 +107,7 @@
                                         <option value=150 >提前150ms</option>
                                         <option value=200 >提前200ms</option>
                                         <option value=300 >提前300ms</option>
+                                        <option value=400 >提前400ms</option>
                                         <option value=500 >提前500ms</option>
                                     </select>
 
@@ -376,6 +377,11 @@
                     itemStylePad_html = itemStylePad_html +   " <option value=2 selected = 'selected'>2</option>"
                 }else{
                     itemStylePad_html = itemStylePad_html +   " <option value=2 >2</option>"
+                }
+                if(buyCount==3){
+                    itemStylePad_html = itemStylePad_html +   " <option value=3 selected = 'selected'>3</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=3 >3</option>"
                 }
                 if(buyCount==5){
                     itemStylePad_html = itemStylePad_html +   " <option value=5 selected = 'selected'>5</option>"
