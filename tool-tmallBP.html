@@ -267,7 +267,7 @@
 
             $.ajax({
                 type: "GET", //提交方式
-                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link,//路径
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
@@ -298,6 +298,15 @@
             var  itemStylePad_html = ''
             var current_image;
             var current_style = '';
+            try {
+                if(itemData.item.images[0].length>0){
+                    current_image = "https:"+itemData.item.images[0]
+                }
+            }catch (e) {
+
+            }
+
+
 
             for(var i =0;i<itemData.skuBase.props.length;i++){
                 let current_props = itemData.skuBase.props[i]
@@ -311,11 +320,15 @@
                 for(var j =0;j<current_props.values.length;j++){
                     let current_props_value = current_props.values[j]
                     let current_props_vid = current_props_value.vid
-                    let current_props_image = "https://"+current_props_value.image
+                    var current_props_image = "null"
+                    if(current_props_value.image){
+                        current_props_image = "https:"+current_props_value.image
+                    }
+
                     let isSelect = false;
                     if(skuId==0 && j==0  ){
-                        if(i==0){
-                            current_image = current_props_image
+                        if(i==0  && current_props_image!='null'){
+                                current_image = current_props_image
                         }
                         current_style =current_style+ current_props_name+":"+current_props_value.name
                         let _mprops = {
@@ -329,8 +342,9 @@
                             if(props[k].pid==current_props_pid && props[k].vid==current_props_vid){
                                 current_style =current_style+ current_props_name+":"+current_props_value.name
                                 isSelect = true
-                                if(i==0){
+                                if(i==0  && current_props_image!='null'){
                                     current_image = current_props_image
+                                 
                                 }
                             }
                         }
@@ -383,8 +397,8 @@
             current_style = "[下单确认]"+current_style+' 购买数量:'+buyCount
             $("#itemStyle").html(current_style)
 
-
             $("#itemPic").attr("src",current_image)
+
             findSkuId()
         }
 
