@@ -325,6 +325,8 @@
             $("#weight-1").attr("class",weight_empty_class)
             $("#weight-2").attr("class",weight_empty_class)
             $("#weight-3").attr("class",weight_select_class)
+
+            document.body.scrollTop = 0;
         });
 
         function stopTask(taskType) {
@@ -657,7 +659,7 @@
                     type: 'primary',
                     onClick: function(){
                         cartItems = [] ;
-                        $("#weight-2").trigger("click");
+                        reflashBuyCart()
                         $("#weight-2").html('购物车('+cartItems.length+')')
                     }
                 }]

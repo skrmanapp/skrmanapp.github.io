@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="187" column="30" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+            <state relative-caret-position="650">
+              <caret line="328" column="35" selection-start-line="328" selection-start-column="26" selection-end-line="328" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
@@ -128,8 +128,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="484" />
-    <option name="y" value="144" />
+    <option name="y" value="87" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
   </component>
@@ -370,15 +369,15 @@
       <workItem from="1585288791364" duration="430000" />
       <workItem from="1585290727588" duration="337000" />
       <workItem from="1585478159190" duration="637000" />
-      <workItem from="1585567946499" duration="11253000" />
+      <workItem from="1585567946499" duration="11605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23941000" />
+    <option name="totallyTimeSpent" value="24293000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="484" y="144" width="1920" height="1005" extended-state="0" />
+    <frame x="0" y="87" width="1920" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -496,8 +495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="187" column="30" selection-start-line="187" selection-start-column="30" selection-end-line="187" selection-end-column="30" />
+        <state relative-caret-position="650">
+          <caret line="328" column="35" selection-start-line="328" selection-start-column="26" selection-end-line="328" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
