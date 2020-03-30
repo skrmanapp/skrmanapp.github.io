@@ -45,15 +45,13 @@
 <section id="mu-contact" style="background-color: #fbfbfb">
 
 
-    <div class="topContorPad" >
-        <div id="weight-1" >获取商品</div>
-        <div id="weight-2" >购物车(0)</div>
-        <div id="weight-3" >准备跳转</div>
-    </div>
+
 
 
 
     <div class="container">
+
+
 
         <div class="row">
             <div class="col-md-12">
@@ -184,7 +182,11 @@
 
 
 
-
+    <div class="topContorPad" >
+        <div id="weight-1" >获取商品</div>
+        <div id="weight-2" >购物车(0)</div>
+        <div id="weight-3" >即将跳转</div>
+    </div>
 
 </section>
 <!-- End Contact -->
@@ -241,6 +243,7 @@
         var current_title = '';
 
         $("#weight-1").click(function(){
+            console.log("aaaa")
             if( ready_task){
                 stopTask(1)
                 return
