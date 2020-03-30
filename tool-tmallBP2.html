@@ -3,19 +3,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SKR达人</title>
+    <title></title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
     <!-- Font Awesome -->
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Slick slider -->
     <link href="assets/css/slick.css" rel="stylesheet">
     <!-- Theme color -->
     <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Bootstrap 本地版 -->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
     <!-- Main Style -->
@@ -24,174 +31,746 @@
     <!-- Fonts -->
 
     <!-- Open Sans for body and title font -->
-    <!-- jQuery library -->
-    <script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+
 </head>
-<body>
+<body style="background-color: #fbfbfb">
+
+
+
+
+<!-- Start Contact -->
+<section id="mu-contact" style="background-color: #fbfbfb">
 
 
 
 
 
-<!-- Start main content -->
 
-<main role="main" >
+    <div class="container">
 
-    <!-- Start Feature -->
-    <section id="mu-feature"style="background-color: #fafafa;height: 1500px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mu-feature-area">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area" style="padding-top: 80px">
 
-                        <div class="mu-title-area">
-                            <h2 class="mu-title">SKR工具箱</h2>
-                            <span class="mu-title-dot"></span>
+                    <div class="mu-title-area" >
+                        <h2 class="mu-heading-title" id="title">SKR达人购物车BP</h2>
+                        <span class="mu-title-dot"></span>
 
+                    </div>
+
+
+
+                    <div class="mu-title-area" id="card-searchItem">
+                        <div class="col-md-12">
+                            <div class="mu-contact-left">
+                                <div class="mu-contact-form">
+                                    <div class="form-group">
+                                        <textarea type="text"  placeholder="通过淘口令或链接查询(若口令请确保含有https://m.tb.cn)" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
+                                        <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="query-button"><span>查询</span></button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mu-title-area" id="card-addCart">
+                        <div class="col-md-12" style="padding-left: 20px;padding-right: 20px;display: flex;justify-content: center;align-items: start;text-align: left;height: 120px">
+                            <div class='pic' style="width: 35%"><img id="itemPic" ></div>
+                            <div style="padding-left: 20px;width: 65%;padding-top: 5px">
+                                <div style="font-size: 12px;font-weight: bold" id="itemTitle"></div>
+                                <div style="font-size: 10px;margin-top: 4px;color: darkred;" id="itemStyle"></div>
+                            </div>
                         </div>
 
 
-                        <a  href="tool-tmallBP.html">
-                            <div class="mu-feature-content" style="border-radius: 8px;padding: 8px;height: 120px;box-shadow: 0px 0px 2px #dddddd;overflow: hidden;color: #333333" >
+                        <div id="configPad-1" >
+                            <div id="itemStylePad" class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px"></div>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;margin-right: 10px;background-color: #f1f1f1;color: gray;border-color: gray" id="reset-button"><span>重新查询</span></button>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;margin-left: 10px" id="addcart-button"><span>添加购物车</span></button>
+                        </div>
 
-
-                                <div class="col-xs-3" style="height: 100%;padding: 0px;display: flex;justify-content:center;">
-                                    <img  src="assets/images/tmalllogo.png"  style="height: 64px;width: 64px;margin-top: 20px">
-                                </div>
-                                <div class="col-xs-7" style="padding-right: 0px">
-                                    <h6  style="margin-top: 24px;margin-bottom: 5px">
-                                        淘宝BP
-                                    </h6>
-                                    <p  style="font-size: 14px;word-break: break-all;line-height: 16px">
-                                        设定时间一键跳转下单！手残党的福音！
-                                    </p>
-                                </div>
-                                <div class="col-xs-2" style="  display: flex;justify-content: flex-end;">
-
-                                    <i class="fa fa-angle-right fa-2x row-icon" style="margin-top: 35px"></i>
-                                </div>
-                            </div>
-                        </a>
-
-
-
-                        <a  href="tool-nikeBP.html">
-                            <div class="mu-feature-content" style="border-radius: 8px;padding: 8px;height: 120px;box-shadow: 0px 0px 2px #dddddd;overflow: hidden;color: #333333" >
-
-
-                                <div class="col-xs-3" style="height: 100%;padding: 0px;display: flex;justify-content:center;"  >
-                                    <img  src="assets/images/nikelogo.png"  style="height: 64px;width: 64px;margin-top: 20px">
-                                </div>
-                                <div class="col-xs-7" style="padding-right: 0px">
-                                    <h6  style="margin-top: 24px;margin-bottom: 5px">
-                                        NikeApp跳转
-                                    </h6>
-                                    <p  style="font-size: 14px;word-break: break-all;line-height: 16px">
-                                        通过货号跳转NikeApp商品
-                                    </p>
-                                </div>
-                                <div class="col-xs-2" style="  display: flex;justify-content: flex-end;">
-                                    <i class="fa fa-angle-right fa-2x row-icon" style="margin-top: 35px"></i>
-                                </div>
-                            </div>
-                        </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!-- End Feature Content -->
 
                     </div>
+
+
+                    <div class="mu-title-area" id="card-checkCart">
+
+                        <div id="readyPad-2" >
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' id="time-confirm"></div>
+                                    <div class='itemDiv' id="time-count"></div>
+                                </div>
+
+                            </div>
+                            <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray;margin-bottom: 50px;" id="buy-button"><span>测试跳转</span></button>
+
+                        </div>
+
+                        <div id="card-checkCart-div" style="margin-top: 20px"> </div>
+
+                        <div id="readyPad-1" >
+
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >自动跳转时间</div>
+                                    <input class="itemSelect" type="datetime-local" id="timeInput">
+                                </div>
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >时间偏移</div>
+                                    <select class='itemSelect' id="time-offset">
+                                        <option value=0 >不偏移</option>
+                                        <option value=50 >提前50ms</option>
+                                        <option value=100 >提前100ms</option>
+                                        <option value=150 >提前150ms</option>
+                                        <option value=200 >提前200ms</option>
+                                        <option value=300 >提前300ms</option>
+                                        <option value=400 >提前400ms</option>
+                                        <option value=500 >提前500ms</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;margin-right: 10px;background-color: #f1f1f1;color: gray;border-color: gray" id="clearcart-button"><span>清空购物车</span></button>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="ready-button"><span>定时结算BP</span></button>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
+        </div>
+
+        <div class="row" style="font-size: 10px;color: #666666;padding: 30px;">
+
+            <p >
+                Tips： <br>
+                多商品模拟添加购物车BP可以支持多个商品同一时间跳转下单页面，但相比单商品BP抢购成功概率更低，推荐使用单商品BP同一时间段只抢购一种商品～
+            </p>
 
 
-            <div class="row" style="margin-top:50px;font-size: 12px;color: #666666;padding: 16px;">
-
-                <p style="color: darkred;">
-                    【免责声明】<br>
-                    SKR工具箱内仅供娱乐，不对其实际效果作出任何保证<br>
-                </p>
-                <p >
-                    * 小提示<br>
-                    长时间加载不出可以尝试使用VPN加载好再关闭<br>
-                </p>
-                <p id="device-info">
-
-                </p>
-
-            </div>
-
-
-
-
-
-            <!-- End Feature Content -->
 
         </div>
+
+        <div class="topContorPad" >
+            <div id="weight-1" >获取商品</div>
+            <div id="weight-2" >购物车(0)</div>
+            <div id="weight-3" >准备跳转</div>
         </div>
-        </div>
-        </div>
-    </section>
-    <!-- End Feature -->
+
+    </div>
 
 
 
 
 
 
+</section>
+<!-- End Contact -->
 
 
-</main>
 
 <!-- End main content -->
 
 
 
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<!-- Bootstrap -->
-<script src="assets/js/bootstrap.min.js"></script>
-<!-- Slick slider -->
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<!-- Ajax contact form  -->
-<script type="text/javascript" src="assets/js/app.js"></script>
 
 
+<!-- jQuery library -->
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+
+<!--  Bootstrap CDN版-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="assets/js/tool.js"></script>
+
+<!-- we ui -->
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 
 
 <script type="text/javascript">
 
     jQuery(document).ready(function($){
 
+
+        var isApple = false;
+        var auth = "null";
+        auth = UrlParm.parm("auth");
+        if(!auth || auth == 'null'){
+            weui.alert('请前往官网https://SKRMAN.APP更新最新版本');
+        }
+        var itemData;
+        var itemId;
+        var skuId = 0;
+        var props = [] ;
+        var buyCount = 1 ;
+        var ready_url = "null" ;
+        var ready_time ;
+        var ready_time_offset ;
+        var ready_task = false ;
+        let weight_select_class = 'topContorPad-item-select'
+        let weight_empty_class = 'topContorPad-item'
+
+        var cartItems = [] ;
+        var current_image = '';
+        var current_style = '';
+        var current_title = '';
+
+        $("#weight-1").click(function(){
+            if( ready_task){
+                stopTask(1)
+                return
+            }
+            $("#title").html('STEP1-获取商品')
+            $("#card-searchItem").show()
+            $("#card-addCart").hide()
+            $("#card-checkCart").hide()
+
+            $("#weight-1").attr("class",weight_select_class)
+            $("#weight-2").attr("class",weight_empty_class)
+            $("#weight-3").attr("class",weight_empty_class)
+        });
+        $("#weight-2").click(function(){
+            if(cartItems.length<1){
+                weui.alert("哎呀，购物车没有商品")
+                return
+            }
+            if( ready_task){
+                stopTask(2)
+                return
+            }
+            $("#title").html('STEP2-检查购物车')
+            $("#card-searchItem").hide()
+            $("#card-addCart").hide()
+            $("#card-checkCart").show()
+            $("#readyPad-1").show()
+            $("#readyPad-2").hide()
+            $("#weight-1").attr("class",weight_empty_class)
+            $("#weight-2").attr("class",weight_select_class)
+            $("#weight-3").attr("class",weight_empty_class)
+            reflashBuyCart()
+        });
+        $("#weight-3").click(function(){
+            if(cartItems.length<1){
+                weui.alert("哎呀，购物车没有商品")
+                return
+            }
+            var buyParam = ''
+            for(var i =0;i<cartItems.length;i++){
+                let _item =  cartItems[i]
+                if(i==0){
+                    buyParam = _item.itemId+'_'+_item.buyCount+'_'+_item.skuId
+                }else{
+                    buyParam = buyParam+','+_item.itemId+'_'+_item.buyCount+'_'+_item.skuId
+                }
+
+
+            }
+            let ready_time_str = $("#timeInput").val()
+            ready_time = new Date(ready_time_str);
+            ready_time.setSeconds(0)
+            if(isApple){
+                ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
+
+            }
+            ready_time_offset = $("#time-offset").val()
+
+
+
+            ready_url = "taobao://h5.m.taobao.com/cart/order.html?buyParam="+buyParam
+
+            let now = new Date()
+            let timeDiff = ready_time.getTime() - now.getTime()
+            if(timeDiff<=ready_time_offset){
+                weui.alert("哎呀，开始时间不能比现在早")
+                return
+            }
+
+            $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
+            ready_task = true;
+
+            $("#title").html('STEP3-准备BP')
+            $("#card-searchItem").hide()
+            $("#card-addCart").hide()
+            $("#card-checkCart").show()
+            $("#readyPad-1").hide()
+            $("#readyPad-2").show()
+            $("#weight-1").attr("class",weight_empty_class)
+            $("#weight-2").attr("class",weight_empty_class)
+            $("#weight-3").attr("class",weight_select_class)
+        });
+
+        function stopTask(taskType) {
+            weui.confirm('此操作将暂停当前跳转任务，是否确认？', {
+                title: '提示',
+                buttons: [{
+                    label: '取消',
+                    type: 'default',
+                    onClick: function(){
+
+                    }
+                }, {
+                    label: '确认',
+                    type: 'primary',
+                    onClick: function(){
+                        ready_task = false;
+                        if(taskType==1){
+                            $("#weight-1").trigger("click");
+                        }
+                        if(taskType==2){
+                            $("#weight-2").trigger("click");
+                        }
+
+                    }
+                }]
+            });
+            return;
+
+        }
+
+
+        $("#weight-1").trigger("click");
         let userAgent = navigator.userAgent;
-        $('#device-info').html(userAgent);
+        if(userAgent.indexOf('Weibo')>-1){
+            weui.alert("欢迎下载SKR达人APP启用功能")
+            window.location.href = "https://skrman.app"
+            return;
+        }
+        if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
+            isApple = true
+            if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1){
+                isApple = false
+            }
+        }
+
+
+
+        $('#timeInput').val(getNowFormatDateTime())
+        var ref = setInterval(function(){
+            timeTask();
+        },50);
+
+
+        function timeTask() {
+
+            if(ready_task){
+                let now = new Date()
+                let timeDiff = ready_time.getTime() - now.getTime()
+
+
+                if(timeDiff<=ready_time_offset){
+                    ready_task = false;
+                    console.log("====ok====")
+                    startJump()
+                    $("#time-count").html("开启跳转")
+                }else{
+                    $("#time-count").html("倒计时:"+timeDiff+"ms")
+
+
+                }
+
+
+
+            }
+
+        }
+
+
+        function queryItem(_link) {
+            //读取数据
+            skuId = 0;
+            props = [];
+            buyCount = 1 ;
+            ready_task = false;
+            <!--==========================网络请求============================-->
+            var requestData = {
+                "mlink":_link
+            }
+            var dataStr =  JSON.stringify(requestData)
+
+            $.ajax({
+                type: "GET", //提交方式
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link,//路径
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    if(result.errcode==0){
+                        itemData = result.data
+                        $("#card-searchItem").hide()
+                        $("#card-addCart").show()
+                        reflashControlPad()
+                    }else{
+                        weui.alert(result.errmsg)
+                    }
+
+
+                },
+                error: (err, type) => {
+
+                    weui.alert(err.statusText+"网络错误，换个网络试试")
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+
+
+        function reflashBuyCart() {
+            var  checkCart_html = ''
+            for(var i =0;i<cartItems.length;i++){
+                let _item = cartItems[i]
+                checkCart_html = checkCart_html + "  <div class='col-md-12' style='padding-left: 20px;padding-right: 20px;display: flex;justify-content: center;align-items: start;text-align: left;height: 122px;border-style: solid;border-width: 1px;border-color: #dddddd'>\n" +
+                    "                            <div class='pic' style='width: 35%'><img src='"+_item.image+"' ></div>\n" +
+                    "                            <div style='padding-left: 20px;width: 65%;margin-top: 12px'>\n" +
+                    "                                <div style='font-size: 12px;font-weight: bold;height: 32px;line-height: 16px; overflow: hidden;'>"+_item.title+"</div>\n" +
+                    "                                <div style='font-size: 12px;margin-top: 4px;color: darkred;height: 56px;line-height: 14px; overflow: hidden;' >"+_item.style+"</div>\n" +
+                    "                            </div>\n" +
+                    "                        </div>"
+
+            }
+
+            $("#card-checkCart-div").html(checkCart_html)
+
+        }
+
+
+        function reflashControlPad() {
+            current_image = '';
+            current_style = '';
+            current_title = '';
+            current_title = itemData.item.title
+            $("#itemTitle").html(itemData.item.title)
+            itemId = itemData.item.itemId
+            var  itemStylePad_html = ''
+
+            try {
+                if(itemData.item.images[0].length>0){
+                    current_image = "https:"+itemData.item.images[0]
+                }
+            }catch (e) {
+
+            }
+
+
+
+            for(var i =0;i<itemData.skuBase.props.length;i++){
+                let current_props = itemData.skuBase.props[i]
+                let current_props_name = current_props.name
+                let current_props_pid = current_props.pid
+                var current_props_html = ''
+
+                current_props_html = " <div class='item' >\n" +
+                    "                                <div class='itemTitle' >"+current_props_name+"</div>\n" +
+                    "                                <select name='select' class='itemSelect' onchange=onChange_Row("+current_props_pid+",this.options[this.options.selectedIndex].value)>\n"
+                for(var j =0;j<current_props.values.length;j++){
+                    let current_props_value = current_props.values[j]
+                    let current_props_vid = current_props_value.vid
+                    var current_props_image = "null"
+                    if(current_props_value.image){
+                        current_props_image = "https:"+current_props_value.image
+                    }
+
+                    let isSelect = false;
+                    if(skuId==0 && j==0  ){
+                        if(i==0  && current_props_image!='null'){
+                            current_image = current_props_image
+                        }
+                        current_style =current_style+ current_props_name+":"+current_props_value.name
+                        let _mprops = {
+                            pid:current_props_pid,
+                            vid:current_props_vid
+                        }
+                        props.push(_mprops)
+                    }
+                    if(skuId!=0 ){
+                        for(var k =0;k<props.length;k++){
+                            if(props[k].pid==current_props_pid && props[k].vid==current_props_vid){
+                                current_style =current_style+ current_props_name+":"+current_props_value.name
+                                isSelect = true
+                                if(i==0  && current_props_image!='null'){
+                                    current_image = current_props_image
+
+                                }
+                            }
+                        }
+                    }
+
+                    if(isSelect){
+                        current_props_html = current_props_html+" <option value="+current_props_vid+" selected = 'selected'>"+current_props_value.name+"</option>"
+                    }else{
+                        current_props_html = current_props_html+" <option value="+current_props_vid+">"+current_props_value.name+"</option>"
+                    }
+
+                }
+
+                itemStylePad_html =itemStylePad_html+ current_props_html  + "</select></div>"
+
+
+            }
+            itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
+                "<div class='itemTitle' >购买数量(谨慎选择)</div>\n" +
+                "<select name='select' class='itemSelect' onchange=onChange_Count(this.options[this.options.selectedIndex].value)>"
+
+            if(buyCount==1){
+                itemStylePad_html = itemStylePad_html +   " <option value=1 selected = 'selected'>1</option>"
+            }else{
+                itemStylePad_html = itemStylePad_html +   " <option value=1 >1</option>"
+            }
+
+            if(buyCount==2){
+                itemStylePad_html = itemStylePad_html +   " <option value=2 selected = 'selected'>2</option>"
+            }else{
+                itemStylePad_html = itemStylePad_html +   " <option value=2 >2</option>"
+            }
+            if(buyCount==3){
+                itemStylePad_html = itemStylePad_html +   " <option value=3 selected = 'selected'>3</option>"
+            }else{
+                itemStylePad_html = itemStylePad_html +   " <option value=3 >3</option>"
+            }
+            if(buyCount==5){
+                itemStylePad_html = itemStylePad_html +   " <option value=5 selected = 'selected'>5</option>"
+            }else{
+                itemStylePad_html = itemStylePad_html +   " <option value=5 >5</option>"
+            }
+            if(buyCount==10){
+                itemStylePad_html = itemStylePad_html +   " <option value=10 selected = 'selected'>10</option>"
+            }else{
+                itemStylePad_html = itemStylePad_html +   " <option value=10 >10</option>"
+            }
+
+            itemStylePad_html = itemStylePad_html +"</select></div>"
+
+
+
+            $("#itemStylePad").html(itemStylePad_html)
+
+            current_style = "[规格]"+current_style+' 购买数量:'+buyCount
+            $("#itemStyle").html(current_style)
+
+            $("#itemPic").attr("src",current_image)
+
+            findSkuId()
+        }
+
+        function findSkuId() {
+
+            skuId = 0
+
+
+            for(var i =0;i<itemData.skuBase.skus.length;i++){
+                let _propPath  = itemData.skuBase.skus[i].propPath+';'
+                var matchProps = true
+                for(var j =0;j<props.length;j++){
+                    if(_propPath.indexOf(props[j].pid+':')==-1 || _propPath.indexOf(props[j].vid+';')==-1){
+                        matchProps = false
+                    }
+                }
+
+                if(matchProps){
+                    skuId = itemData.skuBase.skus[i].skuId
+                }
+            }
+            if(skuId==0){
+                weui.alert("获取skuid出错")
+                $("#itemStyle").html("获取数据错误")
+            }
+            console.log("skuId"+"---"+skuId)
+        }
+
+
+        onChange_Row = function (pid,vid){
+            for(var i =0;i<props.length;i++){
+                if(props[i].pid==pid){
+                    props[i].vid = vid
+                }
+            }
+            reflashControlPad()
+        }
+        onChange_Count = function (count){
+            buyCount = count
+            reflashControlPad()
+        }
+        $("#query-button").click(function(){
+            let _link =  $("#link").val()
+
+            if(_link.indexOf('m.tb.cn')>-1){
+                var mlink = _link.split("http")[1]
+                mlink = mlink.split("?")[0]
+                mlink = 'http'+mlink
+                queryItem(mlink)
+            }else if(_link.indexOf('id=')>-1){
+                var mlink = _link.split("id=")[1]
+                mlink = 'id='+mlink
+                queryItem(mlink)
+            }else{
+                weui.alert('确保口令内含有https://m.tb.cn')
+            }
+
+
+
+        });
+        $("#reset-button").click(function(){
+            $("#weight-1").trigger("click");
+
+        });
+        $("#clearcart-button").click(function(){
+
+
+
+            weui.confirm('确定要清空购物车吗', {
+                title: '提示',
+                buttons: [{
+                    label: '取消',
+                    type: 'default',
+                    onClick: function(){
+
+                    }
+                }, {
+                    label: '确认',
+                    type: 'primary',
+                    onClick: function(){
+                        cartItems = [] ;
+                        $("#weight-2").trigger("click");
+                        $("#weight-2").html('购物车('+cartItems.length+')')
+                    }
+                }]
+            });
+        });
+
+        $("#addcart-button").click(function(){
+
+            let shopItem = {
+                title:current_title,
+                image:current_image,
+                style:current_style,
+                itemId:itemId,
+                skuId:skuId,
+                buyCount:buyCount
+            }
+            var isExist = false
+            for(var i =0;i<cartItems.length;i++){
+                if(cartItems[i].itemId == itemId && cartItems[i].skuId == skuId){
+                    isExist = true
+                }
+            }
+            if(isExist){
+                weui.alert("购物车已经有这个商品啦～")
+                return
+            }
+            cartItems.push(shopItem)
+            $("#weight-2").html('购物车('+cartItems.length+')')
+
+            weui.confirm('添加商品到购物车成功！请选择您接下来的操作', {
+                title: '提示',
+                buttons: [{
+                    label: '继续添加商品',
+                    type: 'default',
+                    onClick: function(){
+
+                    }
+                }, {
+                    label: '查看购物车',
+                    type: 'primary',
+                    onClick: function(){
+                        $("#weight-2").trigger("click");
+                    }
+                }]
+            });
+
+        });
+        $("#ready-button").click(function(){
+            $("#weight-3").trigger("click");
+
+
+
+
+
+        });
+
+
+        $("#buy-button").click(function(){
+            startJump()
+
+        });
+
+
+
+        function startJump() {
+            window.location.href = ready_url
+        }
+
+
+
+
+
+
+
+
+
+        function getNowFormatDateTime() {
+            let date = new Date();
+            let seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+
+            date.setMinutes(date.getMinutes()+1)
+            let hour = date.getHours();
+            let strMinutes = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            if (strMinutes >= 0 && strMinutes <= 9) {
+                strMinutes = "0" + strMinutes;
+            }
+
+            var currentdateTime = year + seperator1 + month + seperator1 + strDate+'T'+hour+':'+strMinutes;
+            return currentdateTime;
+        }
 
     })
 
 
 
 
+
+
+
+
+
+
+
+
 </script>
 
-
 </body>
+
 </html>

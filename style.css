@@ -1341,11 +1341,58 @@ button:focus {
 	right: 30px;
 	top: 10px;
 	width: 60px;
-	height: 30px;
-	text-align: right;
-
+	height: 28px;
 	color: #000000;
-	line-height: 30px;
+	line-height: 28px;
+	text-align: right;
 	/*background-color: #555555;*/
 	/*border-radius: 15px;*/
+	font-size: 14px;
+	/*border-style: solid;*/
+	/*border-radius: 8px;*/
+	/*border-width: 1px;*/
+
+	/*border-color: #555555;*/
+	/*background-color: #f2f2f2;*/
+}
+
+.topContorPad{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 40px;
+	border-style: solid;
+	border-width: 2px;
+	display: flex;
+	justify-content: space-around;
+	background-color: #ffffff;
+}
+
+.topContorPad-item{
+	position: relative;
+	width: 30%;
+	height:32px;
+	line-height: 30px;
+	margin-top: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #333333;
+	text-align: center;
+	font-size: 13px;
+	color:  #333333;
+}
+.topContorPad-item-select{
+	position: relative;
+	width: 30%;
+	height:32px;
+	line-height: 30px;
+	margin-top: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #333333;
+	text-align: center;
+	font-size: 13px;
+	background-color: #333333;
+	color: white;
 }
