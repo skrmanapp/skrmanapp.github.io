@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Bootstrap 本地版 -->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body and title font -->
+
+
+
+
+</head>
+<body style="background-color: #fbfbfb">
+
+
+
+
+<!-- Start Contact -->
+<section id="mu-contact" style="background-color: #fbfbfb">
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area" style="padding-top: 50px">
+
+                    <div class="mu-title-area" >
+                        <h2 class="mu-heading-title">已有BP链接定时跳转</h2>
+                        <span class="mu-title-dot"></span>
+
+                    </div>
+
+
+
+                    <div class="mu-title-area" id="card-step-1">
+                        <div class="col-md-12">
+                            <div class="mu-contact-left">
+                                <div class="mu-contact-form">
+                                    <div class="form-group">
+                                        <textarea type="text"  placeholder="请输入已生成好的BP链接" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div id="configPad" >
+
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >自动跳转时间</div>
+                                    <input class="itemSelect" type="datetime-local" id="timeInput">
+                                </div>
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >时间偏移</div>
+                                    <select class='itemSelect' id="time-offset">
+                                        <option value=0 >不偏移</option>
+                                        <option value=50 >提前50ms</option>
+                                        <option value=100 >提前100ms</option>
+                                        <option value=150 >提前150ms</option>
+                                        <option value=200 >提前200ms</option>
+                                        <option value=300 >提前300ms</option>
+                                        <option value=400 >提前400ms</option>
+                                        <option value=500 >提前500ms</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
+                        </div>
+                    </div>
+
+
+                    <div class="mu-title-area" id="card-step-2">
+                        <div class="col-md-12" id="url-detail" style="width: 90%;font-size: 12px;text-align: left;padding-right: 20px;word-wrap: break-word;">
+
+                        </div>
+
+
+
+                        <div id="readyPad" >
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' id="time-confirm"></div>
+                                    <div class='itemDiv' id="time-count"></div>
+                                </div>
+
+                            </div>
+                            <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="buy-button"><span>测试跳转</span></button>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="font-size: 10px;color: #666666;padding: 30px;">
+
+        <p >
+        注意： <br>
+         此为备选方案，热门商品即将发售时容易出现淘口令的解析失败，可以先生成BP链接，然后在此处进行BP定时跳转即可<br>
+
+         </p>
+
+
+
+        </div>
+
+        <div class="resetButton" id="reset-button" >重置</div>
+
+    </div>
+
+
+
+
+
+
+</section>
+<!-- End Contact -->
+
+
+
+<!-- End main content -->
+
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+
+<!--  Bootstrap CDN版-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="assets/js/tool.js"></script>
+
+<!-- we ui -->
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+
+        var isApple = false;
+
+        var itemData;
+        var itemId;
+        var skuId = 0;
+        var props = [] ;
+        var buyCount = 1 ;
+        var ready_url = "null" ;
+        var ready_time ;
+        var ready_time_offset ;
+        var ready_task = false ;
+
+        $("#card-step-1").show()
+        $("#card-step-2").hide()
+
+        let userAgent = navigator.userAgent;
+        if(userAgent.indexOf('Weibo')>-1){
+            weui.alert("欢迎下载SKR达人APP启用功能")
+            window.location.href = "https://skrman.app"
+            return;
+        }
+        if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
+            isApple = true
+            if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1){
+                isApple = false
+            }
+        }
+
+
+
+        $('#timeInput').val(getNowFormatDateTime())
+        var ref = setInterval(function(){
+            timeTask();
+        },50);
+
+
+        function timeTask() {
+
+           if(ready_task){
+               let now = new Date()
+               let timeDiff = ready_time.getTime() - now.getTime()
+
+
+               if(timeDiff<=ready_time_offset){
+                   ready_task = false;
+                   console.log("====ok====")
+                   startJump()
+                   $("#time-count").html("开启跳转")
+               }else{
+                   $("#time-count").html("倒计时:"+timeDiff+"ms")
+
+
+               }
+
+
+
+           }
+
+        }
+
+
+
+
+
+
+
+        $("#reset-button").click(function(){
+            ready_task = false;
+            $("#card-step-1").show()
+            $("#card-step-2").hide()
+
+        });
+
+
+        $("#config-button").click(function(){
+
+
+            let _link =  $("#link").val()
+            ready_url = _link.replace("https:", "taobao:");
+
+            let ready_time_str = $("#timeInput").val()
+            ready_time = new Date(ready_time_str);
+            ready_time.setSeconds(0)
+            if(isApple){
+                ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
+
+            }
+            ready_time_offset = $("#time-offset").val()
+
+
+            let now = new Date()
+            let timeDiff = ready_time.getTime() - now.getTime()
+
+            if(timeDiff<=ready_time_offset){
+                weui.alert("哎呀，开始时间不能比现在早")
+                return
+            }
+            $("#url-detail").html('BP链接'+_link);
+            $("#readyPad").show();
+            $("#card-step-1").hide()
+            $("#card-step-2").show()
+            $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
+            ready_task = true;
+
+
+        });
+
+
+        $("#buy-button").click(function(){
+            startJump()
+
+        });
+
+
+
+        function startJump() {
+            window.location.href = ready_url
+        }
+
+
+
+
+
+
+
+
+
+        function getNowFormatDateTime() {
+            let date = new Date();
+            let seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+
+            date.setMinutes(date.getMinutes()+1)
+            let hour = date.getHours();
+            let strMinutes = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            if (strMinutes >= 0 && strMinutes <= 9) {
+                strMinutes = "0" + strMinutes;
+            }
+
+            var currentdateTime = year + seperator1 + month + seperator1 + strDate+'T'+hour+':'+strMinutes;
+            return currentdateTime;
+        }
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

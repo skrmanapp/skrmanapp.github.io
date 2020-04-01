@@ -113,6 +113,8 @@
 
                             </div>
                             <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray;margin-bottom: 50px;" id="buy-button"><span>测试跳转</span></button>
+                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="copy-button"><span>复制BP链接</span></button>
+
 
                         </div>
 
@@ -727,7 +729,17 @@
         function startJump() {
             window.location.href = ready_url
         }
+        $("#copy-button").click(function(){
 
+            var oInput = document.createElement('input');
+            oInput.value = ready_url.replace("taobao:", "https:");
+            document.body.appendChild(oInput);
+            oInput.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            oInput.className = 'oInput';
+            oInput.style.display='none';
+            weui.alert('BP链接已经复制到剪切板中')
+        });
 
 
 

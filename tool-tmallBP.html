@@ -125,6 +125,7 @@
 
                             </div>
                             <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="buy-button"><span>测试跳转</span></button>
+                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="copy-button"><span>复制BP链接</span></button>
 
                         </div>
 
@@ -143,6 +144,7 @@
             (1)获取商品后记得清除剪切板，或者直接复制这行字 <br>
             (2)自行校准手机的本地时间 <br>
             (3)淘宝客户端打开商品页面并放入后台等待 <br>
+            (4)热门商品请提前生成BP链接后使用【已有BP链接跳转】 <br>
          </p>
 
 
@@ -499,7 +501,13 @@
             $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
             ready_task = true;
 
-
+            var oInput = document.createElement('input');
+            oInput.value = "skrman";
+            document.body.appendChild(oInput);
+            oInput.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            oInput.className = 'oInput';
+            oInput.style.display='none';
         });
 
 
@@ -508,6 +516,17 @@
 
         });
 
+        $("#copy-button").click(function(){
+
+            var oInput = document.createElement('input');
+            oInput.value = ready_url.replace("taobao:", "https:");
+            document.body.appendChild(oInput);
+            oInput.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            oInput.className = 'oInput';
+            oInput.style.display='none';
+            weui.alert('BP链接已经复制到剪切板中')
+        });
 
 
         function startJump() {
