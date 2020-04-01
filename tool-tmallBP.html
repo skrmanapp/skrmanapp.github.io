@@ -125,7 +125,7 @@
 
                             </div>
                             <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="buy-button"><span>测试跳转</span></button>
-                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="copy-button"><span>复制BP链接</span></button>
+                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="copy-button"><span>复制BP</span></button>
 
                         </div>
 
@@ -143,7 +143,7 @@
         为了让抢购畅通无阻： <br>
             (1)自行校准手机的本地时间 <br>
             (2)淘宝客户端打开商品页面并放入后台等待 <br>
-            (3)热门商品请【提前】在最后一步【复制BP链接】再使用【已有BP链接跳转】 <br>
+            (3)热门商品请【提前】在最后一步【复制BP】再使用【已有BP链接跳转】 <br>
             (4)若出现解析失败，请将淘口令的短链接复制到浏览器打开，然后将浏览器的地址复制到此处<br>
          </p>
 
@@ -517,15 +517,15 @@
         });
 
         $("#copy-button").click(function(){
+            copyTxt(ready_url.replace("taobao:", "https:"))
+            // var oInput = document.createElement('input');
+            // oInput.value = ready_url.replace("taobao:", "https:");
+            // document.body.appendChild(oInput);
+            // oInput.select(); // 选择对象
+            // document.execCommand("Copy"); // 执行浏览器复制命令
+            // oInput.className = 'oInput';
+            // oInput.style.display='none';
 
-            var oInput = document.createElement('input');
-            oInput.value = ready_url.replace("taobao:", "https:");
-            document.body.appendChild(oInput);
-            oInput.select(); // 选择对象
-            document.execCommand("Copy"); // 执行浏览器复制命令
-            oInput.className = 'oInput';
-            oInput.style.display='none';
-            weui.alert('BP链接已经复制到剪切板中，请保存好使用【已有BP链接跳转 】')
         });
 
 
@@ -538,7 +538,40 @@
 
 
 
-
+        function copyTxt(text){
+            if(typeof document.execCommand!=="function"){
+                weui.alert(text)
+                return;
+            }
+            var dom = document.createElement("textarea");
+            dom.value = text;
+            dom.setAttribute('style', 'display: block;width: 1px;height: 1px;');
+            document.body.appendChild(dom);
+            dom.select();
+            var result = document.execCommand('copy');
+            document.body.removeChild(dom);
+            if (result) {
+                weui.alert('BP链接已经复制到剪切板中，请保存好使用【已有BP链接跳转 】')
+                return;
+            }
+            if(typeof document.createRange!=="function"){
+                weui.alert(text)
+                return;
+            }
+            var range = document.createRange();
+            var div=document.createElement('div');
+            div.innerHTML=text;
+            div.setAttribute('style', 'height: 1px;fontSize: 1px;overflow: hidden;');
+            document.body.appendChild(div);
+            range.selectNode(div);
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0){
+                selection.removeAllRanges();
+            }
+            selection.addRange(range);
+            document.execCommand('copy');
+            weui.alert(text)
+        }
 
 
         function getNowFormatDateTime() {

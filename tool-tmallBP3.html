@@ -263,6 +263,11 @@
 
 
             let _link =  $("#link").val()
+            if(_link.indexOf('cart/order')==-1){
+                weui.alert("请输入正确BP链接")
+                return;
+            }
+
             ready_url = _link.replace("https:", "taobao:");
 
             let ready_time_str = $("#timeInput").val()
