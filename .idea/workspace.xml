@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skrtool.html" beforeDir="false" afterPath="$PROJECT_DIR$/skrtool.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP3.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +226,7 @@
       <workItem from="1585707052551" duration="3691000" />
       <workItem from="1585712290057" duration="20000" />
       <workItem from="1585713567667" duration="123000" />
-      <workItem from="1585751228237" duration="582000" />
+      <workItem from="1585751228237" duration="746000" />
     </task>
     <servers />
   </component>

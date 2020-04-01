@@ -501,13 +501,7 @@
             $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
             ready_task = true;
 
-            var oInput = document.createElement('input');
-            oInput.value = "skrman";
-            document.body.appendChild(oInput);
-            oInput.select(); // 选择对象
-            document.execCommand("Copy"); // 执行浏览器复制命令
-            oInput.className = 'oInput';
-            oInput.style.display='none';
+            copyTxt("skrman.app")
         });
 
 
