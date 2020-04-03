@@ -297,13 +297,18 @@
 
         }
         function reflashControlPad() {
-            var name  = itemData.name
-            name = 　name.replace(/\"/g, "")
-            var image  = itemData.image
-            image = 　image.replace(/\"/g, "")
-            $("#itemTitle").html(name)
+            try {
+                var name  = itemData.name
+                name = 　name.replace(/\"/g, "")
+                var image  = itemData.image
+                image = 　image.replace(/\"/g, "")
+                $("#itemTitle").html(name)
+                $("#itemPic").attr("src",image)
+            }catch  (e) {
+                $("#itemTitle").html("未知商品")
+            }
 
-            $("#itemPic").attr("src",image)
+
             var  itemStylePad_html = ''
             var current_image ;
 
