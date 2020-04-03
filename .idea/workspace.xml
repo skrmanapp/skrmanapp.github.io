@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tool-jdBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="371" column="34" selection-start-line="371" selection-start-column="34" selection-end-line="371" selection-end-column="34" />
+            <state relative-caret-position="471">
+              <caret line="278" column="49" selection-start-line="278" selection-start-column="49" selection-end-line="278" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -65,8 +65,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-13" />
-    <option name="y" value="29" />
+    <option name="x" value="7" />
+    <option name="y" value="182" />
     <option name="width" value="1920" />
     <option name="height" value="1005" />
   </component>
@@ -310,15 +310,15 @@
       <workItem from="1585751228237" duration="842000" />
       <workItem from="1585752362923" duration="47000" />
       <workItem from="1585791118346" duration="369000" />
-      <workItem from="1585878582441" duration="3849000" />
+      <workItem from="1585878582441" duration="4030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4218000" />
+    <option name="totallyTimeSpent" value="4399000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="443" y="37" width="1920" height="1005" extended-state="0" />
+    <frame x="7" y="182" width="1920" height="1005" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
@@ -416,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-jdBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="371" column="34" selection-start-line="371" selection-start-column="34" selection-end-line="371" selection-end-column="34" />
+        <state relative-caret-position="471">
+          <caret line="278" column="49" selection-start-line="278" selection-start-column="49" selection-end-line="278" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
