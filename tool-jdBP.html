@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+
+
+
+    <!-- Bootstrap 本地版 -->
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body and title font -->
+
+
+
+
+</head>
+<body style="background-color: #fbfbfb">
+
+
+
+
+<!-- Start Contact -->
+<section id="mu-contact" style="background-color: #fbfbfb">
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mu-contact-area" style="padding-top: 50px">
+
+                    <div class="mu-title-area" >
+                        <h2 class="mu-heading-title">SKR达人京东BP</h2>
+                        <span class="mu-title-dot"></span>
+
+                    </div>
+
+
+
+                    <div class="mu-title-area" id="card-step-1">
+                        <div class="col-md-12">
+                            <div class="mu-contact-left">
+                                <div class="mu-contact-form">
+                                    <div class="form-group">
+                                        <textarea type="text"  placeholder="输入京东链接，如https://item.m.jd.com/product/100011585394.html" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
+                                        <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="query-button"><span>查询</span></button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mu-title-area" id="card-step-2">
+                        <div class="col-md-12" style="padding-left: 20px;padding-right: 20px;display: flex;justify-content: center;align-items: start;text-align: left;height: 120px">
+                            <div class='pic' style="width: 35%"><img id="itemPic" ></div>
+                            <div style="padding-left: 20px;width: 65%;padding-top: 5px">
+                                <div style="font-size: 12px;font-weight: bold" id="itemTitle"></div>
+                                <div style="font-size: 10px;margin-top: 4px;color: darkred;" id="itemStyle"></div>
+                            </div>
+                        </div>
+
+
+                        <div id="configPad" >
+                            <div id="itemStylePad" class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px"></div>
+
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >自动跳转时间</div>
+                                    <input class="itemSelect" type="datetime-local" id="timeInput">
+                                </div>
+                                <div class='itemLong' >
+                                    <div class='itemTitle' >时间偏移</div>
+                                    <select class='itemSelect' id="time-offset">
+                                        <option value=0 >不偏移</option>
+                                        <option value=50 >提前50ms</option>
+                                        <option value=100 >提前100ms</option>
+                                        <option value=150 >提前150ms</option>
+                                        <option value=200 >提前200ms</option>
+                                        <option value=300 >提前300ms</option>
+                                        <option value=400 >提前400ms</option>
+                                        <option value=500 >提前500ms</option>
+                                        <option value=800 >提前800ms</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+
+                            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
+                        </div>
+                        <div id="readyPad" >
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                                <div class='itemLong' >
+                                    <div class='itemTitle' id="time-confirm"></div>
+                                    <div class='itemDiv' id="time-count"></div>
+                                </div>
+
+                            </div>
+                            <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="buy-button"><span>测试跳转</span></button>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="font-size: 10px;color: #666666;padding: 30px;">
+
+        <p >
+        为了让抢购畅通无阻： <br>
+            (1)自行校准手机的本地时间 <br>
+            (2)京东客户端打开商品页面并放入后台等待 <br>
+         </p>
+
+
+
+        </div>
+
+        <div class="resetButton" id="reset-button" >重置</div>
+
+    </div>
+
+
+
+
+
+
+</section>
+<!-- End Contact -->
+
+
+
+<!-- End main content -->
+
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+
+<!--  Bootstrap CDN版-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="assets/js/tool.js"></script>
+
+<!-- we ui -->
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+
+        var isApple = false;
+        var auth = "null";
+        auth = UrlParm.parm("auth");
+        if(!auth || auth == 'null'){
+            weui.alert('请前往官网https://SKRMAN.APP更新最新版本');
+        }
+        var itemData;
+        var itemId;
+        var skuId = 0;
+        var props = [] ;
+        var buyCount = 1 ;
+        var ready_url = "null" ;
+        var ready_time ;
+        var ready_time_offset ;
+        var ready_task = false ;
+
+        $("#card-step-1").show()
+        $("#card-step-2").hide()
+
+        let userAgent = navigator.userAgent;
+        if(userAgent.indexOf('SKRIOS')==-1 && userAgent.indexOf('SKRAND')>-1 ){
+            weui.alert("请前往https://SKRMAN.APP更新")
+            // window.location.href = "https://skrman.app"
+            return;
+        }
+        if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
+            isApple = true
+            if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1){
+                isApple = false
+            }
+        }
+
+
+
+        $('#timeInput').val(getNowFormatDateTime())
+        var ref = setInterval(function(){
+            timeTask();
+        },50);
+
+
+        function timeTask() {
+
+           if(ready_task){
+               let now = new Date()
+               let timeDiff = ready_time.getTime() - now.getTime()
+
+
+               if(timeDiff<=ready_time_offset){
+                   ready_task = false;
+                   console.log("====ok====")
+                   startJump()
+                   $("#time-count").html("开启跳转")
+               }else{
+                   $("#time-count").html("倒计时:"+timeDiff+"ms")
+
+
+               }
+
+
+
+           }
+
+        }
+
+
+        function queryItem() {
+            //读取数据
+            skuId = 0;
+            props = [];
+            buyCount = 1 ;
+            ready_task = false;
+            <!--==========================网络请求============================-->
+
+            $.ajax({
+                type: "GET", //提交方式
+                url: 'https://cloud.bmob.cn/aed0843961fb06dc/jdBP?auth='+auth+'&itemid='+itemId,//路径
+                success: function (result) {//返回数据根据结果进行相应的处理
+                    if(result.errcode==0){
+                        itemData = result.data
+                        $("#card-step-1").hide()
+                        $("#card-step-2").show()
+                        $("#configPad").show()
+                        $("#readyPad").hide();
+                        reflashControlPad()
+                    }else{
+                        weui.alert(result.errmsg)
+                    }
+
+
+                },
+                error: (err, type) => {
+
+                    weui.alert(err.statusText+"网络错误，换个网络试试")
+                },
+
+
+            });
+            <!--==========================网络请求============================-->
+
+        }
+        function reflashControlPad() {
+            var name  = itemData.name
+            name = 　name.replace(/\"/g, "")
+            var image  = itemData.image
+            image = 　image.replace(/\"/g, "")
+            $("#itemTitle").html(name)
+
+            $("#itemPic").attr("src",image)
+            var  itemStylePad_html = ''
+            var current_image ;
+
+
+
+            itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
+                "<div class='itemTitle' >购买数量(谨慎选择)</div>\n" +
+                "<select name='select' class='itemSelect' onchange=onChange_Count(this.options[this.options.selectedIndex].value)>"
+
+                if(buyCount==1){
+                    itemStylePad_html = itemStylePad_html +   " <option value=1 selected = 'selected'>1</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=1 >1</option>"
+                }
+
+                if(buyCount==2){
+                    itemStylePad_html = itemStylePad_html +   " <option value=2 selected = 'selected'>2</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=2 >2</option>"
+                }
+                if(buyCount==3){
+                    itemStylePad_html = itemStylePad_html +   " <option value=3 selected = 'selected'>3</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=3 >3</option>"
+                }
+                if(buyCount==5){
+                    itemStylePad_html = itemStylePad_html +   " <option value=5 selected = 'selected'>5</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=5 >5</option>"
+                }
+                if(buyCount==10){
+                    itemStylePad_html = itemStylePad_html +   " <option value=10 selected = 'selected'>10</option>"
+                }else{
+                    itemStylePad_html = itemStylePad_html +   " <option value=10 >10</option>"
+                }
+
+                 itemStylePad_html = itemStylePad_html +"</select></div>"
+
+
+
+            $("#itemStylePad").html(itemStylePad_html)
+
+            let current_style = '[购买数量]'+buyCount
+            $("#itemStyle").html(current_style)
+
+
+        }
+
+
+
+
+        onChange_Row = function (pid,vid){
+            for(var i =0;i<props.length;i++){
+                if(props[i].pid==pid){
+                    props[i].vid = vid
+                }
+            }
+            reflashControlPad()
+        }
+        onChange_Count = function (count){
+            buyCount = count
+            reflashControlPad()
+        }
+        $("#query-button").click(function(){
+            let _link =  $("#link").val()
+
+            if(_link.indexOf('jd.')>-1){
+                itemId = _link.split(".htm")[0]
+                var itemIdArr = itemId.split("/")
+                itemId = itemIdArr[itemIdArr.length-1]
+                queryItem()
+            }else{
+                weui.alert('请输入正确的京东商品链接')
+            }
+
+
+
+        });
+        $("#reset-button").click(function(){
+            ready_task = false;
+            $("#card-step-1").show()
+            $("#card-step-2").hide()
+
+        });
+
+
+        $("#config-button").click(function(){
+
+
+
+
+            let ready_time_str = $("#timeInput").val()
+            ready_time = new Date(ready_time_str);
+            ready_time.setSeconds(0)
+            if(isApple){
+                ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
+
+            }
+            ready_time_offset = $("#time-offset").val()
+
+
+
+            var paramsData = {
+                "des":"m",
+                "category":"jump",
+                "url":"https://p.m.jd.com/norder/order.action?wareId="+itemId+"&wareNum="+buyCount+"&enterOrder=true",
+            }
+            var paramsStr =  JSON.stringify(paramsData)
+            ready_url = "openapp.jdmobile://virtual?params="+paramsStr
+
+
+
+            let now = new Date()
+            let timeDiff = ready_time.getTime() - now.getTime()
+            if(timeDiff<=ready_time_offset){
+                weui.alert("哎呀，开始时间不能比现在早")
+                return
+            }
+            $("#configPad").hide();
+            $("#readyPad").show();
+            $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
+            ready_task = true;
+
+
+        });
+
+
+        $("#buy-button").click(function(){
+            startJump()
+
+        });
+
+
+
+
+        function startJump() {
+            window.location.href = ready_url
+        }
+
+
+
+
+
+
+        function copyTxt(text){
+            if(typeof document.execCommand!=="function"){
+                weui.alert(text)
+                return;
+            }
+            var dom = document.createElement("textarea");
+            dom.value = text;
+            dom.setAttribute('style', 'display: block;width: 1px;height: 1px;');
+            document.body.appendChild(dom);
+            dom.select();
+            var result = document.execCommand('copy');
+            document.body.removeChild(dom);
+            if (result) {
+                weui.alert('BP链接已经复制到剪切板中，请保存好使用【已有BP链接跳转 】')
+                return;
+            }
+            if(typeof document.createRange!=="function"){
+                weui.alert(text)
+                return;
+            }
+            var range = document.createRange();
+            var div=document.createElement('div');
+            div.innerHTML=text;
+            div.setAttribute('style', 'height: 1px;fontSize: 1px;overflow: hidden;');
+            document.body.appendChild(div);
+            range.selectNode(div);
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0){
+                selection.removeAllRanges();
+            }
+            selection.addRange(range);
+            document.execCommand('copy');
+            weui.alert(text)
+        }
+
+
+        function getNowFormatDateTime() {
+            let date = new Date();
+            let seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+
+            date.setMinutes(date.getMinutes()+1)
+            let hour = date.getHours();
+            let strMinutes = date.getMinutes();
+
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            if (strMinutes >= 0 && strMinutes <= 9) {
+                strMinutes = "0" + strMinutes;
+            }
+
+            var currentdateTime = year + seperator1 + month + seperator1 + strDate+'T'+hour+':'+strMinutes;
+            return currentdateTime;
+        }
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
