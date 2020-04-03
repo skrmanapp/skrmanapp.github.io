@@ -277,6 +277,12 @@
                         reflashControlPad()
                     }else{
                         weui.alert(result.errmsg)
+                        itemData = result.data
+                        $("#card-step-1").hide()
+                        $("#card-step-2").show()
+                        $("#configPad").show()
+                        $("#readyPad").hide();
+                        reflashControlPad()
                     }
 
 
@@ -369,6 +375,7 @@
                 itemId = _link.split(".htm")[0]
                 var itemIdArr = itemId.split("/")
                 itemId = itemIdArr[itemIdArr.length-1]
+                console.log(itemId)
                 queryItem()
             }else{
                 weui.alert('请输入正确的京东商品链接')
