@@ -1,6 +1,6 @@
-<IfModule mod_rewrite.c>
+﻿<IfModule mod_rewrite.c>
  
-RewriteEngine on  //on为打开,off为关闭
-RewriteRule ^logout$ logout.php
-RewriteRule ^login$ login.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
 </IfModule>
