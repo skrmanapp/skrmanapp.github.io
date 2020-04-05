@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+ 
+RewriteEngine on  //on为打开,off为关闭
+RewriteRule ^logout$ logout.php
+RewriteRule ^login$ login.php
+</IfModule>
