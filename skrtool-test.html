@@ -273,7 +273,7 @@
         });
         $("#item-3").click(function(){
 
-            dsBridge.call("networkGet",{url:"https://www.baidu.com"},function (ret) {
+            dsBridge.call("getSecret",{key:"testkey"},function (ret) {
                 alert(ret);
             })
         });
