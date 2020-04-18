@@ -492,7 +492,10 @@
 
             }
             ready_time_offset = $("#time-offset").val()
-            ready_url = "tmallbypass://buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
+
+            var pathString =  "buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
+            pathString = encodeURIComponent(pathString)
+            ready_url = "tmallbypass://"+pathString
             let now = new Date()
             let timeDiff = ready_time.getTime() - now.getTime()
             if(timeDiff<=ready_time_offset){
