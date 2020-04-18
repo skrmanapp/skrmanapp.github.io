@@ -517,7 +517,9 @@
         });
 
         $("#copy-button").click(function(){
-            ready_url = "tmallbypass://buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
+            var pathString =  "buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
+            pathString = encodeURIComponent(pathString)
+            ready_url = "tmallbypass://"+pathString
             copyTxt(ready_url.replace("tmallbypass:", "https:"))
 
 
