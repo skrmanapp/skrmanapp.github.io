@@ -189,7 +189,7 @@
 
             <div class="row" style="margin-top:50px;font-size: 12px;color: #666666;padding: 16px;">
 
-                <p style="color: darkred;">
+                <p style="color: darkred;" id="declare-text">
                     【免责声明】<br>
                     SKR工具箱内仅供娱乐，不对其实际效果作出任何保证<br>
                 </p>
@@ -248,8 +248,7 @@
 
     jQuery(document).ready(function($){
 
-        // let userAgent = navigator.userAgent;
-        // $('#device-info').html(userAgent);
+
         var auth = "null";
         auth = UrlParm.parm("auth");
 
@@ -276,6 +275,13 @@
             <!--==========================网络请求============================-->
             window.location.href = "tool-jdBP.html?auth="+auth;
 
+        });
+        $("#declare-text").click(function(){
+            let userAgent = navigator.userAgent;
+            $('#device-info').html(userAgent);
+            if(userAgent.indexOf('SKRIOS1.5')>-1){
+                window.location.href = "tool-tmallBP4.html?auth="+auth;
+            }
         });
     })
 

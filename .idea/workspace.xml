@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/topsport-foss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool-tmallBP4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skrtool.html" beforeDir="false" afterPath="$PROJECT_DIR$/skrtool.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +55,13 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\53921\Documents\GitHub\skrmanapp.github.io\assets\js" />
       <recent name="D:\Github\skrmanapp.github.io" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -243,7 +244,8 @@
       <workItem from="1586572775563" duration="145000" />
       <workItem from="1587000564024" duration="425000" />
       <workItem from="1587087287663" duration="67000" />
-      <workItem from="1587128439230" duration="523000" />
+      <workItem from="1587128439230" duration="1511000" />
+      <workItem from="1587193464539" duration="416000" />
     </task>
     <servers />
   </component>
