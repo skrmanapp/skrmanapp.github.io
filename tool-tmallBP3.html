@@ -265,12 +265,16 @@
 
 
             let _link =  $("#link").val()
-            if(_link.indexOf('cart/order')==-1){
+            if(_link.indexOf('cart/order')==-1 && _link.indexOf('buy.m.tmall.com')==-1){
                 weui.alert("请输入正确BP链接")
                 return;
             }
-
-            ready_url = _link.replace("https:", "taobao:");
+            if(_link.indexOf('cart/order')>-1){
+                ready_url = _link.replace("https:", "taobao:");
+            }
+            if(_link.indexOf('buy.m.tmall.com')>-1){
+                ready_url = _link.replace("https:", "tmallbypass:");
+            }
 
             let ready_time_str = $("#timeInput").val()
             ready_time = new Date(ready_time_str);
