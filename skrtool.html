@@ -279,7 +279,7 @@
         $("#declare-text").click(function(){
             let userAgent = navigator.userAgent;
             $('#device-info').html(userAgent);
-            if(userAgent.indexOf('SKRIOSV1.5')>-1){
+            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
                 window.location.href = "tool-tmallBP4.html?auth="+auth;
             }
         });
