@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP3.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +248,8 @@
       <workItem from="1587269472810" duration="219000" />
       <workItem from="1587284278516" duration="681000" />
       <workItem from="1587298702577" duration="165000" />
-      <workItem from="1587298994190" duration="2185000" />
+      <workItem from="1587298994190" duration="2518000" />
+      <workItem from="1587349895247" duration="64000" />
     </task>
     <servers />
   </component>
