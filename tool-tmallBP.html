@@ -487,6 +487,13 @@
         });
 
         $("#promode-time-button").click(function(){
+            let userAgent = navigator.userAgent;
+            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
+
+            }else{
+                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
+                return;
+            }
             dsBridge.call("networkGet",{url:"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"},function (ret) {
 
                 try {
