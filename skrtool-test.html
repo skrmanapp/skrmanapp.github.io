@@ -267,7 +267,7 @@
         });
         $("#item-2").click(function(){
 
-            dsBridge.call("networkGet",{url:"https://www.baidu.com"},function (ret) {
+            dsBridge.call("networkGet",{url:"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"},function (ret) {
                 alert(ret);
             })
         });

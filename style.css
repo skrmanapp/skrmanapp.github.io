@@ -1345,17 +1345,51 @@ button:focus {
 	color: #000000;
 	line-height: 28px;
 	text-align: right;
-	/*background-color: #555555;*/
-	/*border-radius: 15px;*/
 	font-size: 14px;
-	/*border-style: solid;*/
-	/*border-radius: 8px;*/
-	/*border-width: 1px;*/
-
-	/*border-color: #555555;*/
-	/*background-color: #f2f2f2;*/
 }
 
+.topBar{
+	position: fixed;
+	right: 8px;
+	top: 4px;
+	width: 108px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #666666;
+	border-radius: 16px;
+	background-color: white;
+}
+.topBarLine{
+	position: relative;
+	width: 1px;
+	margin-top: 0px;
+	height:30px;
+	line-height: 32px;
+	font-size: 13px;
+	text-align: center;
+	background-color: #666666;
+}
+.topBarButton-Large{
+	position: relative;
+	width: 55%;
+	height:32px;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: center;
+	color: #333333;
+}
+.topBarButton-Small{
+	position: relative;
+	width: 35%;
+	height:32px;
+	line-height: 30px;
+	font-size: 20px;
+	text-align: center;
+	color: #333333;
+}
 .topContorPad{
 	position: fixed;
 	left: 0px;
