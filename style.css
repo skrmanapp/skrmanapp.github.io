@@ -1352,7 +1352,7 @@ button:focus {
 	position: fixed;
 	right: 8px;
 	top: 8px;
-	width: 108px;
+	width: 128px;
 	height: 32px;
 	display: flex;
 	justify-content: center;
@@ -1374,7 +1374,7 @@ button:focus {
 }
 .topBarButton-Large{
 	position: relative;
-	width: 55%;
+	width: 65%;
 	height:32px;
 	line-height: 30px;
 	font-size: 16px;
@@ -1383,10 +1383,10 @@ button:focus {
 }
 .topBarButton-Small{
 	position: relative;
-	width: 35%;
+	width: 28%;
 	height:32px;
 	line-height: 30px;
-	font-size: 20px;
+	font-size: 19px;
 	text-align: center;
 	color: #333333;
 }

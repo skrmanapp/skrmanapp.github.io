@@ -108,6 +108,7 @@
                                         <option value=200 >提前200ms</option>
                                         <option value=250 >提前250ms</option>
                                         <option value=300 >提前300ms</option>
+                                        <option value=400 >提前400ms</option>
                                     </select>
                                 </div>
                                 <div class='itemLong' id="promode-time-offset">
@@ -150,7 +151,7 @@
                 (4)获取商品后记得清除剪切板，或者直接复制这行字<br>
             </p>
             <p >
-                ⭐️点击右上角的[高级]按钮即可打开高级模式，功能如下⭐️： <br>
+                ⭐️点击右上角的[专业模式]，功能如下⭐️： <br>
                 (1)制作BP链接：为避免网络拥堵，热门商品可以提前复制好BP链接，即先【复制BP链接】抢购时再【已有BP链接跳转】 <br>
                 (2)精准设置时间偏移：对时间偏移进行更精准的设置<br>
                 (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟～<br>
@@ -160,7 +161,7 @@
         </div>
 
         <div class="topBar" >
-            <div class="topBarButton-Large" id="professional-button" >高级</div>
+            <div class="topBarButton-Large" id="professional-button" >专业模式</div>
             <div class="topBarLine" ></div>
             <div class="topBarButton-Small" id="reset-button" >✕</div>
 
@@ -251,7 +252,7 @@
             if(!professional_mode){
                 professional_mode = true;
                 $("#professional-button").css('color','red');
-                weui.alert("已开启高级模式")
+                weui.alert("已开启专业模式")
                 $("#promode-time-offset").show()
                 $("#basemode-time-offset").hide()
                 $("#promode-copy-button").show()
@@ -259,7 +260,7 @@
             }else{
                 professional_mode = false;
                 $("#professional-button").css('color','black');
-                weui.alert("已关闭高级模式")
+                weui.alert("已关闭专业模式")
                 $("#promode-time-offset").hide()
                 $("#basemode-time-offset").show()
                 $("#promode-copy-button").hide()
@@ -506,7 +507,7 @@
                     // if(!isApple){
                     //     timeDiff = timeDiff-(1000 * 60 * 60 * 8)
                     // }
-                    weui.alert('时间延迟'+timeDiff+'ms （仅供参考！计算方式为淘宝时间-本地时间）')
+                    weui.alert('时间延迟['+timeDiff+'ms] （仅供参考！计算方式为淘宝时间-本地时间）')
 
                 }catch (e) {
 
