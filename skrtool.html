@@ -283,32 +283,32 @@
         $("#item-1").click(function(){
 
             <!--==========================网络请求============================-->
-            window.location.href = "tool-tmallBP.html?auth="+auth;
+            window.location.href = "http://SKRMAN.APP/tool-tmallBP.html?auth="+auth;
 
         });
         $("#item-2").click(function(){
 
             <!--==========================网络请求============================-->
-            window.location.href = "tool-tmallBP2.html?auth="+auth;
+            window.location.href = "http://SKRMAN.APP/tool-tmallBP2.html?auth="+auth;
 
         });
         $("#item-3").click(function(){
 
             <!--==========================网络请求============================-->
-            window.location.href = "tool-jdBP.html?auth="+auth;
+            window.location.href = "http://SKRMAN.APP/tool-jdBP.html?auth="+auth;
 
         });
         $("#item-4").click(function(){
             let userAgent = navigator.userAgent;
             if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-                window.location.href = "tool-tmallBP4.html?auth="+auth;
+                window.location.href = "http://SKRMAN.APP/tool-tmallBP4.html?auth="+auth;
             }else{
                 weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
             }
         });
 
         $("#declare-text").click(function(){
-            window.location.href = "skrtool-test.html?auth="+auth;
+            window.location.href = "http://SKRMAN.APP/skrtool-test.html?auth="+auth;
         });
     })
 
