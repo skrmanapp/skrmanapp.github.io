@@ -53,7 +53,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="mu-contact-area" style="padding-top: 50px">
+                <div class="mu-contact-area" style="padding-top: 60px">
 
                     <div class="mu-title-area" >
                         <h2 class="mu-heading-title">SKR达人天猫客户端BP</h2>
@@ -68,7 +68,7 @@
                             <div class="mu-contact-left">
                                 <div class="mu-contact-form">
                                     <div class="form-group">
-                                        <textarea type="text"  placeholder="通过淘口令(含有https://m.tb.cn)或真实链接(如https://detail.tmall.com/item.htm?id=604906722403)查询" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
+                                        <textarea type="text"  placeholder="通过喵口令(含有https://m.tb.cn)或真实链接(如https://detail.tmall.com/item.htm?id=604906722403)查询" id="link" class="form-control" style="text-align: left;font-size: 12px;"></textarea>
                                         <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="query-button"><span>查询</span></button>
                                     </div>
 
@@ -98,9 +98,9 @@
                                     <div class='itemTitle' >自动跳转时间</div>
                                     <input class="itemSelect" type="datetime-local" id="timeInput">
                                 </div>
-                                <div class='itemLong' >
+                                <div class='itemLong' id="basemode-time-offset">
                                     <div class='itemTitle' >时间偏移</div>
-                                    <select class='itemSelect' id="time-offset">
+                                    <select class='itemSelect' id="time-offset-select">
                                         <option value=0 >不偏移</option>
                                         <option value=50 >提前50ms</option>
                                         <option value=100 >提前100ms</option>
@@ -108,15 +108,15 @@
                                         <option value=200 >提前200ms</option>
                                         <option value=250 >提前250ms</option>
                                         <option value=300 >提前300ms</option>
-                                        <option value=400 >提前400ms</option>
-                                        <option value=500 >提前500ms</option>
-                                        <option value=800 >提前800ms</option>
                                     </select>
-
-
+                                </div>
+                                <div class='itemLong' id="promode-time-offset">
+                                    <div class='itemTitle' >时间偏移(输入需要提前的时间，单位ms)</div>
+                                    <input class="itemSelect" value="0" type="number" id="time-offset-input">
                                 </div>
                             </div>
-                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 30%;text-align: center;border-color: lightgray" id="copy-button"><span>复制BP</span></button>
+                            <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 40%;text-align: center;border-color: lightgray" id="promode-time-button"><span>测试淘宝延迟</span></button>
+                            <button  class="mu-primary-btn"  style="color: gray; font-size: 14px;padding: 10px;width: 40%;text-align: center;border-color: lightgray" id="promode-copy-button"><span>复制BP链接</span></button>
                             <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
                         </div>
                         <div id="readyPad" >
@@ -140,22 +140,31 @@
             </div>
         </div>
 
-        <div class="row" style="font-size: 10px;color: #666666;padding: 30px;">
+        <div class="row" style="font-size: 10px;color: #888888;padding: 30px;margin-top: 50px">
 
-        <p >
-        为了让抢购畅通无阻： <br>
-            (1)自行校准手机的本地时间 <br>
-            (2)天猫客户端打开商品页面并放入后台等待 <br>
-            (3)天猫客户端加载时间比淘宝客户端长，建议时间偏移设置大一些 <br>
-            (4)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品<br>
-            (5)获取商品后记得清除剪切板，或者直接复制这行字<br>
-         </p>
-
+            <p >
+                ⚠️️使用前请注意⚠️： <br>
+                (1)自行校准手机的本地时间，跳转基于本地时间 <br>
+                (2)天猫客户端打开商品页面并放入后台等待 <br>
+                (3)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品<br>
+                (4)天猫客户端加载比淘宝客户端慢，注意把偏移调大一些，非天猫客户端独占商品请使用淘宝客户端BP<br>
+            </p>
+            <p >
+                ⭐️高级模式介绍⭐️： <br>
+                (1)制作BP链接：为避免网络拥堵，热门商品可以提前复制好BP链接，即先【复制BP链接】抢购时再【已有BP链接跳转】 <br>
+                (2)精准设置时间偏移：对时间偏移进行更精准的设置<br>
+                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟～<br>
+            </p>
 
 
         </div>
 
-        <div class="resetButton" id="reset-button" >重置</div>
+        <div class="topBar" >
+            <div class="topBarButton-Large" id="professional-button" >高级</div>
+            <div class="topBarLine" ></div>
+            <div class="topBarButton-Small" id="reset-button" >✕</div>
+
+        </div>
 
     </div>
 
@@ -210,10 +219,13 @@
         var ready_time ;
         var ready_time_offset ;
         var ready_task = false ;
+        var professional_mode = false ;
 
         $("#card-step-1").show()
         $("#card-step-2").hide()
-
+        $("#promode-time-offset").hide()
+        $("#promode-time-button").hide()
+        $("#promode-copy-button").hide()
         let userAgent = navigator.userAgent;
         if(userAgent.indexOf('Weibo')>-1){
             weui.alert("欢迎下载SKR达人APP启用功能")
@@ -235,27 +247,47 @@
         },50);
 
 
+        $("#professional-button").click(function(){
+            if(!professional_mode){
+                professional_mode = true;
+                $("#professional-button").css('color','red');
+                weui.alert("已开启高级模式")
+                $("#promode-time-offset").show()
+                $("#basemode-time-offset").hide()
+                $("#promode-copy-button").show()
+                $("#promode-time-button").show()
+            }else{
+                professional_mode = false;
+                $("#professional-button").css('color','black');
+                weui.alert("已关闭高级模式")
+                $("#promode-time-offset").hide()
+                $("#basemode-time-offset").show()
+                $("#promode-copy-button").hide()
+                $("#promode-time-button").hide()
+            }
+
+        });
         function timeTask() {
 
-           if(ready_task){
-               let now = new Date()
-               let timeDiff = ready_time.getTime() - now.getTime()
+            if(ready_task){
+                let now = new Date()
+                let timeDiff = ready_time.getTime() - now.getTime()
 
 
-               if(timeDiff<=ready_time_offset){
-                   ready_task = false;
-                   console.log("====ok====")
-                   startJump()
-                   $("#time-count").html("开启跳转")
-               }else{
-                   $("#time-count").html("倒计时:"+timeDiff+"ms")
+                if(timeDiff<=ready_time_offset){
+                    ready_task = false;
+                    console.log("====ok====")
+                    startJump()
+                    $("#time-count").html("开启跳转")
+                }else{
+                    $("#time-count").html("倒计时:"+timeDiff+"ms")
 
 
-               }
+                }
 
 
 
-           }
+            }
 
         }
 
@@ -335,7 +367,7 @@
                     let isSelect = false;
                     if(skuId==0 && j==0  ){
                         if(i==0  && current_props_image!='null'){
-                                current_image = current_props_image
+                            current_image = current_props_image
                         }
                         current_style =current_style+ current_props_name+":"+current_props_value.name
                         let _mprops = {
@@ -351,7 +383,7 @@
                                 isSelect = true
                                 if(i==0  && current_props_image!='null'){
                                     current_image = current_props_image
-                                 
+
                                 }
                             }
                         }
@@ -370,37 +402,12 @@
 
             }
             itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
-                "<div class='itemTitle' >购买数量(谨慎选择)</div>\n" +
-                "<select name='select' class='itemSelect' onchange=onChange_Count(this.options[this.options.selectedIndex].value)>"
+                "<div class='itemTitle' >购买数量(谨慎输入)</div>\n" +
+                "<input name='select' class='itemSelect' onchange=onChange_Count(this.value) value='"+buyCount+"'>"
 
-                if(buyCount==1){
-                    itemStylePad_html = itemStylePad_html +   " <option value=1 selected = 'selected'>1</option>"
-                }else{
-                    itemStylePad_html = itemStylePad_html +   " <option value=1 >1</option>"
-                }
 
-                if(buyCount==2){
-                    itemStylePad_html = itemStylePad_html +   " <option value=2 selected = 'selected'>2</option>"
-                }else{
-                    itemStylePad_html = itemStylePad_html +   " <option value=2 >2</option>"
-                }
-                if(buyCount==3){
-                    itemStylePad_html = itemStylePad_html +   " <option value=3 selected = 'selected'>3</option>"
-                }else{
-                    itemStylePad_html = itemStylePad_html +   " <option value=3 >3</option>"
-                }
-                if(buyCount==5){
-                    itemStylePad_html = itemStylePad_html +   " <option value=5 selected = 'selected'>5</option>"
-                }else{
-                    itemStylePad_html = itemStylePad_html +   " <option value=5 >5</option>"
-                }
-                if(buyCount==10){
-                    itemStylePad_html = itemStylePad_html +   " <option value=10 selected = 'selected'>10</option>"
-                }else{
-                    itemStylePad_html = itemStylePad_html +   " <option value=10 >10</option>"
-                }
 
-                 itemStylePad_html = itemStylePad_html +"</select></div>"
+            itemStylePad_html = itemStylePad_html +"</div>"
 
 
 
@@ -449,8 +456,15 @@
             reflashControlPad()
         }
         onChange_Count = function (count){
-            buyCount = count
-            reflashControlPad()
+
+            let _count = parseInt(count)
+            if(_count>0&&_count<1000){
+                buyCount = _count
+                console.log(buyCount)
+                reflashControlPad()
+            }
+
+
         }
         $("#query-button").click(function(){
             let _link =  $("#link").val()
@@ -471,6 +485,38 @@
 
 
         });
+
+        $("#promode-time-button").click(function(){
+            let userAgent = navigator.userAgent;
+            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
+
+            }else{
+                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
+                return;
+            }
+            dsBridge.call("networkGet",{url:"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"},function (ret) {
+
+                try {
+                    let now = new Date()
+
+
+                    let data =  JSON.parse(ret)
+                    let timestamp_tb = data.data.t;
+                    var timeDiff = timestamp_tb - now
+                    // if(!isApple){
+                    //     timeDiff = timeDiff-(1000 * 60 * 60 * 8)
+                    // }
+                    weui.alert('时间延迟'+timeDiff+'ms （仅供参考！计算方式为淘宝时间-本地时间）')
+
+                }catch (e) {
+
+                }
+
+            })
+
+        });
+
+
         $("#reset-button").click(function(){
             ready_task = false;
             $("#card-step-1").show()
@@ -491,11 +537,18 @@
                 ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
 
             }
-            ready_time_offset = $("#time-offset").val()
+            if(professional_mode){
+                let _ready_time_offset = parseInt($("#time-offset-input").val())
+                ready_time_offset = _ready_time_offset
+            }else{
+                ready_time_offset = $("#time-offset-select").val()
+
+            }
 
             var pathString =  "buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
             pathString = encodeURIComponent(pathString)
             ready_url = "tmallbypass://"+pathString
+            
             let now = new Date()
             let timeDiff = ready_time.getTime() - now.getTime()
             if(timeDiff<=ready_time_offset){
@@ -516,7 +569,7 @@
 
         });
 
-        $("#copy-button").click(function(){
+        $("#promode-copy-button").click(function(){
             var pathString =  "buy.m.tmall.com/order/confirmOrderWap.htm?itemId="+itemId+"&skuId="+skuId+"&quantity="+buyCount+"&buyNow=true&_input_charset=utf-8"
             pathString = encodeURIComponent(pathString)
             ready_url = "tmallbypass://"+pathString
@@ -610,6 +663,10 @@
 
 
 </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/dsbridge@3.1.4/dist/dsbridge.js"></script>
 
 </body>
 
