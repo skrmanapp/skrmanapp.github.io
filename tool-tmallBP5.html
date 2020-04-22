@@ -325,7 +325,7 @@
                     weui.alert("错误"+ret)
                     return
                 }
-                alert(ret)
+
                 let body =  ret
                 var _itemid = "null";
                 if(body.indexOf('&id=')>-1){
@@ -352,8 +352,11 @@
 
 
         function getTmallItemStyle(itemid) {
+
             let url = "https://detail.m.tmall.com/item.htm?id="+itemid
+            weui.alert("getTmallItemStyle"+url)
             dsBridge.call("networkGet",{url:url},function (ret) {
+                alert(ret)
                 if(ret.indexOf('errorjhandler')==0){
                     weui.alert("错误"+ret)
                     return
