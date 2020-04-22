@@ -416,17 +416,16 @@
             buyCount = 1 ;
             ready_task = false;
             <!--==========================网络请求============================-->
-            var requestData = {
-                "mlink":_link
+            var request_url = 'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
+            if(!isMainRouter){
+                request_url = 'https://cloud.bmob.com/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
             }
-            var dataStr =  JSON.stringify(requestData)
-
             $.ajax({
                 type: "GET", //提交方式
                 timeout: 3000,
                 dataType: 'jsonp',
                 jsonp:"callback", // 默认值是callback，可以修改
-                url: 'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link,//路径
+                url: request_url,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
