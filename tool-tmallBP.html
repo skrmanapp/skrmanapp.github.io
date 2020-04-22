@@ -147,7 +147,7 @@
                 ⚠️️使用前请注意⚠️： <br>
                 (1)自行校准手机的本地时间，跳转基于本地时间 <br>
                 (2)淘宝客户端打开商品页面并放入后台等待 <br>
-                (3)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品<br>
+                (3)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品!<br>
                 (4)获取商品后记得清除剪切板，或者直接复制这行字~<br>
             </p>
             <p >
@@ -317,21 +317,41 @@
                         $("#readyPad").hide();
                         reflashControlPad()
                     }else{
-                        weui.alert(result.errmsg)
+                        queryItem2(_link)
                     }
 
 
                 },
                 error: (err, type) => {
 
-                    weui.alert(err.statusText+"网络错误，换个网络试试")
+                    queryItem2(_link)
                 },
 
 
             });
             <!--==========================网络请求============================-->
+        }
+
+        function queryItem2(_link) {
+            dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
+
+                let result =  JSON.parse(ret)
+                if(result.errcode==0){
+                    itemData = result.data
+                    $("#card-step-1").hide()
+                    $("#card-step-2").show()
+                    $("#configPad").show()
+                    $("#readyPad").hide();
+                    reflashControlPad()
+                }else{
+
+                }
+
+            })
 
         }
+
+
         function reflashControlPad() {
             $("#itemTitle").html(itemData.item.title)
             itemId = itemData.item.itemId
