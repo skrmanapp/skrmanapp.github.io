@@ -271,7 +271,7 @@
             ready_task = false;
             <!--==========================网络请求============================-->
             var request_url = 'https://bmobapi.hb174.top/aed0843961fb06dc/jdBP?auth='+auth+'&itemid='+itemId
-            if(!isMainRouter){
+            if(isMainRouter){
                 request_url = 'https://cloud.bmob.com/aed0843961fb06dc/jdBP?auth='+auth+'&itemid='+itemId
             }
             $.ajax({
