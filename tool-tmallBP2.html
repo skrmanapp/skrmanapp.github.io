@@ -245,7 +245,13 @@
         var current_image = '';
         var current_style = '';
         var current_title = '';
-
+        var isMainRouter = true;
+        var domain = window.location.host;
+        if(domain.indexOf('skrman.app')>-1 || domain.indexOf('SKRMAN.APP')>-1 ){
+            isMainRouter = true;
+        }else{
+            isMainRouter = false;
+        }
         $("#weight-1").click(function(){
             console.log("aaaa")
             if( ready_task){

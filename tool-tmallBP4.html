@@ -221,7 +221,13 @@
         var ready_time_offset ;
         var ready_task = false ;
         var professional_mode = false ;
-
+        var isMainRouter = true;
+        var domain = window.location.host;
+        if(domain.indexOf('skrman.app')>-1 || domain.indexOf('SKRMAN.APP')>-1 ){
+            isMainRouter = true;
+        }else{
+            isMainRouter = false;
+        }
         $("#card-step-1").show()
         $("#card-step-2").hide()
         $("#promode-time-offset").hide()
