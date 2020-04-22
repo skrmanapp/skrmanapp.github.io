@@ -210,7 +210,13 @@
 
         $("#card-step-1").show()
         $("#card-step-2").hide()
-
+        var isMainRouter = true;
+        var domain = window.location.host;
+        if(domain.indexOf('skrman.app')>-1 || domain.indexOf('SKRMAN.APP')>-1 ){
+            isMainRouter = true;
+        }else{
+            isMainRouter = false;
+        }
         let userAgent = navigator.userAgent;
         if(userAgent.indexOf('SKRIOS')==-1 && userAgent.indexOf('SKRAND')==-1 ){
             weui.alert("请前往https://SKRMAN.APP更新")
