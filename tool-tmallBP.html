@@ -154,7 +154,7 @@
                 ⭐️点击右上角的[专业模式]，功能如下⭐️： <br>
                 (1)制作BP链接：为避免网络拥堵，热门商品可以提前复制好BP链接，即先【复制BP链接】抢购时再【已有BP链接跳转】 <br>
                 (2)精准设置时间偏移：对时间偏移进行更精准的设置<br>
-                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟<br>
+                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟.<br>
             </p>
 
 
@@ -328,9 +328,11 @@
                         $("#readyPad").hide();
                         reflashControlPad()
                     }else{
-                        weui.alert(result.errmsg)
+
                         if(result.errmsg.indexOf('解析失败')>-1){
-                            backupMetod('是否尝试切换备用BP？　')
+                            backupMetod(result.errmsg+'是否尝试切换备用BP？　')
+                        }else{
+                            weui.alert(result.errmsg)
                         }
 
 
