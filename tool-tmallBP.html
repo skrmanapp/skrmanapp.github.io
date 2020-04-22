@@ -333,8 +333,25 @@
 
                 },
                 error: (err, type) => {
+                    if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
+                        weui.confirm('解析服务拥堵是否切换备用方案　', {
+                            title: '提示',
+                            buttons: [{
+                                label: '取消',
+                                type: 'default',
+                                onClick: function(){
 
-                    queryItem2(_link)
+                                }
+                            }, {
+                                label: '确认',
+                                type: 'primary',
+                                onClick: function(){
+                                    window.location.href =  "tool-tmallBP5.html?auth="+auth;
+                                }
+                            }]
+                        });
+                    }
+
                 },
 
 
@@ -342,27 +359,7 @@
             <!--==========================网络请求============================-->
         }
 
-        function queryItem2(_link) {
-            if(userAgent.indexOf('SKRIOSV1.5')==-1 && userAgent.indexOf('SKRANDV5.0')==-1){
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-            }
-            dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
 
-                let result =  JSON.parse(ret)
-                if(result.errcode==0){
-                    itemData = result.data
-                    $("#card-step-1").hide()
-                    $("#card-step-2").show()
-                    $("#configPad").show()
-                    $("#readyPad").hide();
-                    reflashControlPad()
-                }else{
-
-                }
-
-            })
-
-        }
 
 
         function reflashControlPad() {
