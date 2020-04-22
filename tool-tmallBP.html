@@ -330,7 +330,7 @@
                     }else{
 
                         if(result.errmsg.indexOf('解析失败')>-1){
-                            backupMetod(result.errmsg+'是否尝试切换备用BP？　')
+                            backupMetod(result.errmsg+'，或者，是否开启备用BP？　')
                         }else{
                             weui.alert(result.errmsg)
                         }
