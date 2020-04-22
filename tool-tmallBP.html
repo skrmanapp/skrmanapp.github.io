@@ -329,29 +329,17 @@
                         reflashControlPad()
                     }else{
                         weui.alert(result.errmsg)
+                        if(result.errmsg.indexOf('解析失败')>-1){
+                            backupMetod('是否尝试切换备用BP？　')
+                        }
+
+
                     }
 
 
                 },
                 error: (err, type) => {
-                    if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-                        weui.confirm('解析服务拥堵是否切换备用方案　', {
-                            title: '提示',
-                            buttons: [{
-                                label: '取消',
-                                type: 'default',
-                                onClick: function(){
-
-                                }
-                            }, {
-                                label: '确认',
-                                type: 'primary',
-                                onClick: function(){
-                                    window.location.href =  "tool-tmallBP5.html?auth="+auth;
-                                }
-                            }]
-                        });
-                    }
+                    backupMetod('解析服务拥堵是否切换备用方案　')
 
                 },
 
@@ -360,6 +348,26 @@
             <!--==========================网络请求============================-->
         }
 
+        function  backupMetod(reason) {
+            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
+                weui.confirm(reason, {
+                    title: '提示',
+                    buttons: [{
+                        label: '取消',
+                        type: 'default',
+                        onClick: function(){
+
+                        }
+                    }, {
+                        label: '确认',
+                        type: 'primary',
+                        onClick: function(){
+                            window.location.href =  "tool-tmallBP5.html?auth="+auth;
+                        }
+                    }]
+                });
+            }
+        }
 
 
 
