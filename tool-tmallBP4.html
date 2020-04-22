@@ -324,7 +324,7 @@
                 },
                 error: (err, type) => {
 
-                    weui.alert(err.statusText+"网络错误，换个网络试试")
+                    queryItem2(_link)
                 },
 
 
@@ -332,6 +332,30 @@
             <!--==========================网络请求============================-->
 
         }
+
+        function queryItem2(_link) {
+            if(userAgent.indexOf('SKRIOSV1.5')==-1 && userAgent.indexOf('SKRANDV5.0')==-1){
+                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
+            }
+            dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
+
+                let result =  JSON.parse(ret)
+                if(result.errcode==0){
+                    itemData = result.data
+                    $("#card-step-1").hide()
+                    $("#card-step-2").show()
+                    $("#configPad").show()
+                    $("#readyPad").hide();
+                    reflashControlPad()
+                }else{
+
+                }
+
+            })
+
+        }
+
+
         function reflashControlPad() {
             $("#itemTitle").html(itemData.item.title)
             itemId = itemData.item.itemId

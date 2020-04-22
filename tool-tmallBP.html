@@ -317,7 +317,7 @@
                         $("#readyPad").hide();
                         reflashControlPad()
                     }else{
-                        queryItem2(_link)
+                        weui.alert(result.errmsg)
                     }
 
 
@@ -333,6 +333,9 @@
         }
 
         function queryItem2(_link) {
+            if(userAgent.indexOf('SKRIOSV1.5')==-1 && userAgent.indexOf('SKRANDV5.0')==-1){
+                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
+            }
             dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
 
                 let result =  JSON.parse(ret)
