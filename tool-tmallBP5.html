@@ -56,7 +56,7 @@
                 <div class="mu-contact-area" style="padding-top: 60px">
 
                     <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">淘宝客户端BP</h2>
+                        <h2 class="mu-heading-title">淘宝客户端BP(备用)</h2>
                         <span class="mu-title-dot"></span>
 
                     </div>
@@ -307,62 +307,79 @@
             props = [];
             buyCount = 1 ;
             ready_task = false;
-            <!--==========================网络请求============================-->
-            var request_url = 'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
-            if(isMainRouter){
-                request_url = 'https://cloud.bmob.com/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
+            if(_link.indexOf('m.tb.cn')>-1){
+                geiItemId(_link)
             }
-            $.ajax({
-                type: "GET", //提交方式
-                timeout: 5000,
-                dataType: 'jsonp',
-                jsonp:"callback", // 默认值是callback，可以修改
-                url: request_url,//路径
-                success: function (result) {//返回数据根据结果进行相应的处理
-                    if(result.errcode==0){
-                        itemData = result.data
-                        $("#card-step-1").hide()
-                        $("#card-step-2").show()
-                        $("#configPad").show()
-                        $("#readyPad").hide();
-                        reflashControlPad()
-                    }else{
-                        weui.alert(result.errmsg)
-                    }
+            if(mlink.indexOf('id=')>-1){
+                var itemid = mlink.split("id=")[1]
+                getTmallItemStyle(itemid)
+            }
 
 
-                },
-                error: (err, type) => {
 
-                    queryItem2(_link)
-                },
-
-
-            });
-            <!--==========================网络请求============================-->
         }
 
-        function queryItem2(_link) {
-            if(userAgent.indexOf('SKRIOSV1.5')==-1 && userAgent.indexOf('SKRANDV5.0')==-1){
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-            }
-            dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
+        function geiItemId(_mlink) {
+            dsBridge.call("networkGet",{url:_mlink},function (ret) {
+                if(ret.indexOf('errorjhandler')==0){
+                    weui.alert("错误"+ret)
+                    return
+                }
+                let body =  JSON.parse(ret)
+                var _itemid = "null";
+                if(body.indexOf('&id=')>-1){
+                    var itemid = body.split("&id=")[1]
+                    _itemid = itemid.split("&")[0]
+                }
+                else if(body.indexOf('taobao.com/i')>-1){
+                    var itemid = body.split("taobao.com/i")[1]
+                    _itemid = itemid.split(".htm")[0]
+                }
+                else if(body.indexOf('tmall.com/i')>-1){
+                    var itemid = body.split("tmall.com/i")[1]
+                    _itemid = itemid.split(".htm")[0]
+                }
+                if(_itemid!='null'){
+                    getTmallItemStyle(_itemid)
+                }
+                else{
+                    weui.alert("无法解析该淘口令")
+                }
+            })
 
-                let result =  JSON.parse(ret)
-                if(result.errcode==0){
-                    itemData = result.data
+        }
+
+
+        function getTmallItemStyle(itemid) {
+            let url = "https://detail.m.tmall.com/item.htm?id="+itemid
+            dsBridge.call("networkGet",{url:url},function (ret) {
+                if(ret.indexOf('errorjhandler')==0){
+                    weui.alert("错误"+ret)
+                    return
+                }
+                try{
+                    let encodingResult = ret
+                    let jsonString = encodingResult.split("_DATA_Mdskip =")[1].split('</scrip')[0];
+                    let _result_json=JSON.parse(jsonString);
+                    let _result = {
+                    item: _result_json.item,
+                    skuBase:_result_json.skuBase
+                    };
+                    itemData = _result
                     $("#card-step-1").hide()
                     $("#card-step-2").show()
                     $("#configPad").show()
                     $("#readyPad").hide();
                     reflashControlPad()
-                }else{
+                    }catch (e) {
+                    weui.alert("解析失败,此类商品目前还不支持")
 
-                }
-
+                    }
             })
 
+
         }
+
 
 
         function reflashControlPad() {
