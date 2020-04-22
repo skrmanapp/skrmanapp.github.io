@@ -307,6 +307,7 @@
 
             $.ajax({
                 type: "GET", //提交方式
+                timeout: 3000,
                 url: 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
