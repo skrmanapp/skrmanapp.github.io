@@ -148,7 +148,7 @@
                 (1)自行校准手机的本地时间，跳转基于本地时间 <br>
                 (2)淘宝客户端打开商品页面并放入后台等待 <br>
                 (3)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品!<br>
-                (4)获取商品后记得清除剪切板，或者直接复制这行字~<br>
+                (4)获取商品后记得清除剪切板，或者直接复制这行字!<br>
             </p>
             <p >
                 ⭐️点击右上角的[专业模式]，功能如下⭐️： <br>
@@ -198,7 +198,7 @@
 <!-- we ui -->
 <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
 <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/dsbridge@3.1.4/dist/dsbridge.js"></script>
 
 <script type="text/javascript">
 
@@ -310,8 +310,8 @@
             if(_link.indexOf('m.tb.cn')>-1){
                 geiItemId(_link)
             }
-            if(mlink.indexOf('id=')>-1){
-                var itemid = mlink.split("id=")[1]
+            if(_link.indexOf('id=')>-1){
+                var itemid = _link.split("id=")[1]
                 getTmallItemStyle(itemid)
             }
 
@@ -325,6 +325,7 @@
                     weui.alert("错误"+ret)
                     return
                 }
+                alert(ret)
                 let body =  JSON.parse(ret)
                 var _itemid = "null";
                 if(body.indexOf('&id=')>-1){
@@ -713,7 +714,7 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/dsbridge@3.1.4/dist/dsbridge.js"></script>
+
 
 </body>
 
