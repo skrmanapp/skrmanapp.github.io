@@ -435,10 +435,8 @@
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
                         itemData = result.data
-                        $("#card-step-1").hide()
-                        $("#card-step-2").show()
-                        $("#configPad").show()
-                        $("#readyPad").hide();
+                        $("#card-searchItem").hide()
+                        $("#card-addCart").show()
                         reflashControlPad()
                     }else{
                         weui.alert(result.errmsg)
