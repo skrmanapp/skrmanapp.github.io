@@ -310,13 +310,14 @@
             <!--==========================网络请求============================-->
             var request_url = 'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
             if(isMainRouter){
-                request_url = 'https://cloud.bmob.com/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
+                request_url = 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
             }
             $.ajax({
                 type: "GET", //提交方式
                 timeout: 5000,
                 dataType: 'jsonp',
                 jsonp:"callback", // 默认值是callback，可以修改
+                jsonpCallback:'jsonp',//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
                 url: request_url,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
                     if(result.errcode==0){
