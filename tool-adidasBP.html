@@ -112,7 +112,6 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
        var loading;
 
 
@@ -122,13 +121,9 @@
         function reloadAdidas() {
 
             $("#shoeList").html('')
-            var currentApi = baseApi;
-            currentApi = currentApi+'&offset='+(page*50)
+            var currentApi = "https://wows.adidas.com.cn/campaigns/event/formal/events.json ";
 
 
-            if (orderByUpdate) {
-                currentApi += "&orderBy=lastUpdated"
-            }
             loading =  weui.loading('加载中');
             $.ajax({
                 type : "get", //提交方式
@@ -146,6 +141,7 @@
 
                 },//数据，这里使用的是Json格式进行传输
                 success : function(data) {//返回数据根据结果进行相应的处理
+                    console.log(data)
                     loading.hide()
                     shoeTask(data)
                 },
@@ -168,26 +164,22 @@
 
             console.log("console.log(data)")
             console.log(data)
-            var templist = new Array();
-            var threads;
 
-
-
-            threads= data.threads;
+            var threads = data;
             console.log(threads.length)
 
             //=============JSON转换成功"=================
             $("#shoeList").html("");
 
 
-            for (var i = 0; i < threads.length; i++) {
+            for (var i = threads.length-1; i >=0; i--) {
 
 
 
 
                 var shoeId = ""
                 var title = ""
-                var image = "http://lazy-1252169987.cosgz.myqcloud.com/nullshoe.png"
+                var image = ""
                 var info = ""
                 var buyStep = 0
                 var original = "未获取到"
@@ -195,104 +187,32 @@
                 try {
 
 
-                    image = threads[i].imageUrl
+                    image = threads[i].main_image
 
-                    title = threads[i].name
+                    title = threads[i].product_name
                     shoeId = threads[i].id
 
-                    var startSelldata = new Date();
-                    var startSellTime = threads[i].product.startSellDate
-                    if (isNaN(startSellTime) && !isNaN(Date.parse(startSellTime))) {
-                        startSelldata = new Date(startSellTime);
-                        startSellTime = threads[i].product.startSellDate.substring(0, 19) + '(+8为北京时间)'
 
+                    var appointment_start = threads[i].appointment_start
+                    var rush_buy_start = threads[i].rush_buy_start
 
-                        var BJ_Hour = parseInt(startSellTime.substring(11, 13)) + 8
-                        var BJ_Day = parseInt(startSellTime.substring(8, 10))
-                        if (BJ_Hour > 24) {
-                            BJ_Day = BJ_Day + 1
-                            BJ_Hour = BJ_Hour - 24
-                        }
-                        var BJ_Hour_Str = '' + BJ_Hour;
-                        if (BJ_Hour < 10) {
-                            BJ_Hour_Str = '0' + BJ_Hour_Str
-                        }
-                        startSellTime = startSellTime.substring(0, 8) + BJ_Day + " " + BJ_Hour_Str + startSellTime.substring(13, 19)
-
-                    } else {
-                        startSellTime = '未知'
-                    }
-
-                    var merchStatus = threads[i].product.merchStatus
-
-                    var merchStatusStr = '未知'
-                    if (typeof (merchStatus) == "undefined") {
-                        //为空
-
-                    } else {
-                        if (merchStatus == 'ACTIVE') {
-                            merchStatusStr = '在售'
-                            buyStep += 1
-                        } else if (merchStatus == 'HOLD') {
-                            merchStatusStr = '下架'
-                        } else {
-                            merchStatusStr = merchStatus
-                        }
-                    }
-
-
-                    var restricted = threads[i].restricted
-                    var restrictedStr = '未知'
-                    if (typeof (restricted) == "undefined") {
-
-                    } else {
-                        if (restricted) {
-                            restrictedStr = '专属购买/突击发布'
-                        } else {
-                            restrictedStr = '否'
-                        }
-                    }
+                    original = '【信息登记】' + appointment_start +'<br>【预约时间】'+rush_buy_start
 
 
 
-
-
-                    info = '【发售日期】' + startSellTime
-
-
-                    seoSlug = threads[i].seoSlug
-
-                    var tempSku = ""
-                    var skuCount = 0
-                    for (var j = 0; j < threads[i].product.skus.length; j++) {
-                        if (threads[i].product.skus[j].available == true) {
-                            tempSku = tempSku + threads[i].product.skus[j].nikeSize + " "
-                            skuCount += 1
-                        }
-                    }
-                    if (skuCount > 0) {
-                        buyStep += 1
-                    }
-
-
-                    var selectionEngine = "FLOW"
-                    if (threads[i].product.selectionEngine) {
-                        selectionEngine = threads[i].product.selectionEngine
-                    } else {
-                        buyStep += 1
-                    }
-                    original = "【快速搜索】" + threads[i].product.style + '<br>【当前库存(US码)】' + tempSku + '<br>【发售方式】' + selectionEngine + '<br>【在售状态】' + merchStatusStr + '<br>【是否专属】' + restrictedStr
-                    if (buyStep > 2) {
-                        original = original + "<br>⭐️⭐️⭐️有货可买⭐️⭐️⭐️"
-                    }
                 }
                 catch (err) {
                     console.log('error' + err.message)
                 }
 
 
+                var path = "pages/yeezy/pages/verify/index.html?size=UK8&id="+shoeId+"&wowType=2"
 
-                let   jumpUrl = "https://www.nike.com/"+country+"/launch/t/"+seoSlug;
+                path = path.replace(/%1%/g, "/")
+                path = path.replace(/%2%/g, "?")
+                path = path.replace(/%3%/g, "&")
+
+                let   jumpUrl =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
                 console.log("shoeId"+shoeId)
                 $("#shoeList").html( $("#shoeList").html() +"     " +
                     " <div class=' rowView '  >\n" +
@@ -305,8 +225,7 @@
                     "            </div>"+
 
                     " <div class=' rowBottom '  >\n" +
-                    "  <a class=' rowButton ' href='"+jumpUrl+"' >快速跳转商品</a>          " +
-                    "  <a class=' rowButton ' href='sku.html?id="+shoeId+"&page="+page+"' >查看后台数据</a>          " +
+                    "  <a class=' rowButton ' href='"+jumpUrl+"' >选择登记</a>          " +
                     "" +
                     "</div>"+
 
