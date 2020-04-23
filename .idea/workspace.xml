@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tool-adidasBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-adidasBP.html" afterDir="false" />
-    </list>
+    <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,7 +248,7 @@
       <workItem from="1587559258484" duration="566000" />
       <workItem from="1587560002806" duration="5000" />
       <workItem from="1587567376810" duration="1067000" />
-      <workItem from="1587601851872" duration="5646000" />
+      <workItem from="1587601851872" duration="5843000" />
     </task>
     <servers />
   </component>
