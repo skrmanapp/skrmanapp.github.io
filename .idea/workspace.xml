@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tool-adidasBP.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP5.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP5.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +45,13 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\53921\Documents\GitHub\skrmanapp.github.io\assets\js" />
       <recent name="D:\Github\skrmanapp.github.io" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -248,7 +250,10 @@
       <workItem from="1587551867180" duration="442000" />
       <workItem from="1587554484598" duration="474000" />
       <workItem from="1587557137862" duration="339000" />
-      <workItem from="1587559258484" duration="216000" />
+      <workItem from="1587559258484" duration="566000" />
+      <workItem from="1587560002806" duration="5000" />
+      <workItem from="1587567376810" duration="1067000" />
+      <workItem from="1587601851872" duration="586000" />
     </task>
     <servers />
   </component>
