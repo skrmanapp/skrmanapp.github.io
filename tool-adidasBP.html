@@ -54,7 +54,11 @@
 
             <h3 style="padding: 8px">ADIDAS会员中心快速登记7</h3>
 
-
+        <div class='itemLong rowView' id="promode-time-offset">
+            <div class='itemTitle' >时间偏移(输入需要提前的时间，单位ms)</div>
+            <input class="itemSelect " id="time-offset-input">
+            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
+        </div>
         <div class="row table-view">
 
 
@@ -157,7 +161,18 @@
         reloadAdidas();
 
 
+        $("#config-button").click(function(){
+            var path =  $("#time-offset-input").val()
 
+            path = path.replace(/\//g, "%1%")
+            path = path.replace(/\?/g, "%2%")
+            path = path.replace(/&/g, "%3%")
+
+            let ready_url =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
+            window.location.href = ready_url
+
+
+        });
 
 
         function shoeTask(data){
