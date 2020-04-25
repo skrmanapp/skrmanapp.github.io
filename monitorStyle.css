@@ -185,7 +185,6 @@ html {
     line-height: 15px;
     font-size:12px;
     word-break: break-all;
-    overflow: hidden;
 }
 .rowViewInfo{
     position:absolute;
