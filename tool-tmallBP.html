@@ -547,11 +547,17 @@
                     let data =  JSON.parse(ret)
                     let timestamp_tb = data.data.t;
                     var timeDiff = timestamp_tb - now
-                    var recommendTime = 80 - timeDiff
+                    var recommendTime = 60 - timeDiff
+                    if(timeDiff>0){
+                        weui.alert('淘宝时间比本地晚了['+timeDiff+'ms] , 本地时间偏移可设置['+recommendTime+'ms]实现延后（仅供参考！实际视设备跳转速度决定！）')
+                    }else{
+                        weui.alert('淘宝时间比本地早了['+(-timeDiff)+'ms] , 本地时间偏移可设置['+recommendTime+'ms]实现提前（仅供参考！实际视设备跳转速度决定！）')
+
+                    }
+
                     // if(!isApple){
                     //     timeDiff = timeDiff-(1000 * 60 * 60 * 8)
                     // }
-                    weui.alert('时间延迟['+timeDiff+'ms] , 时间偏移可填写['+recommendTime+']左右（仅供参考！实际视设备跳转速度决定！）')
 
                 }catch (e) {
 
