@@ -86,7 +86,7 @@ html {
     position:relative;
     width: 100%;
     right: 0%;
-    height:400px;
+    height:300px;
     top: 0px;
     overflow: hidden;
     overflow:hidden;
@@ -346,4 +346,62 @@ html {
     background-color: #000000;
     color: white;
     line-height: 40px;
+}
+.floatButton{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
+.floatButton img{
+    width: 64px;
+    height: 64px;
+    border-color: black;
+    border-style: solid;
+}
+.topBar{
+    position: fixed;
+    right: 8px;
+    top: 8px;
+    width: 128px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #666666;
+    border-radius: 16px;
+    background-color: white;
+}
+.topBarLine{
+    position: relative;
+    width: 1px;
+    margin-top: 0px;
+    height:30px;
+    line-height: 32px;
+    font-size: 13px;
+    text-align: center;
+    background-color: #666666;
+}
+.topBarButton-Large{
+    position: relative;
+    width: 65%;
+    height:32px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+}
+.topBarButton-Small{
+    position: relative;
+    width: 28%;
+    height:32px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #333333;
 }

@@ -222,6 +222,7 @@
         var ready_task = false ;
         var professional_mode = false ;
         var isMainRouter = true;
+        var queryReady = true;
         var domain = window.location.host;
         if(domain.indexOf('skrman.app')>-1 || domain.indexOf('SKRMAN.APP')>-1 ){
             isMainRouter = true;
@@ -303,6 +304,11 @@
 
         function queryItem(_link) {
             //读取数据
+            if(queryReady){
+                queryReady = false;
+            }else{
+                return
+            }
             skuId = 0;
             props = [];
             buyCount = 1 ;
@@ -320,6 +326,7 @@
                 jsonpCallback:'jsonp',//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
                 url: request_url,//路径
                 success: function (result) {//返回数据根据结果进行相应的处理
+                    queryReady = true;
                     if(result.errcode==0){
                         itemData = result.data
                         $("#card-step-1").hide()
@@ -342,7 +349,7 @@
                 },
                 error: (err, type) => {
                     backupMetod('网络拥堵')
-
+                    queryReady = true;
                 },
 
 

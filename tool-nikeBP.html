@@ -55,16 +55,12 @@
                 <div class="mu-contact-area" style="padding-top: 50px">
 
                     <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">NIKE APP 货号跳转 </h2>
+                        <h2 class="mu-heading-title">NIKEAPP 助手</h2>
                         <span class="mu-title-dot"></span>
 
                     </div>
 
-
-
-
-
-                    <div class="mu-title-area">
+                    <div class="mu-title-area" id="card-step-1">
                         <div class="col-md-12">
                             <div class="mu-contact-left">
                                 <div id="form-messages"></div>
@@ -73,9 +69,12 @@
                                     <div class="form-group">
                                         <input type="text"  placeholder="输入货号(字母大写如CD5006-001)" id="style" class="form-control" style="text-align: center">
                                     </div>
+                                    <div class="" >
+                                        <label style="padding-left: 4px;padding-right: 4px"><input  name="Channel" type="radio" value="NIKE" checked /> NIKE.COM </label>
+                                        <label style="padding-left: 4px;padding-right: 4px"><input  name="Channel" type="radio" value="SNKRS" /> SNKRS </label>
+                                    </div>
                                 </div>
-                                <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="enter-button"><span>进入</span></button>
-
+                                <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;margin-top:20px " id="enter-button"><span>查询</span></button>
                             </div>
                         </div>
 
@@ -124,17 +123,43 @@
 
     jQuery(document).ready(function($){
 
-
-
+        var stylecode = ""
 
 
 
 
         $("#enter-button").click(function(){
-            let _style =  $("#style").val()
-            window.location.href = "mynike://x-callback-url/product-details?style-color="+_style;
+
+            var _Channel =  $("input[name='Channel']:checked").val();
+            var _style =  $("#style").val()
+            stylecode = _style.toUpperCase()
+            if(_style.length!=10 || _style.indexOf('-')==-1  ){
+                weui.confirm('货号不标准哦，您输入的是'+stylecode+'是否继续查询？', {
+                    title: '提示',
+                    buttons: [{
+                        label: '取消',
+                        type: 'default',
+                        onClick: function(){
+
+                        }
+                    }, {
+                        label: '确认',
+                        type: 'primary',
+                        onClick: function(){
+                            window.location.href ='sku-nikeapp.html?style='+stylecode+'&channel='+_Channel
+                        }
+                    }]
+                });
+                return;
+            }else{
+                window.location.href ='sku-nikeapp.html?style='+stylecode+'&channel='+_Channel
+            }
 
         });
+
+
+
+
 
 
 
