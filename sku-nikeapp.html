@@ -546,8 +546,8 @@
             if (size_up > 1 && size_down > 1 && total_time > 0 && size_up >= size_down){
                 current_time = total_time
                 AutoRefresh = true
-                $("#AutoBar_1").html('上界:'+size_up)
-                $("#AutoBar_2").html('下界:'+size_down)
+                $("#AutoBar_1").html('下界:US'+size_down)
+                $("#AutoBar_2").html('上界:US'+size_up)
                 $("#monitor-step-1").hide()
                 $("#monitor-step-2").show()
                 weui.alert("监控已开启，务必保持前台运行")
