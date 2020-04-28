@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sku-nikeapp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skrtool.html" beforeDir="false" afterPath="$PROJECT_DIR$/skrtool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/luanch-nikeapp.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/luanch-nikeapp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sku-nikeapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/sku-nikeapp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/skuStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-nikeBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-nikeBP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +261,9 @@
       <workItem from="1587870168069" duration="132000" />
       <workItem from="1587904533418" duration="267000" />
       <workItem from="1587910501019" duration="212000" />
-      <workItem from="1587947384627" duration="11036000" />
+      <workItem from="1587947384627" duration="11119000" />
+      <workItem from="1587976964819" duration="5276000" />
+      <workItem from="1588034632169" duration="1335000" />
     </task>
     <servers />
   </component>
@@ -271,6 +271,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="166" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587979358492">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="166" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1587979358492" />
     <state x="765" y="267" key="FileChooserDialogImpl" timestamp="1580356706832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

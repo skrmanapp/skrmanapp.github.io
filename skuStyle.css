@@ -230,7 +230,7 @@ html {
 
 .row-key{
     position: relative;
-    width: 30%;
+    width: 35%;
     height:32px;
     margin-top: 0px;
 
@@ -245,7 +245,7 @@ html {
 }
 .row-value{
     position: relative;
-    width: 50%;
+    width: 45%;
     height:32px;
     margin-top: 0px;
 
@@ -349,17 +349,17 @@ html {
 }
 .floatButton{
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 64px;
-    height: 64px;
+    right: 16px;
+    bottom: 56px;
+    width: 56px;
+    height: 56px;
     text-align: center;
     color: white;
     line-height: 40px;
 }
 .floatButton img{
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-color: black;
     border-style: solid;
 }
@@ -396,6 +396,15 @@ html {
     text-align: center;
     color: #333333;
 }
+.topBarButton-Middle{
+    position: relative;
+    width: 38%;
+    height:32px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+}
 .topBarButton-Small{
     position: relative;
     width: 28%;
@@ -404,4 +413,86 @@ html {
     font-size: 20px;
     text-align: center;
     color: #333333;
+}
+
+.bottomBar-Low{
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 42px;
+    border-top: 1px solid #c9c9d8;
+}
+.bottomBar-High{
+     background-color: #ffffff;
+     width: 100%;
+     position: fixed;
+     bottom: 0;
+     height: 128px;
+     border-top: 1px solid #c9c9d8;
+
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+    padding-top: 4px;
+ }
+.bottomBar-row-view{
+    position: relative;
+    width: 45%;
+    height:28px;
+    margin-top: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:black;
+    text-align: center;
+    font-size: 11px;
+    line-height: 26px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333333;
+
+}
+.bottomBar_row_title {
+    position: absolute;
+    left: 4%;
+    width: 40%;
+    height: 26px;
+    font-size: 13px;
+    line-height:26px;
+    color: #333333;
+    text-align: left;
+}
+.bottomBar_row_input {
+    position: absolute;
+    left: 48%;
+    width: 38%;
+    top: 0px;
+    height: 24px;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+}
+.bottomBar_row_button {
+    position: absolute;
+    left:4%;
+    width: 92%;
+    top: 0px;
+    height: 26px;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+}
+.bottomBar_row_tips {
+    position: relative;
+    width: 90%;
+    height:26px;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:gray;
+    text-align: center;
+    font-size: 11px;
+    line-height: 26px;
+
 }
