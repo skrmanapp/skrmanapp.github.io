@@ -357,7 +357,23 @@ html {
     color: white;
     line-height: 40px;
 }
+.floatButton2{
+    position: fixed;
+    right: 16px;
+    bottom: 120px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
 .floatButton img{
+    width: 56px;
+    height: 56px;
+    border-color: black;
+    border-style: solid;
+}
+.floatButton2 img{
     width: 56px;
     height: 56px;
     border-color: black;

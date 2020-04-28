@@ -78,7 +78,9 @@
             <div class="floatButton" id="floatButton" >
                 <img src="assets/images/luanch-nikeapp.png">
             </div>
-
+            <div class="floatButton2" id="floatButton2" >
+                <img src="assets/images/luanch-weapp.png">
+            </div>
 
 
 
@@ -165,6 +167,9 @@
         let _channel = UrlParm.parm("channel");
         if( _channel && _channel == 'SNKRS'){
             channelId = "010794e5-35fe-4e32-aaff-cd2c74f89d61"
+            $("#floatButton2").hide()
+        }else{
+            $("#floatButton2").show()
         }
         if(!stylecode || stylecode == 'null'){
             weui.alert('进入参数错误！');
@@ -496,6 +501,18 @@
             }else{
                 window.location.href = "mynike://x-callback-url/product-details?style-color="+stylecode;
             }
+        });
+
+
+        $("#floatButton2").click(function(){
+            var path =  "pages/product/index?stylecolor="+stylecode
+
+            path = path.replace(/\//g, "__1__")
+            path = path.replace(/\?/g, "__2__")
+            path = path.replace(/&/g, "__3__")
+
+            let ready_url =  "weixin://pages/Renav/Renav?id=wx096c43d1829a7788&mpath="+path
+            window.location.href = ready_url
         });
         $("#monitor-button").click(function(){
             if(!monitor_mode){

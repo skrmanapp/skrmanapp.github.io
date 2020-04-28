@@ -4,6 +4,8 @@
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sku-nikeapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/sku-nikeapp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skuStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/skuStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +264,8 @@
       <workItem from="1587947384627" duration="11119000" />
       <workItem from="1587976964819" duration="5276000" />
       <workItem from="1588034632169" duration="1448000" />
-      <workItem from="1588036290496" duration="124000" />
+      <workItem from="1588036290496" duration="445000" />
+      <workItem from="1588043269907" duration="487000" />
     </task>
     <servers />
   </component>
