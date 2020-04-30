@@ -64,7 +64,7 @@
             <div class='smallTitle' id="smallTitle3"></div>
 
 
-            <div id="attributeTable" style="margin-bottom: 100px"></div>
+            <div id="attributeTable" style="margin-bottom: 150px"></div>
 
             <div class='smallTitle' id="skuTitle" style="visibility: hidden">实时库存情况（数量为预估值）</div>
             <div id="skuTable" ></div>
@@ -353,7 +353,7 @@
                         selectionEngine = shoe_item.productInfo[0].launchView.method
                         var htmlString = '<div class=" table-row col-xs-12" >\n' +
                             '                <p class="row-key" >\n' +
-                            '                    发售方式\n' +
+                            '                    抽签方式\n' +
                             '                </p>\n' +
                             '                <p class="row-value" >\n' +
                             selectionEngine +
@@ -376,6 +376,39 @@
                         $("#attributeTable").html($("#attributeTable").html()+htmlString)
                     }catch (e) { }
 
+
+                    try {
+                        let channels = shoe_item.productInfo[0].merchProduct.channels
+                        if(channels.length>1){
+                            var channelString = ""
+                            for(var channel_index=0;channel_index<channels.length;channel_index++){
+                                var _channel = channels[channel_index]
+                                if(_channel=='WeChat'){
+                                    _channel = "小程序"
+                                }
+                                else if(_channel=='NikeApp'){
+                                    _channel = "NIKEAPP"
+                                }
+                                else if(_channel=='Nike.com'){
+                                    _channel = "官网"
+                                }
+                                else if(_channel=='Nike Store Experiences'){
+                                    _channel = "体验店"
+                                }
+                                channelString = channelString+_channel+","
+                            }
+                            var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                                '                <p class="row-key" >\n' +
+                                '                    购买渠道\n' +
+                                '                </p>\n' +
+                                '                <p class="row-value" >\n' +
+                                channelString +
+                                '                </p>\n' +
+                                '            </div>'
+                            $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                        }
+
+                    }catch (e) { }
 
                     try {
                         var restricted = shoe_item.productInfo[0].merchProduct.exclusiveAccess

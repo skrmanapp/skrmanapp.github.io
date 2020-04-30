@@ -309,3 +309,73 @@ html {
     border-color: darkred;
     color: darkred;
 }
+
+.bottomBar-High{
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 128px;
+    border-top: 1px solid #c9c9d8;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 4px;
+}
+.bottomBar-row-view{
+    position: relative;
+    width: 45%;
+    height:48px;
+    margin-top: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color:black;
+    text-align: center;
+    font-size: 15px;
+    line-height: 44px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333333;
+
+}
+.bottomBar_row_title {
+    position: absolute;
+    left: 4%;
+    width: 40%;
+    height: 44px;
+    line-height:44px;
+    color: #333333;
+    text-align: left;
+}
+.bottomBar_row_input {
+    position: absolute;
+    left: 48%;
+    width: 38%;
+    top: 0px;
+    height: 44px;
+    line-height: 44px;
+    color: #333333;
+    text-align: center;
+}
+.bottomBar_row_button {
+    position: absolute;
+    left:4%;
+    width: 92%;
+    top: 0px;
+    height: 44px;
+    color: #333333;
+    text-align: center;
+}
+.bottomBar_row_tips {
+    position: relative;
+    width: 90%;
+    height: 26px;
+    margin-top: 8px;
+    margin-left: 1px;
+    margin-right: 1px;
+    color: gray;
+    text-align: center;
+    font-size: 11px;
+    line-height: 26px;
+
+}

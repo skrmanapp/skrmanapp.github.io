@@ -52,28 +52,14 @@
 
     <div class="container-fluid" style="padding-left: 0px;padding-right: 0px">
 
-            <h3 style="padding: 8px">ADIDAS会员中心快速登记9</h3>
+            <h3 style="padding: 8px">ADIDAS会员中心快速登记</h3>
 
-        <div class='itemLong rowView' id="promode-time-offset">
-            <div class='itemTitle' >时间偏移(输入需要提前的时间，单位ms)</div>
-            <input class="itemSelect " id="time-offset-input">
-            <button  class="mu-send-msg-btn" style="font-size: 16px;padding: 10px;" id="config-button"><span>下一步</span></button>
-        </div>
+
         <div class="row table-view">
 
 
             <div id="shoeList">
-            <!--<div class=' rowView ' >-->
 
-                <!--<div class='pic' ><img src="https://c.static-nike.com/a/images/w_750,c_limit/y2fxddhm0u6ukm6cqodb/rio-de-janeiro.jpg" ></div>-->
-                <!--<div class='rowViewTitle'>AIR JORDAN X</div>-->
-                <!--<div class='rowViewTitleLine'></div>-->
-                <!--<div class='rowViewOriginal'></div>-->
-                <!--<div class='rowViewInfo'></div>-->
-
-
-
-            <!--</div>-->
             </div>
 
 
@@ -85,7 +71,18 @@
 
 
     </div>
+    <div class='bottomBar-High' id="monitor-step-1">
 
+        <div  class="bottomBar-row-view">
+            <div class="bottomBar_row_title"> 尺码：</div>
+            <input class='bottomBar_row_input'  placeholder='US码'  type='number' id="size_down"></input>
+        </div>
+
+        <div  class="bottomBar-row-view">
+            <view class="bottomBar_row_button" style="color: darkred;text-decoration: underline" id="start-monitor">提交</view>
+        </div>
+        <div  class="bottomBar_row_tips">* 请输入US码</div>
+    </div>
 
 
 
@@ -161,18 +158,7 @@
         reloadAdidas();
 
 
-        $("#config-button").click(function(){
-            var path =  $("#time-offset-input").val()
 
-            path = path.replace(/\//g, "__1__")
-            path = path.replace(/\?/g, "__2__")
-            path = path.replace(/&/g, "__3__")
-
-            let ready_url =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
-            window.location.href = ready_url
-
-
-        });
 
 
         function shoeTask(data){
@@ -211,7 +197,7 @@
                     var appointment_start = threads[i].appointment_start
                     var rush_buy_start = threads[i].rush_buy_start
 
-                    original = '【信息登记】' + appointment_start +'<br>【预约时间】'+rush_buy_start
+                    original = '[信息登记]' + appointment_start +'<br>[预约时间]'+rush_buy_start
 
 
 
