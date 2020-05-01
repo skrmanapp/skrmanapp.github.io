@@ -112,8 +112,8 @@
                                     </select>
                                 </div>
                                 <div class='itemLong' id="promode-time-offset">
-                                    <div class='itemTitle' >时间偏移(输入需要提前的时间,单位ms,延后则输入负数)</div>
-                                    <input class="itemSelect" value="0" type="number" id="time-offset-input">
+                                    <div class='itemTitle' >时间偏移(输入提前的时间,单位ms,延后则为负数)</div>
+                                    <input class="itemSelect" value="0" type="number" id="time-offset-input" style='text-indent: 4px'>
                                 </div>
                             </div>
                             <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 40%;text-align: center;border-color: lightgray" id="promode-time-button"><span>测试淘宝延迟</span></button>
@@ -454,7 +454,7 @@
             }
             itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
                 "<div class='itemTitle' >购买数量(谨慎输入)</div>\n" +
-                "<input name='select' class='itemSelect' onchange=onChange_Count(this.value) value='"+buyCount+"'>"
+                "<input name='select' class='itemSelect' style='text-indent: 4px' onchange=onChange_Count(this.value) value='"+buyCount+"'>"
 
 
 
