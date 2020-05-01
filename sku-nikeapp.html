@@ -484,9 +484,11 @@
 
                         }
 
-
-                        $("#cardTable").html('<div class="  col-xs-12"  style="width: 100%;padding: 10%;text-align: center;">信息更新于:'+shoe_item.lastFetchTime+'</div>')
-
+                        try {
+                            let slug = shoe_item.productInfo[0].productContent.slug
+                            let link = "https://www.nike.com/cn/t/"+slug
+                        $("#cardTable").html('<div class="  col-xs-12"  style="width: 100%;padding: 10%;text-align: center;font-size: 11px">'+link+'<br>信息更新于:'+shoe_item.lastFetchTime+'</div>')
+                        }catch(e){}
 
 
 
