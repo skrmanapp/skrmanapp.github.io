@@ -154,7 +154,7 @@
                 ⭐️点击右上角的[专业模式]，功能如下⭐️： <br>
                 (1)制作BP链接：为避免网络拥堵，热门商品可以提前复制好BP链接，即先【复制BP链接】抢购时再【已有BP链接跳转】 <br>
                 (2)精准设置时间偏移：对时间偏移进行更精准的设置<br>
-                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟～<br>
+                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟!<br>
             </p>
 
 
@@ -295,6 +295,33 @@
 
 
             }
+
+        }
+
+        function geiItemId(_mlink) {
+            dsBridge.call("networkGet",{url:_mlink},function (ret) {
+                if(ret.indexOf('errorjhandler')==0){
+                    weui.alert("错误"+ret)
+                    return
+                }
+
+                let body =  ret
+                var _itemid = "null";
+                if(body.indexOf('&id=')>-1){
+                    var itemid = body.split("&id=")[1]
+                    _itemid = itemid.split("&")[0]
+                }
+                else if(body.indexOf('tmall.com/i')>-1){
+                    var itemid = body.split("tmall.com/i")[1]
+                    _itemid = itemid.split(".htm")[0]
+                }
+                if(_itemid!='null'){
+                    queryItem("https://detail.tmall.com/item.htm?id="+_itemid+"&aa=1")
+                }
+                else{
+                    weui.alert("无法解析该淘口令")
+                }
+            })
 
         }
 
@@ -499,6 +526,10 @@
 
 
         }
+
+
+
+
         $("#query-button").click(function(){
             let _link =  $("#link").val()
 
@@ -506,7 +537,7 @@
                 var mlink = _link.split("http")[1]
                 mlink = mlink.split("?")[0]
                 mlink = 'http'+mlink
-                queryItem(mlink)
+                geiItemId(mlink)
             }else if(_link.indexOf('id=')>-1){
                 var mlink = _link.split("id=")[1]
                 mlink = 'id='+mlink
