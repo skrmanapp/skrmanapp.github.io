@@ -71,17 +71,17 @@
 
 
     </div>
-    <div class='bottomBar-High' id="monitor-step-1">
+    <div class='bottomBar-High' id="card-step-1">
 
         <div  class="bottomBar-row-view">
             <div class="bottomBar_row_title"> 尺码：</div>
-            <input class='bottomBar_row_input'  placeholder='US码'  type='number' id="size_down"></input>
+            <input class='bottomBar_row_input'  placeholder='US码'  type='number' id="size">
         </div>
 
         <div  class="bottomBar-row-view">
-            <view class="bottomBar_row_button" style="color: darkred;text-decoration: underline" id="start-monitor">提交</view>
+            <view class="bottomBar_row_button" style="color: darkred;text-decoration: underline" id="submit-button">提交</view>
         </div>
-        <div  class="bottomBar_row_tips">* 请输入US码</div>
+        <div  class="bottomBar_row_tips" id="card-step-1-tips"></div>
     </div>
 
 
@@ -117,7 +117,10 @@
 
 
         var orderByUpdate = false;
-     
+        var shoedata = [];
+        var currentId ;
+
+        $("#card-step-1").hide()
 
         function reloadAdidas() {
 
@@ -144,7 +147,8 @@
                 success : function(data) {//返回数据根据结果进行相应的处理
                     console.log(data)
                     loading.hide()
-                    shoeTask(data)
+                    shoedata = data;
+                    shoeTask()
                 },
                 error: (err, type) => {
 
@@ -161,12 +165,11 @@
 
 
 
-        function shoeTask(data){
+        function shoeTask(){
 
-            console.log("console.log(data)")
-            console.log(data)
 
-            var threads = data;
+
+            var threads = shoedata;
             console.log(threads.length)
 
             //=============JSON转换成功"=================
@@ -182,9 +185,7 @@
                 var title = ""
                 var image = ""
                 var info = ""
-                var buyStep = 0
                 var original = "未获取到"
-                var seoSlug = ""
                 try {
 
 
@@ -207,11 +208,6 @@
                 }
 
 
-                var path = "pages%1%yeezy%1%pages%1%verify%1%index%2%size=UK8%3%id="+shoeId+"%3%wowType=2"
-
-                path = "、pages%1%detail%1%index%2%size=UK8%3%id="+shoeId
-
-                let   jumpUrl =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
                 console.log("shoeId"+shoeId)
                 $("#shoeList").html( $("#shoeList").html() +"     " +
                     " <div class=' rowView '  >\n" +
@@ -224,7 +220,7 @@
                     "            </div>"+
 
                     " <div class=' rowBottom '  >\n" +
-                    "  <a class=' rowButton ' href='"+jumpUrl+"' >选择登记</a>          " +
+                    "  <div class=' rowButton ' onclick='selectSerial("+shoeId+")' >选择登记</div>          " +
                     "" +
                     "</div>"+
 
@@ -246,6 +242,80 @@
 
 
 
+
+        }
+
+        $("#submit-button").click(function(){
+            var threads = shoedata;
+
+            var _shoe;
+            var isFind = false
+            for (var i = threads.length-1; i >=0; i--) {
+                if(threads[i].id==currentId){
+                    isFind = true
+                    _shoe = threads[i]
+                }
+            }
+            if(!isFind){
+                return
+            }
+            let title = _shoe.product_name
+            let shoeId = _shoe.id
+
+
+            let size = parseFloat($("#size").val())
+            if(size>0&&size<20){
+                let sizeStr = 'UK'+size
+                var path =  "pages/yeezy/pages/verify/index?size="+sizeStr+"&id="+currentId+"&wowType=2"
+
+                path = path.replace(/\//g, "__1__")
+                path = path.replace(/\?/g, "__2__")
+                path = path.replace(/&/g, "__3__")
+                let ready_url =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
+                window.location.href = ready_url
+                weui.confirm('您当前需要登记的尺码为'+sizeStr+',鞋款名称为'+title+',点击确认前往登记', {
+                    title: '提示',
+                    buttons: [{
+                        label: '取消',
+                        type: 'default',
+                        onClick: function(){
+
+                        }
+                    }, {
+                        label: '确认',
+                        type: 'primary',
+                        onClick: function(){
+                            window.location.href =  ready_url;
+                        }
+                    }]
+                });
+            }else{
+                weui.alert("尺码有误")
+            }
+
+        });
+
+        selectSerial = function (id){
+            currentId = id
+            console.log(id)
+            var threads = shoedata;
+
+            var _shoe;
+            var isFind = false
+            for (var i = threads.length-1; i >=0; i--) {
+                if(threads[i].id==id){
+                    isFind = true
+                    _shoe = threads[i]
+                }
+            }
+            if(!isFind){
+                return
+            }
+            let title = _shoe.product_name
+            let shoeId = _shoe.id
+            $("#card-step-1").show()
+            $("#card-step-1-tips").html('您当前选择登记的是'+title+'，请输入您登记的尺码（UK码）')
+            weui.alert("请在下方输入您的登记信息")
 
         }
 
