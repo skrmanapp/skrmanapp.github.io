@@ -75,7 +75,7 @@
 
         <div  class="bottomBar-row-view">
             <div class="bottomBar_row_title"> 尺码：</div>
-            <input class='bottomBar_row_input'  placeholder='US码'  type='number' id="size">
+            <input class='bottomBar_row_input'  placeholder='UK码'  type='number' id="size">
         </div>
 
         <div  class="bottomBar-row-view">
@@ -272,7 +272,6 @@
                 path = path.replace(/\?/g, "__2__")
                 path = path.replace(/&/g, "__3__")
                 let ready_url =  "weixin://pages/Renav/Renav?id=wx771a28fa51fa2b99&mpath="+path
-                window.location.href = ready_url
                 weui.confirm('您当前需要登记的尺码为'+sizeStr+',鞋款名称为'+title+',点击确认前往登记', {
                     title: '提示',
                     buttons: [{
