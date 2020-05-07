@@ -81,7 +81,7 @@
         <div  class="bottomBar-row-view">
             <view class="bottomBar_row_button" style="color: darkred;text-decoration: underline" id="submit-button">提交</view>
         </div>
-        <div  class="bottomBar_row_tips" id="card-step-1-tips"></div>
+        <div  class="bottomBar_row_tips" id="card-step-1-tips">⚠️⚠️注意⚠️⚠️ 小程序若出现白屏是因为：1.时间没到 2.阿迪达斯小程序后台卡了，请务必在时间开始后跳转</div>
     </div>
 
 
@@ -296,24 +296,9 @@
 
         selectSerial = function (id){
             currentId = id
-            console.log(id)
-            var threads = shoedata;
 
-            var _shoe;
-            var isFind = false
-            for (var i = threads.length-1; i >=0; i--) {
-                if(threads[i].id==id){
-                    isFind = true
-                    _shoe = threads[i]
-                }
-            }
-            if(!isFind){
-                return
-            }
-            let title = _shoe.product_name
-            let shoeId = _shoe.id
             $("#card-step-1").show()
-            $("#card-step-1-tips").html('您当前选择登记的是'+title+'，请输入您登记的尺码（UK码）')
+
             weui.alert("请在下方输入您的登记信息")
 
         }
