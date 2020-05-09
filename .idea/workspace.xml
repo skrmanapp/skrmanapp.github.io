@@ -4,7 +4,6 @@
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android-pzff.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-pzff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +282,8 @@
       <workItem from="1588777622569" duration="810000" />
       <workItem from="1588817002511" duration="420000" />
       <workItem from="1588917190143" duration="5000" />
-      <workItem from="1589011221729" duration="354000" />
+      <workItem from="1589011221729" duration="688000" />
+      <workItem from="1589014200791" duration="448000" />
     </task>
     <servers />
   </component>
