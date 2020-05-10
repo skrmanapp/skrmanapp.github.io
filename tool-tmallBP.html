@@ -383,6 +383,7 @@
 
 
         function reflashControlPad() {
+
             $("#itemTitle").html(itemData.item.title)
             itemId = itemData.item.itemId
             var  itemStylePad_html = ''
@@ -425,6 +426,7 @@
                             pid:current_props_pid,
                             vid:current_props_vid
                         }
+
                         props.push(_mprops)
                     }
                     if(skuId!=0 ){
@@ -488,11 +490,13 @@
 
                 if(matchProps){
                     skuId = itemData.skuBase.skus[i].skuId
+
                 }
             }
             if(skuId==0){
                 weui.alert("获取skuid出错")
                 $("#itemStyle").html("获取数据错误")
+                props = []
             }
             console.log("skuId"+"---"+skuId)
         }
