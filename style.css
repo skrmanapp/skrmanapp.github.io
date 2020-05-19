@@ -1431,3 +1431,16 @@ button:focus {
 	background-color: #333333;
 	color: white;
 }
+
+
+#slide{
+	 width:375px;
+	 height:280px;
+ }
+
+.slide-img{
+	width:375px;
+	height:280px;
+	max-width:375px;
+}
+
