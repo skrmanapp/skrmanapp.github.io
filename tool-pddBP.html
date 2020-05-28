@@ -535,8 +535,13 @@
         $("#query-button").click(function(){
             let _link =  $("#link").val()
 
-            if(_link.indexOf('goods_id')>-1){
+            if(_link.indexOf('goods_id=')>-1){
                 goods_id = _link.split("goods_id=")[1]
+                goods_id = goods_id.split("&")[0]
+                console.log(goods_id)
+                queryItem()
+            }else if(_link.indexOf('subject_id=')>-1){
+                goods_id = _link.split("subject_id=")[1]
                 goods_id = goods_id.split("&")[0]
                 console.log(goods_id)
                 queryItem()
