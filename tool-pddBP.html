@@ -346,7 +346,7 @@
 
         function reflashControlPad() {
             if(!itemData.isOnSale){
-                weui.alert('已下架')
+                weui.alert('当前商品尚未开售哦～（有可能是秒杀尚未开售或者服务器解析失败）')
             }
             $("#itemTitle").html(itemData.goodsName)
             var  itemStylePad_html = ''
