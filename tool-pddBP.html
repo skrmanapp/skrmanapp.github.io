@@ -611,7 +611,7 @@
 
             }
 
-            ready_url = "pinduoduo://mobile.yangkeduo.com/order_checkout.html?sku_id="+skuId+"&goods_id="+goods_id+"&goods_number="+buyCount+"&page_from=0";
+            ready_url = "pinduoduo://com.xunmeng.pinduoduo/order_checkout.html?sku_id="+skuId+"&goods_id="+goods_id+"&goods_number="+buyCount+"&page_from=0";
 
             let now = new Date()
             let timeDiff = ready_time.getTime() - now.getTime()
@@ -634,7 +634,7 @@
         });
 
         $("#promode-copy-button").click(function(){
-            ready_url = "pinduoduo://mobile.yangkeduo.com/order_checkout.html?sku_id="+skuId+"&goods_id="+goods_id+"&goods_number="+buyCount+"&page_from=0";
+            ready_url = "pinduoduo://com.xunmeng.pinduoduo/order_checkout.html?sku_id="+skuId+"&goods_id="+goods_id+"&goods_number="+buyCount+"&page_from=0";
             copyTxt(ready_url.replace("pinduoduo:", "https:"))
 
 
