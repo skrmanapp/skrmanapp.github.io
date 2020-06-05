@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verify-card-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/verify-card-new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,12 +53,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="22" />
-    <option name="width" value="1623" />
-    <option name="height" value="1058" />
   </component>
   <component name="ProjectId" id="1VPYZVZetfvfmy6rot6WPpbJ5Zw" />
   <component name="ProjectLevelVcsManager">
@@ -348,7 +343,8 @@
       <workItem from="1591091736515" duration="2496000" />
       <workItem from="1591101285215" duration="21000" />
       <workItem from="1591355787747" duration="797000" />
-      <workItem from="1591399564175" duration="139000" />
+      <workItem from="1591399564175" duration="162000" />
+      <workItem from="1591400725706" duration="16000" />
     </task>
     <servers />
   </component>
