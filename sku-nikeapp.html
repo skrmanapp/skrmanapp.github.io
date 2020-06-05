@@ -116,7 +116,7 @@
 
 
     <div class="topBar" style="width: 220px">
-        <div class="topBarButton-Middle" id="monitor-button" >库存监控</div>
+        <div class="topBarButton-Middle" id="monitor-button" >自动刷新</div>
         <div class="topBarLine" ></div>
         <div class="topBarButton-Middle" id="position-button" >地区:国区</div>
         <div class="topBarLine" ></div>
@@ -335,7 +335,21 @@
                     }catch (e) {
 
                     }
-
+                    try {
+                        var currentPrice = 0
+                        currentPrice = shoe_item.productInfo[0].merchPrice.currentPrice
+                        var htmlString = '<div class=" table-row col-xs-12" >\n' +
+                            '                <p class="row-key" >\n' +
+                            '                    当前价格\n' +
+                            '                </p>\n' +
+                            '                <p class="row-value" >\n' +
+                            currentPrice +
+                            '                </p>\n' +
+                            '            </div>'
+                        $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                    }catch (e) {
+                        console.log(e)
+                    }
                     try {
                         var htmlString = '<div class=" table-row col-xs-12" >\n' +
                             '                <p class="row-key" >\n' +
