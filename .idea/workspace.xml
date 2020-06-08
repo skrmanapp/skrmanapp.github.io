@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help-bbxx.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-bbxx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-pddBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-pddBP.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,37 +18,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>professional-button</find>
-      <find>promode-time-offset</find>
-      <find>promode</find>
-      <find>time-offset</find>
-      <find>time-</find>
-      <find>timeInput</find>
-      <find>getNowFormatDateTime</find>
-      <find>ready</find>
-      <find>ready_</find>
-      <find>total_time</find>
-      <find>ready_url</find>
-      <find>itemid</find>
-      <find>reset-button</find>
-      <find>queryItem</find>
-      <find>querySku</find>
-      <find>callbackString</find>
-      <find>itemId</find>
-      <find>查询中</find>
-      <find>card-step-2</find>
-      <find>getTmallItemStyle</find>
-      <find>new Date</find>
-      <find>ud</find>
-      <find>current_props_vid</find>
-      <find>reflashControlPad</find>
-      <find>date</find>
-      <find>ready_task</find>
-      <find>container</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -346,7 +315,8 @@
       <workItem from="1591399564175" duration="162000" />
       <workItem from="1591400725706" duration="296000" />
       <workItem from="1591403540464" duration="911000" />
-      <workItem from="1591410217203" duration="11000" />
+      <workItem from="1591410217203" duration="118000" />
+      <workItem from="1591575972704" duration="1307000" />
     </task>
     <servers />
   </component>
