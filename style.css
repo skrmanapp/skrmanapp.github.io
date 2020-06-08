@@ -1329,6 +1329,13 @@ button:focus {
 	line-height: 30px;
 
 }
+.itemSelectWide{
+	font-size: 12px;
+	height: 30px;
+	background-color: white;
+	width: 95%;
+	line-height: 30px;
+}
 .itemDiv{
 	font-size: 14px;
 	height: 30px;
