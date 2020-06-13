@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title></title>
     <!-- Favicon -->
@@ -55,13 +55,6 @@
             <div class="col-md-12">
                 <div class="mu-contact-area" style="padding-top: 60px">
 
-                    <div class="mu-title-area" >
-                        <h2 class="mu-heading-title">淘宝客户端BP</h2>
-                        <span class="mu-title-dot"></span>
-
-                    </div>
-
-
 
                     <div class="mu-title-area" id="card-step-1">
                         <div class="col-md-12">
@@ -84,16 +77,16 @@
                         <div class="col-md-12" style="padding-left: 20px;padding-right: 20px;display: flex;justify-content: center;align-items: start;text-align: left;height: 120px">
                             <div class='pic' style="width: 35%"><img id="itemPic" ></div>
                             <div style="padding-left: 20px;width: 65%;padding-top: 5px">
-                                <div style="font-size: 12px;font-weight: bold" id="itemTitle"></div>
-                                <div style="font-size: 10px;margin-top: 4px;color: darkred;" id="itemStyle"></div>
+                                <div style="font-size: 12px;font-weight: bold;height: 40px;overflow: hidden;" id="itemTitle"></div>
+                                <div style="font-size: 10px;margin-top: 4px;color: darkred;height: 80px;overflow: hidden;" id="itemStyle"></div>
                             </div>
                         </div>
 
 
                         <div id="configPad" >
-                            <div id="itemStylePad" class="col-md-12" style="margin-top:10px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 160px"></div>
+                            <div id="itemStylePad" class="col-md-12" style="margin-top:10px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 180px"></div>
 
-                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 120px">
+                            <div  class="col-md-12" style="margin-top:20px;padding-left: 20px;padding-right: 20px;display: flex;  flex-wrap: wrap;justify-content: space-between;align-items: start;text-align: left;height: 180px">
                                 <div class='itemLong' >
                                     <div class='itemTitle' >自动跳转时间</div>
                                     <input class="itemSelect" type="datetime-local" id="timeInput">
@@ -114,6 +107,14 @@
                                 <div class='itemLong' id="promode-time-offset">
                                     <div class='itemTitle' >时间偏移(输入提前的时间,单位ms,延后则为负数)</div>
                                     <input class="itemSelect" value="0"  id="time-offset-input" style='text-indent: 4px'>
+                                </div>
+                                <div class='itemLong' id="promode-channel-select">
+                                    <div class='itemTitle' >频道选择（通用/百亿补贴）</div>
+                                    <select class='itemSelect' id="channel-select">
+                                        <option value='defalut' selected>【通用频道】</option>
+                                        <option value='bybtqdyh' >【百亿补贴】</option>
+                                        <option value='tips' >（若不清楚请选通用频道）</option>
+                                    </select>
                                 </div>
                             </div>
                             <button  class="mu-primary-btn" style="color: gray; font-size: 14px;padding: 10px;width: 40%;text-align: center;border-color: lightgray" id="promode-time-button"><span>测试淘宝延迟</span></button>
@@ -141,21 +142,14 @@
             </div>
         </div>
 
-        <div class="row" style="font-size: 10px;color: #888888;padding: 30px;margin-top: 50px">
+        <div class="row" style="font-size: 12px;color: #888888;padding: 30px;margin-top: 0px" id="tips-content">
 
             <p >
-                ⚠️️使用前请注意⚠️： <br>
-                (1)自行校准手机的本地时间，跳转基于本地时间 <br>
-                (2)淘宝客户端打开商品页面并放入后台等待 <br>
-                (3)若出现解析失败，请将淘口令的【短链接】复制到浏览器打开，然后将【浏览器的地址】复制再查询商品!<br>
-                (4)获取商品后记得清除剪切板，或者直接复制这行字~<br>
+                ⚠️⚠️️注意️⚠️⚠️️
+                <br>(1)使用前请仔细阅读<a style="font-weight: bold" href="https://docs.qq.com/doc/DYlpobEdheENTWUNt?disableReturnList=1&_from=1#www.nike.comnativewebview-">使用指南</a>，合理的设置是提高抢购成功率的关键
+                <br>(2)点击右上角的【专业模式】，可提供复制BP链接、精准时间偏移设置、延迟测试、百亿补贴频道支持等功能
             </p>
-            <p >
-                ⭐️点击右上角的[专业模式]，功能如下⭐️： <br>
-                (1)制作BP链接：为避免网络拥堵，热门商品可以提前复制好BP链接，即先【复制BP链接】抢购时再【已有BP链接跳转】 <br>
-                (2)精准设置时间偏移：对时间偏移进行更精准的设置<br>
-                (3)测试淘宝延迟：知晓本机时间与淘宝时间延迟，计算方式为淘宝时间-本地时间<br>
-            </p>
+
 
 
         </div>
@@ -198,532 +192,275 @@
 <!-- we ui -->
 <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
 <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+<script src="assets/js/dsbridge.js"></script>
 
 
 <script type="text/javascript">
 
-    jQuery(document).ready(function($){
 
-
-        var isApple = false;
-        var auth = "null";
-        auth = UrlParm.parm("auth");
-        if(!auth || auth == 'null'){
-            weui.alert('请前往官网https://SKRMAN.APP更新最新版本');
-        }
-        var itemData;
-        var itemId;
-        var skuId = 0;
-        var props = [] ;
-        var buyCount = 1 ;
-        var ready_url = "null" ;
-        var ready_time ;
-        var ready_time_offset ;
-        var ready_task = false ;
-        var professional_mode = false ;
-        var isMainRouter = true;
-        var queryReady = true;
-        var domain = window.location.host;
-        if(domain.indexOf('skrman.app')>-1 || domain.indexOf('SKRMAN.APP')>-1 ){
-            isMainRouter = true;
-        }else{
-            isMainRouter = false;
-        }
-
-
-        $("#card-step-1").show()
-        $("#card-step-2").hide()
-        $("#promode-time-offset").hide()
-        $("#promode-time-button").hide()
-        $("#promode-copy-button").hide()
-        let userAgent = navigator.userAgent;
-        if(userAgent.indexOf('Weibo')>-1){
-            weui.alert("欢迎下载SKR达人APP启用功能")
-            window.location.href = "https://skrman.app"
-            return;
-        }
-        if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
-            isApple = true
-            if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1){
-                isApple = false
-            }
-        }
-
-
-
-        $('#timeInput').val(getNowFormatDateTime())
-        var ref = setInterval(function(){
-            timeTask();
-        },50);
-
-
-        $("#professional-button").click(function(){
-            if(!professional_mode){
-                professional_mode = true;
-                $("#professional-button").css('color','red');
-                weui.alert("已开启专业模式")
-                $("#promode-time-offset").show()
-                $("#basemode-time-offset").hide()
-                $("#promode-copy-button").show()
-                $("#promode-time-button").show()
-            }else{
-                professional_mode = false;
-                $("#professional-button").css('color','black');
-                weui.alert("已关闭专业模式")
-                $("#promode-time-offset").hide()
-                $("#basemode-time-offset").show()
-                $("#promode-copy-button").hide()
-                $("#promode-time-button").hide()
-            }
-
-        });
-        function timeTask() {
-
-           if(ready_task){
-               let now = new Date()
-               let timeDiff = ready_time.getTime() - now.getTime()
-
-
-               if(timeDiff<=ready_time_offset){
-                   ready_task = false;
-                   console.log("====ok====")
-                   startJump()
-                   $("#time-count").html("开启跳转")
-               }else{
-                   $("#time-count").html("倒计时:"+timeDiff+"ms")
-
-
-               }
-
-
-
-           }
-
-        }
-
-
-        function queryItem(_link) {
-            //读取数据
-            if(queryReady){
-                queryReady = false;
-            }else{
-                return
-            }
-            skuId = 0;
-            props = [];
-            buyCount = 1 ;
-            ready_task = false;
-            <!--==========================网络请求============================-->
-            var request_url = 'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
-            if(isMainRouter){
-                request_url = 'https://cloud.bmob.cn/aed0843961fb06dc/tmallBP?auth='+auth+'&mlink='+_link
-            }
-            $.ajax({
-                type: "GET", //提交方式
-                timeout: 5000,
-                dataType: 'jsonp',
-                jsonp:"callback", // 默认值是callback，可以修改
-                jsonpCallback:'jsonp',//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名，也可以不写这个参数，jQuery会自动为你处理数据
-                url: request_url,//路径
-                success: function (result) {//返回数据根据结果进行相应的处理
-                    queryReady = true;
-                    if(result.errcode==0){
-                        itemData = result.data
-                        $("#card-step-1").hide()
-                        $("#card-step-2").show()
-                        $("#configPad").show()
-                        $("#readyPad").hide();
-                        reflashControlPad()
-                    }else{
-
-                        if(result.errmsg.indexOf('解析失败')>-1){
-                            backupMetod(result.errmsg)
-                        }else{
-                            weui.alert(result.errmsg)
-                        }
-
-
-                    }
-
-
-                },
-                error: (err, type) => {
-                    backupMetod('网络拥堵')
-                    queryReady = true;
-                },
-
-
-            });
-            <!--==========================网络请求============================-->
-        }
-
-        function  backupMetod(reason) {
-            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-                weui.confirm(reason+' ，是否打开备用BP？', {
-                    title: '提示',
-                    buttons: [{
-                        label: '取消',
-                        type: 'default',
-                        onClick: function(){
-
-                        }
-                    }, {
-                        label: '确认',
-                        type: 'primary',
-                        onClick: function(){
-                            window.location.href =  "tool-tmallBP5.html?auth="+auth;
-                        }
-                    }]
-                });
-            }else{
-                weui.alert(reason)
-            }
-        }
-
-
-
-        function reflashControlPad() {
-
-            $("#itemTitle").html(itemData.item.title)
-            itemId = itemData.item.itemId
-            var  itemStylePad_html = ''
-            var current_image;
-            var current_style = '';
-            try {
-                if(itemData.item.images[0].length>0){
-                    current_image = "https:"+itemData.item.images[0]
-                }
-            }catch (e) {
-
-            }
-
-
-
-            for(var i =0;i<itemData.skuBase.props.length;i++){
-                let current_props = itemData.skuBase.props[i]
-                let current_props_name = current_props.name
-                let current_props_pid = current_props.pid
-                var current_props_html = ''
-
-                current_props_html = " <div class='item' >\n" +
-                    "                                <div class='itemTitle' >"+current_props_name+"</div>\n" +
-                    "                                <select name='select' class='itemSelect' onchange=onChange_Row("+current_props_pid+",this.options[this.options.selectedIndex].value)>\n"
-                for(var j =0;j<current_props.values.length;j++){
-                    let current_props_value = current_props.values[j]
-                    let current_props_vid = current_props_value.vid
-                    var current_props_image = "null"
-                    if(current_props_value.image){
-                        current_props_image = "https:"+current_props_value.image
-                    }
-
-                    let isSelect = false;
-                    if(skuId==0 && j==0  ){
-                        if(i==0  && current_props_image!='null'){
-                                current_image = current_props_image
-                        }
-                        current_style =current_style+ current_props_name+":"+current_props_value.name
-                        let _mprops = {
-                            pid:current_props_pid,
-                            vid:current_props_vid
-                        }
-
-                        props.push(_mprops)
-                    }
-                    if(skuId!=0 ){
-                        for(var k =0;k<props.length;k++){
-                            if(props[k].pid==current_props_pid && props[k].vid==current_props_vid){
-                                current_style =current_style+ current_props_name+":"+current_props_value.name
-                                isSelect = true
-                                if(i==0  && current_props_image!='null'){
-                                    current_image = current_props_image
-                                 
-                                }
-                            }
-                        }
-                    }
-
-                    if(isSelect){
-                        current_props_html = current_props_html+" <option value="+current_props_vid+" selected = 'selected'>"+current_props_value.name+"</option>"
-                    }else{
-                        current_props_html = current_props_html+" <option value="+current_props_vid+">"+current_props_value.name+"</option>"
-                    }
-
-                }
-
-                itemStylePad_html =itemStylePad_html+ current_props_html  + "</select></div>"
-
-
-            }
-            itemStylePad_html =itemStylePad_html+ " <div class='item' >\n" +
-                "<div class='itemTitle' >购买数量(谨慎输入)</div>\n" +
-                "<input name='select' class='itemSelect' style='text-indent: 4px' onchange=onChange_Count(this.value) value='"+buyCount+"'>"
-
-
-
-                 itemStylePad_html = itemStylePad_html +"</div>"
-
-
-
-            $("#itemStylePad").html(itemStylePad_html)
-
-            current_style = "[下单确认]"+current_style+' 购买数量:'+buyCount
-            $("#itemStyle").html(current_style)
-
-            $("#itemPic").attr("src",current_image)
-
-            findSkuId()
-        }
-
-        function findSkuId() {
-
-            skuId = 0
-
-
-            for(var i =0;i<itemData.skuBase.skus.length;i++){
-                let _propPath  = itemData.skuBase.skus[i].propPath+';'
-                var matchProps = true
-                for(var j =0;j<props.length;j++){
-                    if(_propPath.indexOf(props[j].pid+':')==-1 || _propPath.indexOf(props[j].vid+';')==-1){
-                        matchProps = false
-                    }
-                }
-
-                if(matchProps){
-                    skuId = itemData.skuBase.skus[i].skuId
-
-                }
-            }
-            if(skuId==0){
-                weui.alert("获取skuid出错")
-                $("#itemStyle").html("获取数据错误")
-                props = []
-            }
-            console.log("skuId"+"---"+skuId)
-        }
-
-
-        onChange_Row = function (pid,vid){
-            for(var i =0;i<props.length;i++){
-                if(props[i].pid==pid){
-                    props[i].vid = vid
-                }
-            }
-            reflashControlPad()
-        }
-        onChange_Count = function (count){
-
-            let _count = parseInt(count)
-            if(_count>0&&_count<1000){
-                buyCount = _count
-                console.log(buyCount)
-                reflashControlPad()
-            }
-
-
-        }
-        $("#query-button").click(function(){
-            let _link =  $("#link").val()
-            if(_link.indexOf('.tb.cn')>-1){
-                var mlink = _link.split("http")[1]
-                mlink = mlink.split("?")[0]
-                mlink = 'http'+mlink
-                queryItem(mlink)
-            }else if(_link.indexOf('id=')>-1){
-                var mlink = _link.split("id=")[1]
-                mlink = 'id='+mlink
-                queryItem(mlink)
-            }else{
-                weui.alert('确保口令内含有https://m.tb.cn')
-            }
-
-
-
-        });
-
-        $("#promode-time-button").click(function(){
-            let userAgent = navigator.userAgent;
-            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-
-            }else{
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-                return;
-            }
-            dsBridge.call("networkGet",{url:"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"},function (ret) {
-
-                try {
-                    let now = new Date()
-
-
-                    let data =  JSON.parse(ret)
-                    let timestamp_tb = data.data.t;
-                    var timeDiff = timestamp_tb - now
-                    var recommendTime = 60 - timeDiff
-                    if(timeDiff>0){
-                        weui.alert('淘宝时间比本地晚了【'+timeDiff+'ms】 , 时间偏移建议提前【'+recommendTime+'】（正负值已为您算好，数值仅供参考！实际视设备跳转速度自行调整！）')
-                    }else{
-                        weui.alert('淘宝时间比本地早了【'+(-timeDiff)+'ms】 , 时间偏移建议设置【'+recommendTime+'】（正负值已为您算好，数值仅供参考！实际视设备跳转速度自行调整！）')
-
-                    }
-
-                    // if(!isApple){
-                    //     timeDiff = timeDiff-(1000 * 60 * 60 * 8)
-                    // }
-
-                }catch (e) {
-
-                }
-
-            })
-
-        });
-
-
-        $("#reset-button").click(function(){
-            ready_task = false;
-            $("#card-step-1").show()
-            $("#card-step-2").hide()
-
-        });
-
-
-        $("#config-button").click(function(){
-
-
-
-
-            let ready_time_str = $("#timeInput").val()
-            ready_time = new Date(ready_time_str);
-            ready_time.setSeconds(0)
-            if(isApple){
-                ready_time.setTime(ready_time.getTime()-(1000 * 60 * 60 * 8))
-
-            }
-            if(professional_mode){
-                let _ready_time_offset = parseInt($("#time-offset-input").val())
-                ready_time_offset = _ready_time_offset
-            }else{
-                ready_time_offset = $("#time-offset-select").val()
-
-            }
-
-            ready_url = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
-
-            let now = new Date()
-            let timeDiff = ready_time.getTime() - now.getTime()
-            if(timeDiff<=ready_time_offset){
-                weui.alert("哎呀，开始时间不能比现在早")
-                return
-            }
-            $("#configPad").hide();
-            $("#readyPad").show();
-            $("#time-confirm").html("["+ready_time.toLocaleString()+"(-"+ready_time_offset+"ms)] 自动下单")
-            ready_task = true;
-
-
-        });
-
-
-        $("#buy-button").click(function(){
-            startJump()
-
-        });
-
-        $("#promode-copy-button").click(function(){
-            ready_url = "taobao://h5.m.taobao.com/cart/order.html?itemId="+itemId+"&_input_charset=utf-8&buyNow=true&v=0&skuId="+skuId+"&quantity="+buyCount;
-            copyTxt(ready_url.replace("taobao:", "https:"))
-
-
-        });
-
-
-        function startJump() {
-            window.location.href = ready_url
-        }
-
-
-
-
-
-
-        function copyTxt(text){
-            if(typeof document.execCommand!=="function"){
-                weui.alert(text)
-                return;
-            }
-            var dom = document.createElement("textarea");
-            dom.value = text;
-            dom.setAttribute('style', 'display: block;width: 1px;height: 1px;');
-            document.body.appendChild(dom);
-            dom.select();
-            var result = document.execCommand('copy');
-            document.body.removeChild(dom);
-            if (result) {
-                weui.alert('BP链接已经复制到剪切板中，请保存好使用【已有BP链接跳转 】')
-                return;
-            }
-            if(typeof document.createRange!=="function"){
-                weui.alert(text)
-                return;
-            }
-            var range = document.createRange();
-            var div=document.createElement('div');
-            div.innerHTML=text;
-            div.setAttribute('style', 'height: 1px;fontSize: 1px;overflow: hidden;');
-            document.body.appendChild(div);
-            range.selectNode(div);
-            const selection = window.getSelection();
-            if (selection.rangeCount > 0){
-                selection.removeAllRanges();
-            }
-            selection.addRange(range);
-            document.execCommand('copy');
-            weui.alert(text)
-        }
-
-
-        function getNowFormatDateTime() {
-            let date = new Date();
-            let seperator1 = "-";
-            var year = date.getFullYear();
-            var month = date.getMonth() + 1;
-            var strDate = date.getDate();
-
-            date.setMinutes(date.getMinutes()+1)
-            let hour = date.getHours();
-            let strMinutes = date.getMinutes();
-
-            if (month >= 1 && month <= 9) {
-                month = "0" + month;
-            }
-            if (strDate >= 0 && strDate <= 9) {
-                strDate = "0" + strDate;
-            }
-            if (strMinutes >= 0 && strMinutes <= 9) {
-                strMinutes = "0" + strMinutes;
-            }
-
-            var currentdateTime = year + seperator1 + month + seperator1 + strDate+'T'+hour+':'+strMinutes;
-            return currentdateTime;
-        }
-
-    })
-
-
-
-
-
-
-
-
-
-
-
+    ;eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('3K(O).4y(A($){3 g=L;3 h="10";h=4Z.3H("1O");4(!h||h==\'10\'){D.C(\'请前往官网W://1S.1T更新最新版本\')}3 l;3 m;3 n=0;3 o=[];3 p=1;3 q="10";3 r;3 s;3 t=L;3 u=L;3 v=F;3 w=F;3 x=20.2s.4f;4(x.B(\'4z.4D\')>-1||x.B(\'1S.1T\')>-1){v=F}H{v=L}$("#Y-Z-1").K();$("#Y-Z-2").E();$("#I-J-1b").E();$("#I-J-G").E();$("#I-1l-G").E();$("#I-1G-Q").E();z N=2i.N;4(N.B(\'3I\')>-1||N.B(\'2f\')>-1||N.B(\'4b\')>-1){g=F;4(N.B(\'2f 2h 4j\')>-1||N.B(\'4r\')>-1||N.B(\'2f 2h 4v\')>-1){g=L}}$(\'#2n\').1j(2G());3 y=4O(A(){2H()},50);$("#1P-G").16(A(){4(!u){u=F;$("#1P-G").2I(\'2V\',\'4d\');D.C("已开启专业模式");$("#I-J-1b").K();$("#2W-J-1b").E();$("#I-1l-G").K();$("#I-J-G").K();$("#I-1G-Q").K()}H{u=L;$("#1P-G").2I(\'2V\',\'4i\');D.C("已关闭专业模式");$("#I-J-1b").E();$("#2W-J-1b").K();$("#I-1l-G").E();$("#I-J-G").E();$("#I-1G-Q").E()}});A 2H(){4(t){z 15=1g 1h();z 1w=r.1i()-15.1i();4(1w<=s){t=L;1U();$("#J-33").P("开启跳转")}H{$("#J-33").P("倒计时:"+1w+"1y")}}}A 1M(b){4(w){w=L}H{11}n=0;o=[];p=1;t=L;3 c=\'W://3O.44.48/2m/3r?1O=\'+h+\'&3q=\'+b;4(v){c=\'W://4g.4h.1I/2m/3r?1O=\'+h+\'&3q=\'+b}$.3p({1p:"3k",3g:3d,24:\'1a\',1a:"3a",39:\'1a\',1A:c,36:A(a){w=F;4(a.3J==0){l=a.17;$("#Y-Z-1").E();$("#Y-Z-2").K();$("#1X").K();$("#1Y").E();1s()}H{4(a.31.B(\'解析失败\')>-1){23(b);w=F}H{D.C(a.31)}}},2Y:(25,1p)=>{23(b);w=F},})}A 23(a){n=0;o=[];p=1;t=L;4(a.B(\'.28.1I\')>-1){2X(a)}4(a.B(\'U=\')>-1){3 b=a.R("U=")[1];2e(b)}}A 2X(d){2N.2M("2K",{1A:d},A(a){4(a.B(\'4G\')==0){D.C("错误"+a);11}z S=a;3 b="10";4(S.B(\'&U=\')>-1){3 c=S.R("&U=")[1];b=c.R("&")[0]}H 4(S.B(\'M.V/i\')>-1){3 c=S.R("M.V/i")[1];b=c.R(".2F")[0]}H 4(S.B(\'2D.V/i\')>-1){3 c=S.R("2D.V/i")[1];b=c.R(".2F")[0]}4(b!=\'10\'){2e(b)}H{D.C("无法解析该淘口令")}})}A 2e(b){z 2C="3M";z 2A="3Q";z 15=1g 1h();z 1W=15.1i()+"";3 c={"U":b,"45":b,"1u":b,"2w":{"U":b},"4c":"8.0.0","4e":"1"};3 d=1Z.2v(c);d=2u(d);z 2t=2C+"&"+1W+"&2r&"+d;z 2q=4u(2t);z 2o="W://4w.m.M.V/2g/27.M.2l.2k/6.0/?"+"4H=2.5.7&4T=2r&t="+1W+"&4Y="+2q+"&2b=27.M.2l.2k&v=6.0&52=0&3v=0&3x=F&3y=F&3z=F&3A=3B@3D.9.9&1p=1a&24=1a&"+"17="+d;$.3p({1p:"3k",3g:3d,24:\'1a\',1a:"3a",39:2A,1A:2o,36:A(a){1o{z 2S={14:a.17.14,18:a.17.18};l=2S;$("#Y-Z-1").E();$("#Y-Z-2").K();$("#1X").K();$("#1Y").E();1s()}1n(e){D.C("解析失败")}},2Y:(25,1p)=>{D.C(25.3P+"网络错误，换个网络试试")},})}A 1s(){$("#2a").P(l.14.3S);m=l.14.1u+"";3 a=\'\';3 b;3 c=\'\';1o{4(l.14.2j[0].19>0){b=l.14.2j[0];4(b.B("1F")!=0){b="W:"+b}1J.26(b)}}1n(e){}1o{1d(3 i=0;i<l.18.2p.19;i++){z 1q=l.18.2p[i];z 1C=1q.1c;z 1B=1q.1r;3 d=\'\';d=" <X 1e=\'14\' >\\n"+"                                <X 1e=\'2a\' >"+1C+"</X>\\n"+"                                <Q 1c=\'Q\' 1e=\'2x\' 2y=2z("+1B+",1V.2B[1V.2B.4E].1k)>\\n";1d(3 j=0;j<1q.2E.19;j++){z 13=1q.2E[j];z 1x=13.1m;3 f="10";4(13.2J){f="W:"+13.2J}z 1N=L;4(n==0&&j==0){4(i==0&&f!=\'10\'){b=f}c=c+1C+":"+13.1c;z 2L={1r:1B,1m:1x};o.3w(2L)}4(n!=0){1d(3 k=0;k<o.19;k++){4(o[k].1r==1B&&o[k].1m==1x){c=c+1C+":"+13.1c;1N=F;4(i==0&&f!=\'10\'){b=f}}}}4(1N){d=d+" <1D 1k="+1x+" 2O = \'2O\'>"+13.1c+"</1D>"}H{d=d+" <1D 1k="+1x+">"+13.1c+"</1D>"}}a=a+d+"</Q></X>"}}1n(e){c=\'默认\'}a=a+" <X 1e=\'14\' >\\n"+"<X 1e=\'2a\' >购买数量(谨慎输入)</X>\\n"+"<2P 1c=\'Q\' 1e=\'2x\' 2y=2Q(1V.1k) 1k=\'"+p+"\'>";a=a+"</X>";$("#3C").P(a);c="[下单确认]"+c+\' 购买数量:\'+p;$("#2R").P(c);$("#3E").3F("3G",b);3u();$("#2T-2U").E()}A 3u(){n=0;1o{1d(3 i=0;i<l.18.1K.19;i++){z 2d=l.18.1K[i].3L+\';\';3 a=F;1d(3 j=0;j<o.19;j++){4(2d.B(o[j].1r+\':\')==-1||2d.B(o[j].1m+\';\')==-1){a=L}}4(a){n=l.18.1K[i].1v}}4(n==0){D.C("获取3N出错");$("#2R").P("获取数据错误")}}1n(e){1J.26("1v"+"---"+n)}};2z=A(a,b){1d(3 i=0;i<o.19;i++){4(o[i].1r==a){o[i].1m=b}}1s()};2Q=A(a){z 1z=2Z(a);4(1z>0&&1z<30){p=1z;1J.26(p);1s()}};$("#3R-G").16(A(){z 1t=$("#3T").1j();4(1t.B(\'.28.1I\')>-1){3 a=1t.R("1F")[1];a=a.R("?")[0];a=\'1F\'+a;1M(a)}H 4(1t.B(\'U=\')>-1){3 a=1t.R("U=")[1];a=\'U=\'+a;1M(a)}H{D.C(\'确保口令内含有W://m.28.1I\')}});$("#I-J-G").16(A(){z N=2i.N;4(N.B(\'3U.5\')>-1||N.B(\'3V.0\')>-1){}H{D.C(\'该功能需要3W.5或安卓3X.0版本开启，前往W://1S.1T更新\');11}2N.2M("2K",{1A:"1F://2b.m.M.V/3Y/3Z.40?2b=27.41.42"},A(a){1o{z 15=1g 1h();z 17=1Z.43(a);z 32=17.17.t;3 b=32-15;3 c=1R-b;4(b>0){D.C(\'淘宝时间比本地晚了【\'+b+\'1y】 , 时间偏移建议提前【\'+c+\'】（正负值已为您算好，数值仅供参考！实际视设备跳转速度自行调整！）\')}H{D.C(\'淘宝时间比本地早了【\'+(-b)+\'1y】 , 时间偏移建议设置【\'+c+\'】（正负值已为您算好，数值仅供参考！实际视设备跳转速度自行调整！）\')}}1n(e){}})});$("#46-G").16(A(){t=L;$("#Y-Z-1").K();$("#Y-Z-2").E();$("#2T-2U").K()});$("#47-G").16(A(){z 34=$("#2n").1j();r=1g 1h(34);r.49(0);4(g){r.4a(r.1i()-(30*1R*1R*8))}q="M://2g.m.M.V/35/1Q.P?1u="+m+"&37=38-8&1L=F&v=0&1v="+n+"&2c="+p;4(u){z 3b=2Z($("#J-1b-2P").1j());s=3b;z 3c=$("#1G-Q").1j();4(3c==\'22\'){3 a={"U":m,"4k":"22","4l":"22"};3 b=1Z.2v(a);b=2u(b);q=\'M://4m.m.M.V/1Q/4n.P?1v=\'+n+\'&2c=\'+p+\'&1u=\'+m+\'&1L=F&2w=\'+b}}H{s=$("#J-1b-Q").1j()}z 15=1g 1h();z 1w=r.1i()-15.1i();4(1w<=s){D.C("哎呀，开始时间不能比现在早");11}$("#1X").E();$("#1Y").K();$("#J-4o").P("["+r.4p()+"(-"+s+"1y)] 自动下单");t=F});$("#4q-G").16(A(){1U()});$("#I-1l-G").16(A(){q="M://2g.m.M.V/35/1Q.P?1u="+m+"&37=38-8&1L=F&v=0&1v="+n+"&2c="+p;3e(q.4s("M:","W:"))});A 1U(){20.2s.4t=q}A 3e(a){4(3f O.21!=="A"){D.C(a);11}3 b=O.3h("4x");b.1k=a;b.3i(\'3j\',\'4A: 4B;4C: 1E;3l: 1E;\');O.S.3m(b);b.Q();3 c=O.21(\'1l\');O.S.4F(b);4(c){D.C(\'3n链接已经复制到剪切板中，请保存好使用【已有3n链接跳转 】\');11}4(3f O.3o!=="A"){D.C(a);11}3 d=O.3o();3 e=O.3h(\'X\');e.4I=a;e.3i(\'3j\',\'3l: 1E;4J: 1E;4K: 4L;\');O.S.3m(e);d.4M(e);4N 1H=20.4P();4(1H.4Q>0){1H.4R()}1H.4S(d);O.21(\'1l\');D.C(a)}A 2G(){z 12=1g 1h();z 29="-";3 a=12.4U();3 b=12.4V()+1;3 c=12.4W();12.4X(12.3s()+1);z 3t=12.51();z 1f=12.3s();4(b>=1&&b<=9){b="0"+b}4(c>=0&&c<=9){c="0"+c}4(1f>=0&&1f<=9){1f="0"+1f}3 d=a+29+b+29+c+\'T\'+3t+\':\'+1f;11 d}})',62,313,'|||var|if|||||||||||||||||||||||||||||||let|function|indexOf|alert|weui|hide|true|button|else|promode|time|show|false|taobao|userAgent|document|html|select|split|body||id|com|https|div|card|step|null|return|date|current_props_value|item|now|click|data|skuBase|length|jsonp|offset|name|for|class|strMinutes|new|Date|getTime|val|value|copy|vid|catch|try|type|current_props|pid|reflashControlPad|_link|itemId|skuId|timeDiff|current_props_vid|ms|_count|url|current_props_pid|current_props_name|option|1px|http|channel|selection|cn|console|skus|buyNow|queryItem|isSelect|auth|professional|order|60|SKRMAN|APP|startJump|this|timeStramp|configPad|readyPad|JSON|window|execCommand|bybtqdyh|queryItem2|dataType|err|log|mtop|tb|seperator1|itemTitle|api|quantity|_propPath|getTmallItemStyle|iPhone|h5|OS|navigator|images|getdetail|detail|aed0843961fb06dc|timeInput|linkString|props|signStr|12574478|location|preSignStr|encodeURIComponent|stringify|exParams|itemSelect|onchange|onChange_Row|callbackString|options|current_token|tmall|values|htm|getNowFormatDateTime|timeTask|css|image|networkGet|_mprops|call|dsBridge|selected|input|onChange_Count|itemStyle|_result|tips|content|color|basemode|geiItemId|error|parseInt|1000|errmsg|timestamp_tb|count|ready_time_str|cart|success|_input_charset|utf|jsonpCallback|callback|_ready_time_offset|buy_channel|5000|copyTxt|typeof|timeout|createElement|setAttribute|style|GET|height|appendChild|BP|createRange|ajax|mlink|tmallBP|getMinutes|hour|findSkuId|ecode|push|AntiFlood|AntiCreep|H5Request|ttid|2018|itemStylePad|taobao_h5_9|itemPic|attr|src|parm|AppleWebKit|errcode|jQuery|propPath|654a3a20023319a6dc4c755b151f082b|skuid|bmobapi|statusText|mtopjsonp|query|title|link|SKRIOSV1|SKRANDV5|iOSV1|V5|rest|api3|do|common|getTimestamp|parse|hb174|itemNumId|reset|config|top|setSeconds|setTime|iPad|detail_v|red|utdid|host|cloud|bmob|black|4_3_3|umpChannel|u_channel|main|index|confirm|toLocaleString|buy|SKRAND|replace|href|hex_md5|7_0_1|h5api|textarea|ready|skrman|display|block|width|app|selectedIndex|removeChild|errorjhandler|jsv|innerHTML|fontSize|overflow|hidden|selectNode|const|setInterval|getSelection|rangeCount|removeAllRanges|addRange|appKey|getFullYear|getMonth|getDate|setMinutes|sign|UrlParm||getHours|isSec'.split('|'),0,{}));
+    
 
 </script>
 
+<script>
+    /*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.1 Copyright (C) Paul Johnston 1999 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
 
+    /*
+     * Configurable variables. You may need to tweak these to be compatible with
+     * the server-side, but the defaults work in most cases.
+     */
+    var hexcase = 0;  /* hex output format. 0 - lowercase; 1 - uppercase        */
+    var b64pad  = ""; /* base-64 pad character. "=" for strict RFC compliance   */
+    var chrsz   = 8;  /* bits per input character. 8 - ASCII; 16 - Unicode      */
 
-<script src="https://cdn.jsdelivr.net/npm/dsbridge@3.1.4/dist/dsbridge.js"></script>
+    /*
+     * These are the functions you'll usually want to call
+     * They take string arguments and return either hex or base-64 encoded strings
+     */
+    function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
+    function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
+    function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
+    function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
+    function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
+    function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
+
+    /*
+     * Perform a simple self-test to see if the VM is working
+     */
+    function md5_vm_test()
+    {
+        return hex_md5("abc") == "900150983cd24fb0d6963f7d28e17f72";
+    }
+
+    /*
+     * Calculate the MD5 of an array of little-endian words, and a bit length
+     */
+    function core_md5(x, len)
+    {
+        /* append padding */
+        x[len >> 5] |= 0x80 << ((len) % 32);
+        x[(((len + 64) >>> 9) << 4) + 14] = len;
+
+        var a =  1732584193;
+        var b = -271733879;
+        var c = -1732584194;
+        var d =  271733878;
+
+        for(var i = 0; i < x.length; i += 16)
+        {
+            var olda = a;
+            var oldb = b;
+            var oldc = c;
+            var oldd = d;
+
+            a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+            d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+            c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+            b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+            a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+            d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+            c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+            b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+            a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+            d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+            c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+            b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+            a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+            d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+            c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+            b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+
+            a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+            d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+            c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+            b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+            a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+            d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+            c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+            b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+            a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+            d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+            c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+            b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+            a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+            d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+            c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+            b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+
+            a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+            d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+            c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+            b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+            a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+            d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+            c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+            b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+            a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+            d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+            c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+            b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+            a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+            d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+            c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+            b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+
+            a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+            d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+            c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+            b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+            a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+            d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+            c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+            b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+            a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+            d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+            c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+            b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+            a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+            d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+            c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+            b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+
+            a = safe_add(a, olda);
+            b = safe_add(b, oldb);
+            c = safe_add(c, oldc);
+            d = safe_add(d, oldd);
+        }
+        return Array(a, b, c, d);
+
+    }
+
+    /*
+     * These functions implement the four basic operations the algorithm uses.
+     */
+    function md5_cmn(q, a, b, x, s, t)
+    {
+        return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+    }
+    function md5_ff(a, b, c, d, x, s, t)
+    {
+        return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+    }
+    function md5_gg(a, b, c, d, x, s, t)
+    {
+        return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+    }
+    function md5_hh(a, b, c, d, x, s, t)
+    {
+        return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+    }
+    function md5_ii(a, b, c, d, x, s, t)
+    {
+        return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+    }
+
+    /*
+     * Calculate the HMAC-MD5, of a key and some data
+     */
+    function core_hmac_md5(key, data)
+    {
+        var bkey = str2binl(key);
+        if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);
+
+        var ipad = Array(16), opad = Array(16);
+        for(var i = 0; i < 16; i++)
+        {
+            ipad[i] = bkey[i] ^ 0x36363636;
+            opad[i] = bkey[i] ^ 0x5C5C5C5C;
+        }
+
+        var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);
+        return core_md5(opad.concat(hash), 512 + 128);
+    }
+
+    /*
+     * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+     * to work around bugs in some JS interpreters.
+     */
+    function safe_add(x, y)
+    {
+        var lsw = (x & 0xFFFF) + (y & 0xFFFF);
+        var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+        return (msw << 16) | (lsw & 0xFFFF);
+    }
+
+    /*
+     * Bitwise rotate a 32-bit number to the left.
+     */
+    function bit_rol(num, cnt)
+    {
+        return (num << cnt) | (num >>> (32 - cnt));
+    }
+
+    /*
+     * Convert a string to an array of little-endian words
+     * If chrsz is ASCII, characters >255 have their hi-byte silently ignored.
+     */
+    function str2binl(str)
+    {
+        var bin = Array();
+        var mask = (1 << chrsz) - 1;
+        for(var i = 0; i < str.length * chrsz; i += chrsz)
+            bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);
+        return bin;
+    }
+
+    /*
+     * Convert an array of little-endian words to a string
+     */
+    function binl2str(bin)
+    {
+        var str = "";
+        var mask = (1 << chrsz) - 1;
+        for(var i = 0; i < bin.length * 32; i += chrsz)
+            str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);
+        return str;
+    }
+
+    /*
+     * Convert an array of little-endian words to a hex string.
+     */
+    function binl2hex(binarray)
+    {
+        var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+        var str = "";
+        for(var i = 0; i < binarray.length * 4; i++)
+        {
+            str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +
+                hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);
+        }
+        return str;
+    }
+
+    /*
+     * Convert an array of little-endian words to a base-64 string
+     */
+    function binl2b64(binarray)
+    {
+        var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+        var str = "";
+        for(var i = 0; i < binarray.length * 4; i += 3)
+        {
+            var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)
+                | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )
+                |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
+            for(var j = 0; j < 4; j++)
+            {
+                if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;
+                else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);
+            }
+        }
+        return str;
+    }
+</script>
 
 </body>
 

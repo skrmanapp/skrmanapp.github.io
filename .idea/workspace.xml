@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallMBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallMBP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp-help.html" beforeDir="false" afterPath="$PROJECT_DIR$/weapp-help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP2.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP2.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,22 +18,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tool-tmallMBP.html">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="192" column="7102" selection-start-line="192" selection-start-column="7102" selection-end-line="192" selection-end-column="7102" />
+            <state relative-caret-position="606">
+              <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="4" />
               <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0613.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="199" column="4" lean-forward="true" selection-start-line="199" selection-start-column="4" selection-end-line="749" />
+              <folding>
+                <element signature="e#9001#29616#0" />
               </folding>
             </state>
           </provider>
@@ -43,10 +54,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../tool-tmallMBP0608.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+            <state relative-caret-position="193">
+              <caret line="510" lean-forward="true" selection-start-line="510" selection-end-line="640" />
               <folding>
-                <element signature="e#8259#27364#0" />
+                <element signature="e#19748#24270#0" />
+                <element signature="e#24301#25178#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP5.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="209" selection-start-line="209" selection-end-line="467" />
+              <folding>
+                <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -81,6 +105,11 @@
       <find>console_html</find>
       <find>time-confirm</find>
       <find>skuId_array</find>
+      <find>dsbridge</find>
+      <find>textarea-skuIds</find>
+      <find>购买数量</find>
+      <find>itemStyle</find>
+      <find>getMinutes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,12 +124,15 @@
         <option value="$PROJECT_DIR$/../../tool-tmallBP20601.html" />
         <option value="$PROJECT_DIR$/../../tool-tmallMBP0608.html" />
         <option value="$PROJECT_DIR$/tool-tmallMBP.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP2.html" />
+        <option value="$PROJECT_DIR$/../../tool-tmallBP【1】0613.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="196" />
-    <option name="y" value="22" />
+    <option name="x" value="268" />
+    <option name="y" value="23" />
     <option name="width" value="1623" />
     <option name="height" value="1028" />
   </component>
@@ -119,6 +151,17 @@
             <path>
               <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -435,15 +478,16 @@
       <workItem from="1591602458244" duration="238000" />
       <workItem from="1591607508495" duration="848000" />
       <workItem from="1591611782397" duration="2689000" />
-      <workItem from="1591623525604" duration="5266000" />
+      <workItem from="1591623525604" duration="5515000" />
+      <workItem from="1592052376620" duration="6368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10954000" />
+    <option name="totallyTimeSpent" value="17571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="196" y="22" width="1623" height="1028" extended-state="0" />
+    <frame x="268" y="23" width="1623" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496879" />
@@ -516,11 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-tmallBP2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2952" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../tool-tmallBP20601.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -542,30 +581,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+    <entry file="file://$PROJECT_DIR$/sku-nikeapp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="608" column="11" selection-start-line="608" selection-start-column="11" selection-end-line="609" />
+        <state>
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../tool-tmallMBP0608.html">
+    <entry file="file://$PROJECT_DIR$/skrtool.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
-          <folding>
-            <element signature="e#8259#27364#0" />
-          </folding>
+        <state relative-caret-position="638">
+          <caret line="57" column="119" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-pddBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="202" column="70" selection-start-line="202" selection-start-column="62" selection-end-line="202" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallMBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="192" column="7102" selection-start-line="192" selection-start-column="7102" selection-end-line="192" selection-end-column="7102" />
+        <state relative-caret-position="658">
+          <caret line="189" column="70" selection-start-line="189" selection-start-column="62" selection-end-line="189" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -578,6 +620,78 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="301" column="20" selection-start-line="301" selection-start-column="12" selection-end-line="301" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="204" column="31" selection-start-line="204" selection-start-column="23" selection-end-line="204" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tool-tmallMBP0608.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="510" lean-forward="true" selection-start-line="510" selection-end-line="640" />
+          <folding>
+            <element signature="e#19748#24270#0" />
+            <element signature="e#24301#25178#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="209" selection-start-line="209" selection-end-line="467" />
+          <folding>
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0613.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="199" column="4" lean-forward="true" selection-start-line="199" selection-start-column="4" selection-end-line="749" />
+          <folding>
+            <element signature="e#9001#29616#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
