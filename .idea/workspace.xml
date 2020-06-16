@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-pddBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-pddBP.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,31 +18,6 @@
         <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>findSkuId</find>
-      <find>current_image</find>
-      <find>mu-send-msg-btn</find>
-      <find>professional_mode</find>
-      <find>skuId</find>
-      <find>current_style</find>
-      <find>样式</find>
-      <find>款式</find>
-      <find>buy-button</find>
-      <find>ready_url</find>
-      <find>reset-button</find>
-      <find>已关闭</find>
-      <find>reflashControlPad</find>
-      <find>console_html</find>
-      <find>time-confirm</find>
-      <find>skuId_array</find>
-      <find>dsbridge</find>
-      <find>textarea-skuIds</find>
-      <find>购买数量</find>
-      <find>getMinutes</find>
-      <find>itemStyle</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -349,7 +325,9 @@
       <workItem from="1591611782397" duration="2689000" />
       <workItem from="1591623525604" duration="5515000" />
       <workItem from="1592052376620" duration="6892000" />
-      <workItem from="1592190691463" duration="313000" />
+      <workItem from="1592190691463" duration="350000" />
+      <workItem from="1592286264537" duration="64000" />
+      <workItem from="1592347070705" duration="196000" />
     </task>
     <servers />
   </component>
