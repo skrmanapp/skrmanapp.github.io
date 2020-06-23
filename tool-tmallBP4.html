@@ -234,11 +234,6 @@
         $("#promode-time-button").hide()
         $("#promode-copy-button").hide()
         let userAgent = navigator.userAgent;
-        if(userAgent.indexOf('Weibo')>-1){
-            weui.alert("欢迎下载SKR达人APP启用功能")
-            window.location.href = "https://skrman.app"
-            return;
-        }
         if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
             isApple = true
             if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1){
@@ -369,9 +364,6 @@
         }
 
         function queryItem2(_link) {
-            if(userAgent.indexOf('SKRIOSV1.5')==-1 && userAgent.indexOf('SKRANDV5.0')==-1){
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-            }
             dsBridge.call("networkGet",{url:'https://bmobapi.hb174.top/aed0843961fb06dc/tmallBP2?auth='+auth+'&mlink='+_link},function (ret) {
 
                 let result =  JSON.parse(ret)
@@ -552,13 +544,6 @@
         });
 
         $("#promode-time-button").click(function(){
-            let userAgent = navigator.userAgent;
-            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-
-            }else{
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-                return;
-            }
             dsBridge.call("networkGet",{url:"http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"},function (ret) {
 
                 try {
