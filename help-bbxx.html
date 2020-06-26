@@ -49,8 +49,8 @@
 
                         <div class="mu-title-area">
                             <h2 class="mu-heading-title">版本信息</h2>
-                            <span class="mu-title-dot"></span>
-                            <p>目前最新版本为v1.6 前往AppStore即可检查更新</p>
+                            <span class="mu-title-dot" ></span>
+                            <p id="version-info">目前最新版本为v1.6 前往AppStore即可检查更新</p>
                         </div>
 
 
@@ -79,13 +79,35 @@
 <!-- Ajax contact form  -->
 <script type="text/javascript" src="assets/js/app.js"></script>
 
+    <!-- we ui -->
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 
 
 <!-- Custom js -->
 <script type="text/javascript" src="assets/js/custom.js"></script>
 
 
+    <script type="text/javascript">
 
+        jQuery(document).ready(function($){
+            var version = "null";
+            version = UrlParm.parm("version");
+
+
+            if(!version || version == 'null'){
+                weui.alert('请前往官网https://SKRMAN.APP更新软件版本');
+
+            }else{
+                $("#version-info").html("当前版本为："+version)
+            }
+
+        })
+
+
+
+
+    </script>
 
 </body>
 </html>
