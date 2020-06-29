@@ -1451,3 +1451,8 @@ button:focus {
 	max-width:375px;
 }
 
+.bx-wrapper{
+	-webkit-box-shadow:  none;
+	box-shadow:  none;
+	margin-bottom:0px;
+}
