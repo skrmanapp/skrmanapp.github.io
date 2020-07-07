@@ -67,7 +67,7 @@
                                 <div class="mu-contact-form">
 
                                     <div class="form-group">
-                                        <input type="text"  placeholder="112211" id="style" class="form-control" style="text-align: center">
+                                        <input type="text"  placeholder="1122112" id="style" class="form-control" style="text-align: center">
                                     </div>
 
                                 </div>
@@ -126,18 +126,28 @@
         var _style =  $("#style").val()
 
 
+        // var requestData = {
+        //     "label":"test",
+        //     "domain":"taobao",
+        //     "startUrl":"https://jordan.m.taobao.com",
+        //     "finishUrl":"https://jordan.m.taobao.com",
+        //     "taskType":"cookie@",
+        //     "taskKey_JS":"null",
+        //     "taskKey_Cookie":"_m_h5_tk",
+        //     "autoFinish":"true",
+        //
+        // }
         var requestData = {
             "label":"test",
-            "domain":"taobao",
-            "startUrl":"https://jordan.m.taobao.com",
-            "finishUrl":"https://jordan.m.taobao.com",
-            "taskType":"cookie@",
-            "taskKey_JS":"null",
+            "domain":"nike",
+            "startUrl":"https://www.nike.com",
+            "finishUrl":"https://unite.nike.com/auth/unite_session_cookies/v1",
+            "taskType":"javascript@",
+            "taskKey_JS":"localStorage.getItem('com.nike.commerce.nikedotcom.web.credential')",
             "taskKey_Cookie":"_m_h5_tk",
-            "autoFinish":"true",
+            "autoFinish":"false",
 
         }
-
         $("#start-button").click(function(){
             dsBridge.call("webTaskStart_ASyn",requestData,function (ret) {
                 weui.alert(ret)
