@@ -401,16 +401,11 @@
 
         });
         $("#item-4").click(function(){
-            let userAgent = navigator.userAgent;
-            if(userAgent.indexOf('SKRIOSV1.5')>-1 || userAgent.indexOf('SKRANDV5.0')>-1){
-                window.location.href = "tool-tmallBP4.html?auth="+auth;
-            }else{
-                weui.alert('该功能需要iOSV1.5或安卓V5.0版本开启，前往https://SKRMAN.APP更新');
-            }
+            window.location.href = "tool-tmallBP4.html?auth="+auth;
         });
 
         $("#declare-text").click(function(){
-            window.location.href =  "tool-test.html";
+            window.location.href =  "tool-adidasBP.html";
         });
         $("#declare-text2").click(function(){
             window.location.href =  "http://service.spiritsoft.cn/ua.html";
