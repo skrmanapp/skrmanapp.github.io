@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,12 +15,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/download-android.html">
+        <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0626.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="66" column="182" selection-start-line="66" selection-start-column="182" selection-end-line="66" selection-end-column="182" />
+            <state relative-caret-position="821">
+              <caret line="744" lean-forward="true" selection-start-line="744" selection-end-line="744" />
+              <folding>
+                <element signature="e#9000#29114#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="746" />
+              <folding>
+                <element signature="e#9228#29343#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,6 +51,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>skuId==0</find>
+      <find>reflashControlPad</find>
+      <find>current_style</find>
+      <find>skuId=</find>
+      <find>skuId</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
@@ -44,12 +68,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/download-android.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
+        <option value="$PROJECT_DIR$/../../tool-tmallBP【1】0626.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
-    <option name="y" value="23" />
+    <option name="x" value="123" />
+    <option name="y" value="54" />
     <option name="width" value="1578" />
     <option name="height" value="1008" />
   </component>
@@ -62,6 +88,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -73,7 +100,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -125,6 +151,9 @@
         </serviceView>
       </list>
     </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",HTML5_OUTLINE_MODE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -429,24 +458,21 @@
       <workItem from="1595069305574" duration="167000" />
       <workItem from="1595069543555" duration="77000" />
       <workItem from="1595148279286" duration="63000" />
-      <workItem from="1595405914619" duration="241000" />
+      <workItem from="1595405914619" duration="265000" />
+      <workItem from="1595464653000" duration="3287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241000" />
+    <option name="totallyTimeSpent" value="3552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="23" width="1578" height="1008" extended-state="0" />
+    <frame x="86" y="22" width="1578" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983944" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989083" visible="true" weight="0.24983944" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5010917" side_tool="true" visible="true" weight="0.24983944" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -454,6 +480,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -487,8 +517,28 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/download-android.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="66" column="182" selection-start-line="66" selection-start-column="182" selection-end-line="66" selection-end-column="182" />
+        <state relative-caret-position="663">
+          <caret line="73" column="34" lean-forward="true" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="746" />
+          <folding>
+            <element signature="e#9228#29343#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0626.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="744" lean-forward="true" selection-start-line="744" selection-end-line="744" />
+          <folding>
+            <element signature="e#9000#29114#0" />
+          </folding>
         </state>
       </provider>
     </entry>
