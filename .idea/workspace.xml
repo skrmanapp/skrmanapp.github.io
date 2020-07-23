@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool-jdBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-jdBP.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,26 +15,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0626.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="821">
-              <caret line="744" lean-forward="true" selection-start-line="744" selection-end-line="744" />
-              <folding>
-                <element signature="e#9000#29114#0" />
-              </folding>
+            <state relative-caret-position="-3112" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-pddBP.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2749" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-nikeBP.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2003" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tool-jdBP.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="230" column="9" lean-forward="true" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="746" />
-              <folding>
-                <element signature="e#9228#29343#0" />
-              </folding>
+            <state relative-caret-position="-3330" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tool-tmallBP4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="240" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -68,14 +89,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/download-android.html" />
-        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
         <option value="$PROJECT_DIR$/../../tool-tmallBP【1】0626.html" />
+        <option value="$PROJECT_DIR$/tool-tmallBP.html" />
+        <option value="$PROJECT_DIR$/tool-jdBP.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="123" />
-    <option name="y" value="54" />
+    <option name="x" value="132" />
+    <option name="y" value="202" />
     <option name="width" value="1578" />
     <option name="height" value="1008" />
   </component>
@@ -459,19 +481,19 @@
       <workItem from="1595069543555" duration="77000" />
       <workItem from="1595148279286" duration="63000" />
       <workItem from="1595405914619" duration="265000" />
-      <workItem from="1595464653000" duration="3287000" />
+      <workItem from="1595464653000" duration="3835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3552000" />
+    <option name="totallyTimeSpent" value="4100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="22" width="1578" height="1008" extended-state="0" />
+    <frame x="132" y="202" width="1578" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989083" visible="true" weight="0.24983944" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5010917" side_tool="true" visible="true" weight="0.24983944" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75" visible="true" weight="0.24983944" />
+      <window_info id="Structure" order="1" sideWeight="0.25" side_tool="true" visible="true" weight="0.24983944" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -522,23 +544,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+    <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0626.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="201" column="4" selection-start-line="201" selection-start-column="4" selection-end-line="746" />
-          <folding>
-            <element signature="e#9228#29343#0" />
-          </folding>
+        <state relative-caret-position="9902">
+          <caret line="744" lean-forward="true" selection-start-line="744" selection-end-line="744" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../tool-tmallBP【1】0626.html">
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="744" lean-forward="true" selection-start-line="744" selection-end-line="744" />
-          <folding>
-            <element signature="e#9000#29114#0" />
-          </folding>
+        <state relative-caret-position="407">
+          <caret line="201" column="68643" selection-start-line="201" selection-start-column="68643" selection-end-line="201" selection-end-column="68643" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3112" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-pddBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-nikeBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2003" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="240" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool-jdBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="230" column="9" lean-forward="true" selection-start-line="230" selection-start-column="9" selection-end-line="230" selection-end-column="9" />
         </state>
       </provider>
     </entry>
