@@ -145,7 +145,7 @@
         为了让抢购畅通无阻： <br>
             (1)在京东客户端选好规格后再复制链接 <br>
             (2)自行校准手机的本地时间 <br>
-            (3)京东客户端打开商品页面并放入后台等待 <br>
+            (3)京东客户端打开商品页面并放入后台等待. <br>
          </p>
 
 
@@ -218,11 +218,7 @@
             isMainRouter = false;
         }
         let userAgent = navigator.userAgent;
-        if(userAgent.indexOf('SKRIOS')==-1 && userAgent.indexOf('SKRAND')==-1 ){
-            weui.alert("请前往https://SKRMAN.APP更新")
-            // window.location.href = "https://skrman.app"
-            return;
-        }
+
         if(userAgent.indexOf('AppleWebKit')>-1 || userAgent.indexOf('iPhone')>-1 || userAgent.indexOf('iPad')>-1){
             isApple = true
             if(userAgent.indexOf('iPhone OS 4_3_3')>-1 || userAgent.indexOf('SKRAND')>-1 || userAgent.indexOf('iPhone OS 7_0_1')>-1|| userAgent.indexOf('IOS14')>-1){
@@ -261,9 +257,38 @@
            }
 
         }
-
-
         function queryItem() {
+            let url = "https://item.m.jd.com/product/"+itemId+".html"
+            dsBridge.call("networkGet",{url:url},function (ret) {
+                if(ret.indexOf('errorjhandler')==0){
+                    weui.alert("错误"+ret);
+                    return;
+                }
+
+                let body =  ret;
+                try{
+
+                    let  imageString = body.split("_firstImg = ")[1].split(";")[0];
+                    let  nameString = body.split("_firstName = ")[1].split(";")[0];
+                    //  let  nameString = body.split("_firstName = \"//")[1].split("\";")[0];
+                    let _result = {
+                        image: imageString,
+                        name:nameString
+                    };
+                    itemData = _result
+                    $("#card-step-1").hide()
+                    $("#card-step-2").show()
+                    $("#configPad").show()
+                    $("#readyPad").hide();
+                    reflashControlPad()
+                }catch (e) {
+
+                    queryItem2()
+                }
+            })
+
+        }
+        function queryItem2() {
             //读取数据
             skuId = 0;
             props = [];
