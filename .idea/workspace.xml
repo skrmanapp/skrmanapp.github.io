@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-jdBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-jdBP.html" afterDir="false" />
-    </list>
+    <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -374,7 +371,7 @@
       <workItem from="1595405914619" duration="265000" />
       <workItem from="1595464653000" duration="3835000" />
       <workItem from="1595722146294" duration="795000" />
-      <workItem from="1596948109751" duration="2951000" />
+      <workItem from="1596948109751" duration="3235000" />
     </task>
     <servers />
   </component>
