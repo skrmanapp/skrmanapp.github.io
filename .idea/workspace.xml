@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wiki.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bind-wechat-confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/bind-wechat-confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bind-wechat.html" beforeDir="false" afterPath="$PROJECT_DIR$/bind-wechat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-update-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-update-info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,6 +399,7 @@
       <workItem from="1602219571491" duration="29000" />
       <workItem from="1602722209561" duration="296000" />
       <workItem from="1602917022951" duration="85000" />
+      <workItem from="1603435102028" duration="569000" />
     </task>
     <servers />
   </component>
