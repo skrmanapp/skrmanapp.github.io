@@ -23,11 +23,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
-    <option name="width" value="1600" />
-    <option name="height" value="829" />
-  </component>
   <component name="ProjectId" id="1VPYZVZetfvfmy6rot6WPpbJ5Zw" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -401,6 +396,7 @@
       <workItem from="1602917022951" duration="85000" />
       <workItem from="1603435102028" duration="730000" />
       <workItem from="1603436222433" duration="14000" />
+      <workItem from="1603498761521" duration="466000" />
     </task>
     <servers />
   </component>
