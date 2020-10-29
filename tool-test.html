@@ -137,33 +137,30 @@
         //     "autoFinish":"true",
         //
         // }
-        var requestData = {
-            "label":"test",
-            "domain":"nike",
-            "startUrl":"https://www.nike.com",
-            "finishUrl":"https://unite.nike.com/auth/unite_session_cookies/v1",
-            "taskType":"cookie@",
-            "taskKey_JS":"localStorage.getItem('com.nike.commerce.nikedotcom.web.credential')",
-            "taskKey_Cookie":"access_token",
-            "autoFinish":"false",
-
-        }
-        $("#start-button").click(function(){
-            dsBridge.call("webTaskStart_ASyn",requestData,function (ret) {
-                weui.alert(ret)
-            })
-        })
-        var requestData2 = {
-            "label":"test",
-        }
-        $("#result-button").click(function(){
-            //Call synchronously
-            var str=dsBridge.call("playAlert",requestData2);
-            weui.alert(str)
-        })
-
-
-
+        // var requestData = {
+        //     "label":"test",
+        //     "domain":"nike",
+        //     "startUrl":"https://www.nike.com",
+        //     "finishUrl":"https://unite.nike.com/auth/unite_session_cookies/v1",
+        //     "taskType":"cookie@",
+        //     "taskKey_JS":"localStorage.getItem('com.nike.commerce.nikedotcom.web.credential')",
+        //     "taskKey_Cookie":"access_token",
+        //     "autoFinish":"false",
+        //
+        // }
+        // $("#start-button").click(function(){
+        //     dsBridge.call("webTaskStart_ASyn",requestData,function (ret) {
+        //         weui.alert(ret)
+        //     })
+        // })
+        // var requestData2 = {
+        //     "label":"test",
+        // }
+        // $("#result-button").click(function(){
+        //     //Call synchronously
+        //     var str=dsBridge.call("playAlert",requestData2);
+        //     weui.alert(str)
+        // })
 
 
 
