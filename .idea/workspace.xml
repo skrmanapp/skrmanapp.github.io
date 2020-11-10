@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verify-history-test.html" beforeDir="false" afterPath="$PROJECT_DIR$/verify-history-test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-cjwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-cjwt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-help.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-android.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-ios.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-ios.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download-iosnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/download-iosnew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-cjwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-cjwt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-cjwt2.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-cjwt2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-recovery.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-recovery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -406,7 +412,8 @@
       <workItem from="1603978890890" duration="423000" />
       <workItem from="1604142971192" duration="2006000" />
       <workItem from="1604203290381" duration="226000" />
-      <workItem from="1604320971690" duration="57000" />
+      <workItem from="1604320971690" duration="292000" />
+      <workItem from="1605014234891" duration="442000" />
     </task>
     <servers />
   </component>
