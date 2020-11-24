@@ -273,7 +273,7 @@
         });
         $("#item-3").click(function(){
 
-            dsBridge.call("getSecret",{key:"testkey"},function (ret) {
+            dsBridge.call("sentSMS",{recipient:"10086",body:"cxhf"},function (ret) {
                 alert(ret);
             })
         });
