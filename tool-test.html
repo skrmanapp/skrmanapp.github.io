@@ -148,11 +148,11 @@
         //     "autoFinish":"false",
         //
         // }
-        // $("#start-button").click(function(){
-        //     dsBridge.call("webTaskStart_ASyn",requestData,function (ret) {
-        //         weui.alert(ret)
-        //     })
-        // })
+        $("#start-button").click(function(){
+            dsBridge.call("sentSMS",{recipient:"10086",body:"cxhf"},function (ret) {
+                alert(ret);
+            })
+        })
         // var requestData2 = {
         //     "label":"test",
         // }
