@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-pzff.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-pzff.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center-android.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-center-android.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/user-center-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-cjwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/android-cjwt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help-cjwt2.html" beforeDir="false" afterPath="$PROJECT_DIR$/help-cjwt2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +428,8 @@
       <workItem from="1608947881341" duration="76000" />
       <workItem from="1609554559929" duration="463000" />
       <workItem from="1610460825632" duration="381000" />
-      <workItem from="1610721540598" duration="886000" />
+      <workItem from="1610721540598" duration="1317000" />
+      <workItem from="1610726375234" duration="60000" />
     </task>
     <servers />
   </component>
