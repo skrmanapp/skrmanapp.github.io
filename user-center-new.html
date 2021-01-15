@@ -224,20 +224,7 @@
             <!-- head -->
             <!-- row -->
 
-            <div class=" table-row-s col-xs-12"  id="bind-wechat">
 
-                <div class="col-xs-8">
-                    <p class="row-title-s" >
-                        绑定微信（旧版本老用户）
-                    </p>
-                </div>
-
-                <div class="col-xs-4" style="  display: flex;justify-content: flex-end;">
-                    <p   type="text" class="row-text"> </p>
-                    <i class="fa fa-angle-right fa-2x row-icon"></i>
-                </div>
-            </div>
-            <div class="row-line col-xs-12" ></div>
 
             <!-- row -->
             <!-- row -->
@@ -362,7 +349,6 @@
                         }
                         if(vip!='null'){
                             $("#test-push").css("display","unset");
-                            $("#bind-wechat").css("display","none");
                         }
                         $("#verify-card").css("display","unset");
                         if(vip=='null'){
@@ -393,15 +379,7 @@
 
 
 
-        $("#vip-level").click(function(){
 
-            tapCount -= 1
-            if(tapCount<0){
-                window.location.href = "bind-wechat.html?auth="+auth;
-            }
-
-
-        });
         $("#verify-card").click(function(){
             if(vip=='null'){
                 window.location.href = "verify-card-new.html?auth="+auth;
@@ -428,14 +406,6 @@
             $("#fileSelector").trigger("click");
         });
 
-        $("#bind-wechat").click(function(){
-            // 二次确认
-            if(vip == "super"){
-                weui.alert("您已经是最高会员")
-            }else{
-                window.location.href = "bind-wechat.html?auth="+auth;
-            }
-        });
 
 
         $("#bind-email").click(function(){
