@@ -574,7 +574,7 @@
                     } else {
                         buyStep += 1
                     }
-                    original = "【快速搜索】" + threads[i].product.style + '<br>【当前库存(US码)】' + tempSku + '<br>【发售方式】' + selectionEngine + '<br>【在售状态】' + merchStatusStr + '<br>【是否专属】' + restrictedStr
+                    original = "【货号】" + threads[i].product.style +'-'+  threads[i].product.colorCode  + '<br>【当前库存(US码)】' + tempSku + '<br>【发售方式】' + selectionEngine + '<br>【在售状态】' + merchStatusStr + '<br>【是否专属】' + restrictedStr
                     if (buyStep > 2) {
                         original = original + "<br>⭐️⭐️⭐️有货可买⭐️⭐️⭐️"
                     }

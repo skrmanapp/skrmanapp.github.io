@@ -265,13 +265,14 @@
                     try {
                         var htmlString = '<div class=" table-row col-xs-12" >\n' +
                             '                <p class="row-key" >\n' +
-                            '                    快速搜索\n' +
+                            '                    货号\n' +
                             '                </p>\n' +
                             '                <p class="row-value" >\n' +
-                            shoe_item.product.style +
+                            shoe_item.product.style +'-'+  shoe_item.product.colorCode +
                             '                </p>\n' +
                             '            </div>'
                         $("#attributeTable").html($("#attributeTable").html()+htmlString)
+                        weui.alert("货量信息请到工具箱使用【NIKE助手】，查询货号【"+shoe_item.product.style +'-'+  shoe_item.product.colorCode+"】")
                     }catch (e) { }
 
                     try {
