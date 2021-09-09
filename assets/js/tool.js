@@ -1,4 +1,4 @@
-let request_url= "http://106.53.170.169/skrman/servlet";
+let request_url= "https://api.hb174.top:8081/skrman/servlet";
 
 
 
