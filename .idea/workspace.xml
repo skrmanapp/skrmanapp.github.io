@@ -40,8 +40,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP6.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+            <state relative-caret-position="282">
+              <caret line="89" column="223" selection-start-line="89" selection-start-column="223" selection-end-line="89" selection-end-column="223" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,8 +97,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="263" />
+    <option name="x" value="367" />
+    <option name="y" value="778" />
     <option name="width" value="1561" />
     <option name="height" value="878" />
   </component>
@@ -571,15 +574,15 @@
       <workItem from="1632788776987" duration="937000" />
       <workItem from="1632790425436" duration="49000" />
       <workItem from="1632790694917" duration="952000" />
-      <workItem from="1632969161425" duration="1092000" />
+      <workItem from="1632969161425" duration="1542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3744000" />
+    <option name="totallyTimeSpent" value="4194000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="263" width="1561" height="878" extended-state="0" />
+    <frame x="367" y="778" width="1561" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -659,8 +662,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+        <state relative-caret-position="282">
+          <caret line="89" column="223" selection-start-line="89" selection-start-column="223" selection-end-line="89" selection-end-column="223" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
