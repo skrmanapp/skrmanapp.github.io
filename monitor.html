@@ -426,15 +426,13 @@
             $.ajax({
                 type : "get", //提交方式
                 url : currentApi,//路径
-                crossDomain: true,//跨域
                 timeout:5000,
-                dataType:'json',
+                contentType:"text/plain",
+                dataType: "JSON",
                 headers: {
                     'accept': '*/*',
-                    'accept-language': 'zh-CN',
-                    'Content-Type': 'application/json',
+                    'accept-language': 'zh-CN'
                 },
-                contentType: "application/json",
                 data : {
 
                 },//数据，这里使用的是Json格式进行传输
