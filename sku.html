@@ -108,7 +108,7 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
+        var baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
         var loading;
 
         var orderByUpdate = false;
@@ -133,21 +133,21 @@
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=CN&language=zh-Hans';
+                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
                     country = "cn"
 
                 } else if (current_country == 'US') {
 
                     country = "us"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=US';
+                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
 
                     country = "gb"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=gb&language=en-GB';
+                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
 
                     country = "jp"
-                    baseApi = 'https://api.nike.com//exp_snkrs/content/v1?country=jp&language=ja';
+                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -188,15 +188,13 @@
             $.ajax({
                 type : "get", //提交方式
                 url : currentApi,//路径
-                crossDomain: true,//跨域
                 timeout:5000,
-                dataType:'json',
+                contentType:"text/plain",
+                dataType: "JSON",
                 headers: {
                     'accept': '*/*',
-                    'accept-language': 'zh-CN',
-                    'Content-Type': 'application/json',
+                    'accept-language': 'zh-CN'
                 },
-                contentType: "application/json",
                 data : {
 
                 },//数据，这里使用的是Json格式进行传输
