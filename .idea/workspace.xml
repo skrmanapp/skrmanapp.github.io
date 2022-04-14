@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875e0475-b5bf-4823-a918-25c619ff070a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/buycode.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool-tmallBP.html" beforeDir="false" afterPath="$PROJECT_DIR$/tool-tmallBP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verify-card-continue.html" beforeDir="false" afterPath="$PROJECT_DIR$/verify-card-continue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verify-card-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/verify-card-new.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +18,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="201" column="68867" selection-start-line="201" selection-start-column="68867" selection-end-line="201" selection-end-column="68867" />
+            <state relative-caret-position="477">
+              <caret line="194" column="103" lean-forward="true" selection-start-line="194" selection-start-column="103" selection-end-line="194" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/verify-card-continue.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="86" column="110" lean-forward="true" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="110" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/verify-card-new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="86" column="123" selection-start-line="86" selection-start-column="123" selection-end-line="86" selection-end-column="123" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="387" column="74" selection-start-line="387" selection-start-column="42" selection-end-line="387" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -28,11 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Volumes/TR200/下载/tool-tmallBP【1】0723.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="754" lean-forward="true" selection-start-line="754" selection-end-line="754" />
-              <folding>
-                <element signature="e#9001#29115#0" />
-              </folding>
+            <state relative-caret-position="11310">
+              <caret line="754" selection-start-line="754" selection-end-line="754" />
             </state>
           </provider>
         </entry>
@@ -74,6 +106,7 @@
       <find>Content-Type</find>
       <find>https://api.nike.com//exp_snkrs</find>
       <find>snkrs</find>
+      <find>src=</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -98,12 +131,14 @@
         <option value="$PROJECT_DIR$/sku.html" />
         <option value="/Volumes/TR200/下载/tool-tmallBP【1】0723.html" />
         <option value="$PROJECT_DIR$/tool-tmallBP.html" />
+        <option value="$PROJECT_DIR$/verify-card-continue.html" />
+        <option value="$PROJECT_DIR$/verify-card-new.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-50" />
-    <option name="y" value="37" />
+    <option name="x" value="329" />
+    <option name="y" value="146" />
     <option name="width" value="1920" />
     <option name="height" value="981" />
   </component>
@@ -116,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,10 +158,22 @@
               <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skrmanapp.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="skrmanapp.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -146,14 +192,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="C:\Users\53921\Documents\GitHub\skrmanapp.github.io\assets\js" />
       <recent name="D:\Github\skrmanapp.github.io" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -595,15 +642,16 @@
       <workItem from="1649211611509" duration="403000" />
       <workItem from="1649212156280" duration="155000" />
       <workItem from="1649810449352" duration="407000" />
-      <workItem from="1649811333181" duration="157000" />
+      <workItem from="1649811333181" duration="281000" />
+      <workItem from="1649930629997" duration="1080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10507000" />
+    <option name="totallyTimeSpent" value="11711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-50" y="37" width="1920" height="981" extended-state="0" />
+    <frame x="329" y="146" width="1920" height="981" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20747761" />
@@ -684,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="686" column="48" selection-start-line="686" selection-start-column="48" selection-end-line="686" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4665">
-          <caret line="311" column="40" selection-start-line="311" selection-start-column="40" selection-end-line="311" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -787,26 +828,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="194" column="103" lean-forward="true" selection-start-line="194" selection-start-column="103" selection-end-line="194" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/TR200/下载/tool-tmallBP【1】0723.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11310">
+          <caret line="754" selection-start-line="754" selection-end-line="754" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP3.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tool-tmallBP2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///Volumes/TR200/下载/tool-tmallBP【1】0723.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="754" lean-forward="true" selection-start-line="754" selection-end-line="754" />
+        <state relative-caret-position="269">
+          <caret line="387" column="74" selection-start-line="387" selection-start-column="42" selection-end-line="387" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verify-card-continue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="86" column="110" lean-forward="true" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="110" />
           <folding>
-            <element signature="e#9001#29115#0" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tool-tmallBP.html">
+    <entry file="file://$PROJECT_DIR$/verify-card-new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="201" column="68867" selection-start-line="201" selection-start-column="68867" selection-end-line="201" selection-end-column="68867" />
+        <state relative-caret-position="373">
+          <caret line="86" column="123" selection-start-line="86" selection-start-column="123" selection-end-line="86" selection-end-column="123" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
