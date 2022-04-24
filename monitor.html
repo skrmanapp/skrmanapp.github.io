@@ -123,7 +123,7 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+        var baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=CN&language=zh-Hans';
        var loading;
         var total_time = 30; //以秒来存放
         var current_time = 0;
@@ -140,21 +140,21 @@
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+                    baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=CN&language=zh-Hans';
                     country = "cn"
                     $("#AutoBar_3").html("地区:国区")
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
                     country = "us"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=US';
+                    baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
                     country = "gb"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=gb&language=en-GB';
+                    baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
                     country = "jp"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=jp&language=ja';
+                    baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -256,7 +256,7 @@
                 {
                     label: '切换国区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+                        baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=CN&language=zh-Hans';
                         $("#AutoBar_3").html("地区:国区")
                         country = "cn"
                         localStorage.setItem('current_country', 'CN');
@@ -265,7 +265,7 @@
                 }, {
                     label: '切换美区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=US;';
+                        baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=US;';
                         $("#AutoBar_3").html("地区:美区")
                         country = "us"
                         localStorage.setItem('current_country', 'US');
@@ -274,7 +274,7 @@
                 }, {
                     label: '切换英区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=gb&language=en-GB';
+                        baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=gb&language=en-GB';
                         $("#AutoBar_3").html("地区:英区")
                         country = "gb"
                         localStorage.setItem('current_country', 'CN');
@@ -283,7 +283,7 @@
                 },{
                     label: '切换日区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=jp&language=ja';
+                        baseApi = 'https://snkrs.services.boboblog.pw/snkrs/content/v1?country=jp&language=ja';
                         $("#AutoBar_3").html("地区:日区")
                         country = "jp"
                         localStorage.setItem('current_country', 'JP');
