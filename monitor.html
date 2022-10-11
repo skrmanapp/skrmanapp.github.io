@@ -23,9 +23,14 @@
 
 
 
+
+    <!-- jQuery library -->
+    <script src="assets/js/jquery.min.js"></script>
+
     <!-- Bootstrap 本地版 -->
-    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
-    <!--<script src="assets/js/bootstrap.min.js"></script>-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.min.js"></script>
+
 
 
 
@@ -107,12 +112,9 @@
 
 
 
-<!-- jQuery library -->
-<script src="https://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+
 <!-- tool library -->
 <script src="assets/js/tool.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- we ui -->
 <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
@@ -123,7 +125,7 @@
 
     jQuery(document).ready(function($){
 
-        var baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+        var baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=CN&language=zh-Hans';
        var loading;
         var total_time = 30; //以秒来存放
         var current_time = 0;
@@ -140,21 +142,21 @@
             var current_country = localStorage.getItem('current_country');
             if (current_country != null){
                 if (current_country == 'CN') {
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=CN&language=zh-Hans';
                     country = "cn"
                     $("#AutoBar_3").html("地区:国区")
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
                     country = "us"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=US';
+                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
                     country = "gb"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=gb&language=en-GB';
+                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
                     country = "jp"
-                    baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=jp&language=ja';
+                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -256,7 +258,7 @@
                 {
                     label: '切换国区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=CN&language=zh-Hans';
+                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=CN&language=zh-Hans';
                         $("#AutoBar_3").html("地区:国区")
                         country = "cn"
                         localStorage.setItem('current_country', 'CN');
@@ -265,7 +267,7 @@
                 }, {
                     label: '切换美区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=US;';
+                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=US;';
                         $("#AutoBar_3").html("地区:美区")
                         country = "us"
                         localStorage.setItem('current_country', 'US');
@@ -274,7 +276,7 @@
                 }, {
                     label: '切换英区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=gb&language=en-GB';
+                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=gb&language=en-GB';
                         $("#AutoBar_3").html("地区:英区")
                         country = "gb"
                         localStorage.setItem('current_country', 'CN');
@@ -283,7 +285,7 @@
                 },{
                     label: '切换日区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.hb174.top/snkrs/content/v1?country=jp&language=ja';
+                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=jp&language=ja';
                         $("#AutoBar_3").html("地区:日区")
                         country = "jp"
                         localStorage.setItem('current_country', 'JP');
@@ -423,29 +425,38 @@
                 currentApi += "&orderBy=lastUpdated"
             }
             loading =  weui.loading('加载中');
-            $.ajax({
-                type : "get", //提交方式
-                url : currentApi,//路径
-                timeout:5000,
-                contentType:"text/plain",
-                dataType: "JSON",
-                headers: {
-                    'accept': '*/*',
-                    'accept-language': 'zh-CN'
-                },
-                data : {
 
-                },//数据，这里使用的是Json格式进行传输
-                success : function(data) {//返回数据根据结果进行相应的处理
-                    loading.hide()
-                    shoeTask(data)
-                },
-                error: (err, type) => {
+            //for prod
+            dsBridge.call("networkGet",{url:currentApi},function (ret) {
+                if(ret.indexOf('errorjhandler')==0){
+                    return
+                }
+                loading.hide()
+                shoeTask(data)
+            })
 
-                },
-
-
-            });
+            //for test
+            // $.ajax({
+            //     type : "get", //提交方式
+            //     url : currentApi,//路径
+            //     timeout:5000,
+            //     contentType:"text/plain",
+            //     dataType: "JSON",
+            //     headers: {
+            //         'accept': '*/*',
+            //         'accept-language': 'zh-CN'
+            //     },
+            //     data : {
+            //
+            //     },//数据，这里使用的是Json格式进行传输
+            //     success : function(data) {//返回数据根据结果进行相应的处理
+            //         loading.hide()
+            //         shoeTask(data)
+            //     },
+            //     error: (err, type) => {
+            //
+            //     },
+            // });
         }
         <!--==========================网络请求============================-->
 
@@ -640,6 +651,6 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/dsbridge@3.1.4/dist/dsbridge.js"></script>
 </body>
 </html>
