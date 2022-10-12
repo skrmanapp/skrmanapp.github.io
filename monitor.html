@@ -33,11 +33,6 @@
 
 
 
-
-    <!--  Bootstrap CDN版-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
     <!-- Fonts -->
 
     <!-- Open Sans for body and title font -->
@@ -148,15 +143,15 @@
                 } else if (current_country == 'US') {
                     $("#AutoBar_3").html("地区:美区")
                     country = "us"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=US';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
                     $("#AutoBar_3").html("地区:英区")
                     country = "gb"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=gb&language=en-GB';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
                     $("#AutoBar_3").html("地区:日区")
                     country = "jp"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=jp&language=ja';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -267,7 +262,7 @@
                 }, {
                     label: '切换美区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=US;';
+                        baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=US;';
                         $("#AutoBar_3").html("地区:美区")
                         country = "us"
                         localStorage.setItem('current_country', 'US');
@@ -276,7 +271,7 @@
                 }, {
                     label: '切换英区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=gb&language=en-GB';
+                        baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=gb&language=en-GB';
                         $("#AutoBar_3").html("地区:英区")
                         country = "gb"
                         localStorage.setItem('current_country', 'CN');
@@ -285,7 +280,7 @@
                 },{
                     label: '切换日区',
                     onClick: function () {
-                        baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=jp&language=ja';
+                        baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=jp&language=ja';
                         $("#AutoBar_3").html("地区:日区")
                         country = "jp"
                         localStorage.setItem('current_country', 'JP');
@@ -427,12 +422,14 @@
             loading =  weui.loading('加载中');
 
             //for prod
-            dsBridge.call("networkGet",{url:currentApi},function (ret) {
+            dsBridge.call("networkGet",{url:currentApi,headers:[{key:"User-Agent",value:"nike"}]},function (ret) {
+			    loading.hide();
                 if(ret.indexOf('errorjhandler')==0){
-                    return
+                    return;
                 }
-                loading.hide()
-                shoeTask(data)
+				let result =  JSON.parse(ret);
+				shoeTask(result);
+               
             })
 
             //for test

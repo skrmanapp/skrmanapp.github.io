@@ -139,15 +139,15 @@
                 } else if (current_country == 'US') {
 
                     country = "us"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=US';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=US';
                 } else if (current_country == 'UK') {
 
                     country = "gb"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=gb&language=en-GB';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=gb&language=en-GB';
                 } else if (current_country == 'JP') {
 
                     country = "jp"
-                    baseApi = 'https://snkrs.services.nike.com.cn/snkrs/content/v1?country=jp&language=ja';
+                    baseApi = 'https://snkrs.services.nike.com/snkrs/content/v1?country=jp&language=ja';
                 }
 
 
@@ -191,12 +191,13 @@
             loading =  weui.loading('加载中');
 
             //for prod
-            dsBridge.call("networkGet",{url:currentApi},function (ret) {
+            dsBridge.call("networkGet",{url:currentApi,headers:[{key:"User-Agent",value:"nike"}]},function (ret) {
+			    loading.hide();
                 if(ret.indexOf('errorjhandler')==0){
-                    return
+                    return;
                 }
-                loading.hide()
-                shoeTask(data)
+				let result =  JSON.parse(ret);
+				shoeTask(result);
             })
 
             //for test
@@ -458,11 +459,11 @@
             for (var i = 0; i < skuArray.length;i++){
                 try {
                     let skuid = skuArray[i].id;
-
+					let link = "https://api.nike.com/deliver/available_skus/v1/" + skuid;
                     //test
                     // $.ajax({
                     //     type : "get", //提交方式
-                    //     url : "https://api.nike.com/deliver/available_skus/v1/" + skuid,//路径
+                    //     url :link ,//路径
                     //     crossDomain: true,//跨域
                     //     timeout:5000,
                     //     dataType:'json',
@@ -481,11 +482,12 @@
                     // });
 
                     //for prod
-                    dsBridge.call("networkGet",{url:"https://api.nike.com/deliver/available_skus/v1/" + skuid},function (ret) {
+                     dsBridge.call("networkGet",{url:link,headers:[{key:"User-Agent",value:"nike"}]},function (ret) {
                         if(ret.indexOf('errorjhandler')==0){
                             return
                         }
-                        skuTask(data)
+						let result =  JSON.parse(ret);
+                        skuTask(result)
                     })
 
                 }catch (e) {
